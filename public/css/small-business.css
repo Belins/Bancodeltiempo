@@ -70,7 +70,12 @@ footer .form-control {
   font-size: 35px;
   color: #36A0FF;
 }
+
 #señal{
   height: 10%;
   width: 10%;
+}
+
+#registro{
+  text-align: center;
 }
