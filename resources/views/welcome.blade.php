@@ -10,6 +10,9 @@
 
   <title>Banco del tiempo</title>
 
+  <!-- JavaScript code -->
+  <script src="/js/javaScript.js"></script>
+
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -176,13 +179,13 @@
                 <form id="store" method="post" action="{{route('guardarcontacto')}}">
                     @csrf
                 	<fieldset class="form-group">
-                        <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+                        <input type="text" class="form-control" name="nombre" placeholder="Nombre" onkeyup="this.value=NumText(this.value)" required>
                     </fieldset>
                     <fieldset class="form-group">
-                        <input type="email" class="form-control" name="email" placeholder="Introduce email">
+                        <input type="email" class="form-control" name="email" placeholder="Introduce email" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required>
                     </fieldset>
                     <fieldset class="form-group">
-                        <textarea class="form-control" name="mensaje" placeholder="Mensaje"></textarea>
+                        <textarea class="form-control" name="mensaje" placeholder="Mensaje" onkeyup="this.value=NumTextComment(this.value)" required></textarea>
                     </fieldset>
                     <fieldset class="form-group text-xs-right">
                         <button type="submit" class="bg-faded btn-sm">Enviar</button>
