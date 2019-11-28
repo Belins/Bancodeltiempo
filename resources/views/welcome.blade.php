@@ -44,7 +44,7 @@
 		  </ul>
   		<ul class="nav navbar-nav flex-row ml-auto">
 	        <li class="dropdown order-1">
-	            <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Iniciar Sesión</button>
+	            <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-info dropdown-toggle">Inicia/Registra</button>
 	            <ul class="dropdown-menu dropdown-menu-right mt-2">
 	               <li class="p-3">
 	                   <form class="form" role="form">
@@ -58,7 +58,7 @@
 	                            <button type="submit" class="btn btn-primary btn-block">Login</button>
 	                        </div>
 	                        <div class="form-group text-center">
-	                            <small><a href="#" data-toggle="modal" data-target="#modalPassword">¿Contraseña olvidada?</a></small>
+	                            <small><a href="#" data-toggle="modal" data-target="#modalPassword">¿No tienes cuenta? Registrate!</a></small>
 	                        </div>
 	                    </form>
 	                </li>
@@ -66,6 +66,7 @@
 	        </li>
         </ul>
 	</nav>
+  <img id="señal" class="float-right mr-2" src="{{asset('img/señal.gif')}}">
 	</header>
 
   <!-- Page Content -->
