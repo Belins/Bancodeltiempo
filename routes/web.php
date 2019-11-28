@@ -15,4 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+Route::get('/registro',function(){
+    return view('usuarios/gestion');
+})->name('registro');
+
 Route::post('/comentario','ContactoController@store')->name('guardarcontacto');

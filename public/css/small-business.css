@@ -60,7 +60,16 @@ footer .form-control {
     color: #d1d2d2;
     padding: 0.7em 1em;
 }
+.header {
+  color: #36A0FF;
+  font-size: 27px;
+  padding: 10px;
+}
 
+.bigicon {
+  font-size: 35px;
+  color: #36A0FF;
+}
 #señal{
   height: 10%;
   width: 10%;
