@@ -10,6 +10,9 @@
 
   <title>Banco del tiempo</title>
 
+  <!-- JavaScript code -->
+  <script src="/js/javaScript.js"></script>
+
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -44,7 +47,7 @@
 		  </ul>
   		<ul class="nav navbar-nav flex-row ml-auto">
 	        <li class="dropdown order-1">
-	            <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Iniciar Sesión</button>
+	            <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-info dropdown-toggle">Inicia/Registra</button>
 	            <ul class="dropdown-menu dropdown-menu-right mt-2">
 	               <li class="p-3">
 	                   <form class="form" role="form">
@@ -58,7 +61,7 @@
 	                            <button type="submit" class="btn btn-primary btn-block">Login</button>
 	                        </div>
 	                        <div class="form-group text-center">
-	                            <small><a href="#" data-toggle="modal" data-target="#modalPassword">¿Contraseña olvidada?</a></small>
+	                            <small><a href="#" data-toggle="modal" data-target="#modalPassword">¿No tienes cuenta? Registrate!</a></small>
 	                        </div>
 	                    </form>
 	                </li>
@@ -66,6 +69,7 @@
 	        </li>
         </ul>
 	</nav>
+  <img id="señal" class="float-right mr-2" src="{{asset('img/señal.gif')}}">
 	</header>
 
   <!-- Page Content -->
@@ -176,13 +180,13 @@
                 <form id="store" method="post" action="{{route('guardarcontacto')}}">
                     @csrf
                 	<fieldset class="form-group">
-                        <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+                        <input type="text" class="form-control" name="nombre" placeholder="Nombre" onkeyup="this.value=NumText(this.value)" required>
                     </fieldset>
                     <fieldset class="form-group">
-                        <input type="email" class="form-control" name="email" placeholder="Introduce email">
+                        <input type="email" class="form-control" name="email" placeholder="Introduce email" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required>
                     </fieldset>
                     <fieldset class="form-group">
-                        <textarea class="form-control" name="mensaje" placeholder="Mensaje"></textarea>
+                        <textarea class="form-control" name="mensaje" placeholder="Mensaje" onkeyup="this.value=NumTextComment(this.value)" required></textarea>
                     </fieldset>
                     <fieldset class="form-group text-xs-right">
                         <button type="submit" class="bg-faded btn-sm">Enviar</button>
