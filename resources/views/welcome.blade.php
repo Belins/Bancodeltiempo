@@ -58,7 +58,7 @@
 	                            <button type="submit" class="btn btn-primary btn-block">Login</button>
 	                        </div>
 	                        <div class="form-group text-center">
-	                            <small><a href="#" data-toggle="modal" data-target="#modalPassword">¿No tienes cuenta? Registrate!</a></small>
+	                            <small><a href="{{route('registro')}}">¿No tienes cuenta? Registrate!</a></small>
 	                        </div>
 	                    </form>
 	                </li>
@@ -176,7 +176,7 @@
             <div class="col-md-5">
                 <form id="store" method="post" action="{{route('guardarcontacto')}}">
                     @csrf
-                	<fieldset class="form-group">
+                	  <fieldset class="form-group">
                         <input type="text" class="form-control" name="nombre" placeholder="Nombre">
                     </fieldset>
                     <fieldset class="form-group">

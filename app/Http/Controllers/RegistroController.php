@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Requests\ComentarioRequest;
+use App\User;
 use Illuminate\Http\Request;
 
-class ContactoController extends Controller
+class RegistroController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -32,13 +32,15 @@ class ContactoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ComentarioRequest $request)
+    public function store(Request $request)
     {
-        $mensaje = new Mensajes;
-        $mensaje->nombre = $request->input('nombre');
-        $mensaje->email = $request->input('email');
-        $mensaje->comentario = $request->input('Mensaje');
-        $mensaje->save();
+        $regis = new User();
+        $regis->name = $request('name');
+        $regis->lastname = $request('lastname');
+        $regis->email = $request('email');
+        $regis->password = $request('password');
+        $regis->phone = $request('phone');
+        $regis->save();
         return view('welcome');
     }
 
