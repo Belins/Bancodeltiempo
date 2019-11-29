@@ -29,4 +29,8 @@ Route::get('/registro', function () {
     return view('registrar');
 })->name('registro');
 
+Route::get('/registro',function(){
+    return view('modalregistro');
+})->name('modalregistro');
+
 Route::post('/registro/guardar', 'RegistroController@store')->name('guardarregistro');

@@ -20,6 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('email', 100);
             $table->integer('phone');
             $table->string('password', 30);
+            $table->boolean('verificated');
+            $table->string('codigo',20);
             $table->rememberToken();
             $table->timestamps();
         });
