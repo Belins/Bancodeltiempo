@@ -75,71 +75,62 @@
 
   <!-- Page Content -->
   <div class="container">
-
-    <!-- Heading Row -->
-    <div class="row align-items-center my-5">
-      <div class="col-lg-7">
-        <img id="imgGen" class="img-fluid rounded mb-4 mb-lg-0" src="img/imagen.png" alt="trueque">
-      </div>
-      <!-- /.col-lg-8 -->
-      <div class="col-lg-5">
-        <h1 class="font-weight-light">Banco del tiempo</h1>
-        <p>Lo que estamos buscando con esta empresa es una comunidad sana donde la gente que participe en ella se dedique hacer truque de su tiempo a cambio del tiempo de otro usuario SIN necesidad de usar ningun tipo de DINERO.</p>
-        <a class="btn btn-primary" href="#">Seguir leyendo!</a>
-      </div>
-      <!-- /.col-md-4 -->
-    </div>
-    <!-- /.row -->
-
-    <!-- Call to Action Well -->
-    <div class="card text-white bg-secondary my-5 py-4 text-center">
-      <div class="card-body">
-        <p id="importante" class="text-white m-0">En nuestra comunidad el usuario tendra tres servicios para interaccionar.</p>
-      </div>
-    </div>
-
-    <!-- Content Row -->
-    <div class="row">
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title">Trabajador</h2>
-            <p class="card-text">El usuario podrá ofrecer sus servicios para que otros usuarios se veneficien de ello, a cambio de tiempo.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
-          </div>
+        <div id="infoGen">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Banco del tiempo</h2>
+                    <p>
+                        Lo que buscamos con esta plataforma son tres cosas principales:
+                    </p>
+                    <ul>
+                        <li>Una comunidad unida y servicial</li>
+                        <li>Ayuda mutua entre usuarios</li>
+                        <li>No darle nada de importancia al dinero</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>
+                        Para lograr alcanzar esta meta, hemos creado esta plataforma donde
+                        los usuarios podran hacer trueques entre ellos. Estos trueques podran ser sobre cualquier trabajo
+                        o incluso el simple echo de enseñar parte de tu conocimiento en un campo a algun otro usuario.
+                    </p>
+                    <p>
+                        Los trueques funcionaran de la siguiente manera, un usuario de la web podra disponer de dos roles.
+                        Uno de los roles será <b>TRABAJADOR</b> y el otro será <b>CLIENTE</b>.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <ul>
+                        <li><b>Trabajador :</b></li><br>
+                        <p>
+                            El trabajador, dara un servicio a un cliente que a cambio de este servicio dependiendo las horas
+                            que transcurra ejecutandolo le dara ese tiempo trabajado para que lo pueda gastar en un servicio
+                            de otro usuario.
+                        </p>
+                        <a class="ejemplo"> <b>Ejemplo:</b> Como informatico te contratan y tardas 1h para arreglar un ordenador, al finalizar
+                            el trabajo te daran 1h para que puedas gastar tu contratando un servicio a otro usuario.
+                        </a><br><br>
+                        <li><b>Cliente :</b></li><br>
+                        <p>
+                            El cliente, para poder contratar un servicio que ofrezca otro usuario tendra que tener a su disposicion tiempo ganado
+                            por haber trabajado. Una vez encuentre el servicio que necesita contactara con el trabajador y se le cobrara el tiempo 
+                            necesario al cliente.
+                        </p>
+                        <a class="ejemplo"> <b>Ejemplo:</b> Necesitas que te cuiden el jardin y como ya has trabajado de informatico tienes 1h para gastar
+                            en este caso lo gastas en contratar un jardinero.
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-4 text-center">
+                    <img class="imgroles" src="img/trabajador.png" alt="trabajador"/>
+                    <img class="imgroles" src="img/clientes.jpg" alt="clientes"/>
+                </div>
+            </div>
         </div>
-      </div>
-      <!-- /.col-md-4 -->
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title">Cliente</h2>
-            <p class="card-text">El usuario podrá contratar a un trabajador para obtener conocimientos o su servicio del trabajador.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
-          </div>
-        </div>
-      </div>
-      <!-- /.col-md-4 -->
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title">Blog</h2>
-            <p class="card-text">En esta todos los usuarios podrán participar en un blog para itercambiar conocimientos sin necesidad de contratar a nadie.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
-          </div>
-        </div>
-      </div>
-      <!-- /.col-md-4 -->
-
-    </div>
-    <!-- /.row -->
-
   </div>
   <!-- /.container -->
 
