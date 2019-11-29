@@ -24,3 +24,9 @@ Route::get('/infGeneral', function(){
 })->name('infgeneral');
 
 Route::post('/comentario','ContactoController@store')->name('guardarcontacto');
+
+Route::get('/registro', function () {
+    return view('registrar');
+})->name('registro');
+
+Route::post('/registro/guardar', 'RegistroController@store')->name('guardarregistro');

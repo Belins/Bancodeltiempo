@@ -62,7 +62,7 @@
 	                        </div>
 	                        <div class="form-group text-center">
 	                            <small><a href="#" data-toggle="modal" data-target="#modalPassword">¿Contraseña olvidada?</a></small><br>
-                              <small><a href="{{route('registro')}}"  data-target="#modalPassword">No tengo cuenta</a></small>
+	                            <small><a href="{{route('registro')}}">¿No tienes cuenta? Registrate!</a></small>
 	                        </div>
 	                    </form>
 	                </li>
@@ -180,8 +180,8 @@
             <div class="col-md-5">
                 <form id="store" method="post" action="{{route('guardarcontacto')}}">
                     @csrf
-                	<fieldset class="form-group">
-                        <input type="text" class="form-control" name="nombre" placeholder="Nombre" onkeyup="this.value=NumText(this.value)" required>
+                	  <fieldset class="form-group">
+                        <input type="text" class="form-control" name="nombre" placeholder="Nombre">
                     </fieldset>
                     <fieldset class="form-group">
                         <input type="email" class="form-control" name="email" placeholder="Introduce email" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required>
