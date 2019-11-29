@@ -85,7 +85,7 @@
       <div class="col-lg-5">
         <h1 class="font-weight-light">Banco del tiempo</h1>
         <p>Lo que estamos buscando con esta empresa es una comunidad sana donde la gente que participe en ella se dedique hacer truque de su tiempo a cambio del tiempo de otro usuario SIN necesidad de usar ningun tipo de DINERO.</p>
-        <a class="btn btn-primary" href="#">Seguir leyendo!</a>
+        <a class="btn btn-primary" href="{{route('infgeneral')}}">Seguir leyendo!</a>
       </div>
       <!-- /.col-md-4 -->
     </div>
