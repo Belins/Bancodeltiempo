@@ -28,40 +28,41 @@
 	<div class="row d-flex align-items-center justify-content-center p-4">
 			<img id="logo" src="{{asset('img/logo.JPG')}}">
 		<div class="p-1">
-			<p class="display-4">Banco del Tiempo</p>
+			<p class="display-4">{{ trans('messages.Banco') }}</p> <!--Banco del Tiempo -->
 		</div>
 	</div>
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 		  <!-- Links -->
-		  <a class="navbar-brand" href="#">Inicio</a>
+		  <a class="navbar-brand" href="{{route('welcome')}}">{{ trans('messages.Inicio') }}</a><!--Inicio-->
 		  <ul class="navbar-nav">
 		    <li class="nav-item">
-		      <a class="nav-link" href="#">Quienes somos</a>
+		      <a class="nav-link" href="#">{{ trans('messages.Quienes') }}</a><!--Quienes somos-->
 		    </li>
 		    <li class="nav-item">
-		      <a class="nav-link" href="#">Como funciona</a>
+		      <a class="nav-link" href="{{route('infgeneral')}}">{{ trans('messages.Como') }}</a><!--Como funciona-->
 		    </li>
 		    <li class="nav-item">
-		      <a class="nav-link" href="#">Foro</a>
+		      <a class="nav-link" href="#">{{ trans('messages.Foro') }}</a><!--Foro-->
 		    </li>
 		  </ul>
   		<ul class="nav navbar-nav flex-row ml-auto">
 	        <li class="dropdown order-1">
-	            <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Iniciar Sesión</button>
+	            <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-info dropdown-toggle">{{ trans('messages.Login/Registro') }}</button><!--Inicia/Registra-->
 	            <ul class="dropdown-menu dropdown-menu-right mt-2">
 	               <li class="p-3">
 	                   <form class="form" role="form">
 	                        <div class="form-group">
-	                            <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text" required="">
+	                            <input id="emailInput" placeholder="{{ trans('messages.Email') }}" class="form-control form-control-sm" type="text" required=""><!--Email-->
 	                        </div>
 	                        <div class="form-group">
-	                            <input id="passwordInput" placeholder="Contraseña" class="form-control form-control-sm" type="text" required="">
+	                            <input id="passwordInput" placeholder="{{ trans('messages.Contraseña') }}" class="form-control form-control-sm" type="text" required=""><!--Contraseña-->
 	                        </div>
 	                        <div class="form-group">
-	                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+	                            <button type="submit" class="btn btn-primary btn-block">{{ trans('messages.Login') }}</button><!--Login-->
 	                        </div>
 	                        <div class="form-group text-center">
-	                            <small><a href="#" data-toggle="modal" data-target="#modalPassword">¿Contraseña olvidada?</a></small>
+	                            <small><a href="#" data-toggle="modal" data-target="#modalPassword">{{ trans('messages.Olvido') }}</a></small><br><!--Contraseña olvidada?-->
+	                            <small><a href="{{route('registro')}}" data-toggle="modal" data-target="#modalSubscriptionForm" >{{ trans('messages.NoCuenta') }}</a></small><!--¿No tienes cuenta? Regístrate!-->
 	                        </div>
 	                    </form>
 	                </li>
@@ -69,6 +70,7 @@
 	        </li>
         </ul>
 	</nav>
+  <img id="señal" class="float-right mr-2" src="{{asset('img/señal.gif')}}">
 	</header>
 
   <!-- Page Content -->
@@ -81,9 +83,9 @@
       </div>
       <!-- /.col-lg-8 -->
       <div class="col-lg-5">
-        <h1 class="font-weight-light">Banco del tiempo</h1>
-        <p>Lo que estamos buscando con esta empresa es una comunidad sana donde la gente que participe en ella se dedique hacer truque de su tiempo a cambio del tiempo de otro usuario SIN necesidad de usar ningun tipo de DINERO.</p>
-        <a class="btn btn-primary" href="#">Seguir leyendo!</a>
+        <h1 class="font-weight-light">{{ trans('messages.Banco') }}</h1><!--Banco del tiempo-->
+        <p>{{ trans('messages.Info') }}</p><!--Lo que estamos buscando con esta empresa es una comunidad sana donde la gente que participe en ella se dedique hacer truque de su tiempo a cambio del tiempo de otro usuario SIN necesidad de usar ningun tipo de DINERO.-->
+        <a class="btn btn-primary" href="{{route('infgeneral')}}">{{ trans('messages.Leyendo') }}</a><!--Seguir leyendo!-->
       </div>
       <!-- /.col-md-4 -->
     </div>
@@ -92,7 +94,7 @@
     <!-- Call to Action Well -->
     <div class="card text-white bg-secondary my-5 py-4 text-center">
       <div class="card-body">
-        <p id="importante" class="text-white m-0">En nuestra comunidad el usuario tendra tres servicios para interaccionar.</p>
+        <p id="importante" class="text-white m-0">{{ trans('messages.Comunidad') }}</p><!--En nuestra comunidad el usuario tendra tres servicios para interaccionar.-->
       </div>
     </div>
 
@@ -101,11 +103,11 @@
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
-            <h2 class="card-title">Trabajador</h2>
-            <p class="card-text">El usuario podrá ofrecer sus servicios para que otros usuarios se veneficien de ello, a cambio de tiempo.</p>
+            <h2 class="card-title">{{ trans('messages.Trabajador') }}</h2><!--Trabajador-->
+            <p class="card-text">{{ trans('messages.TrabajadorDes') }}</p><!--El usuario podrá ofrecer sus servicios para que otros usuarios se veneficien de ello, a cambio de tiempo.-->
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
+            <a href="#" class="btn btn-primary btn-sm">{{ trans('messages.Leer') }}</a><!--Leer más-->
           </div>
         </div>
       </div>
@@ -113,11 +115,11 @@
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
-            <h2 class="card-title">Cliente</h2>
-            <p class="card-text">El usuario podrá contratar a un trabajador para obtener conocimientos o su servicio del trabajador.</p>
+            <h2 class="card-title">{{ trans('messages.Cliente') }}</h2><!--Cliente-->
+            <p class="card-text">{{ trans('messages.ClienteDes') }}</p><!--El usuario podrá contratar a un trabajador para obtener conocimientos o su servicio del trabajador.-->
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
+            <a href="#" class="btn btn-primary btn-sm">{{ trans('messages.Leer') }}</a><!--Leer más-->
           </div>
         </div>
       </div>
@@ -125,11 +127,11 @@
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
-            <h2 class="card-title">Blog</h2>
-            <p class="card-text">En esta todos los usuarios podrán participar en un blog para itercambiar conocimientos sin necesidad de contratar a nadie.</p>
+            <h2 class="card-title">{{ trans('messages.Blog') }}</h2><!--Blog-->
+            <p class="card-text">{{ trans('messages.BlogDes') }}</p><!--En esta todos los usuarios podrán participar en un blog para itercambiar conocimientos sin necesidad de contratar a nadie.-->
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
+            <a href="#" class="btn btn-primary btn-sm">{{ trans('messages.Leer') }}</a><!--Leer más-->
           </div>
         </div>
       </div>
@@ -146,20 +148,20 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-                <h5>Banco Del Tiempo</h5>
+                <h5>{{ trans('messages.Banco') }}</h5><!--Banco Del Tiempo-->
                 <div class="row">
                     <div class="col-6">
                         <ul class="list-unstyled">
-                            <li><a href="">Foro</a></li>
-                            <li><a href="">Beneficios</a></li>
-                            <li><a href="">Partners</a></li>
+                            <li><a href="">{{ trans('messages.Foro') }}</a></li><!--Foro-->
+                            <li><a href="">{{ trans('messages.Beneficios') }}</a></li><!--Beneficios-->
+                            <li><a href="">{{ trans('messages.Partners') }}</a></li><!--Partners-->
                         </ul>
                     </div>
                     <div class="col-6">
                         <ul class="list-unstyled">
-                            <li><a href="">Quienes somos</a></li>
-                            <li><a href="">Soporte</a></li>
-                            <li><a href="">Términos</a></li>
+                            <li><a href="">{{ trans('messages.Quienes') }}</a></li><!--Quienes somos-->
+                            <li><a href="">{{ trans('messages.Soporte') }}</a></li><!--Soporte-->
+                            <li><a href="">{{ trans('messages.Terminos') }}</a></li><!--Términos-->
                         </ul>
                     </div>
                 </div>
@@ -172,23 +174,23 @@
                 <br>
             </div>
             <div class="col-md-2">
-                <h5 class="text-md-right">Contacto</h5>
+                <h5 class="text-md-right">Contacto</h5><!--Contacto-->
                 <hr>
             </div>
             <div class="col-md-5">
                 <form id="store" method="post" action="{{route('guardarcontacto')}}">
                     @csrf
                 	<fieldset class="form-group">
-                        <input type="text" class="form-control" name="nombre" placeholder="Nombre" onkeyup="this.value=NumText(this.value)" required>
+                        <input type="text" class="form-control" name="nombre" placeholder="{{ trans('messages.Nombre') }}" onkeyup="this.value=NumText(this.value)" required><!--Nombre-->
                     </fieldset>
                     <fieldset class="form-group">
-                        <input type="email" class="form-control" name="email" placeholder="Introduce email" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required>
+                        <input type="email" class="form-control" name="email" placeholder="{{ trans('messages.IntroEmail') }}" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required><!--Introduce email-->
                     </fieldset>
                     <fieldset class="form-group">
-                        <textarea class="form-control" name="mensaje" placeholder="Mensaje" onkeyup="this.value=NumTextComment(this.value)" required></textarea>
+                        <textarea class="form-control" name="mensaje" placeholder="{{ trans('messages.Mensaje') }}" onkeyup="this.value=NumTextComment(this.value)" required></textarea><!--Mensaje-->
                     </fieldset>
                     <fieldset class="form-group text-xs-right">
-                        <button type="submit" class="bg-faded btn-sm">Enviar</button>
+                        <button type="submit" class="bg-faded btn-sm">{{ trans('messages.Enviar') }}</button><!--Enviar-->
                     </fieldset>
                     @if ($errors ->has('nombre'))
                     <a class="error">{{ $error->first('nombre') }}</a><br>
@@ -208,7 +210,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  
 </body>
 
 </html>
