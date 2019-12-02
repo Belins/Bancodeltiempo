@@ -18,6 +18,7 @@
 
   <header>
   @include('/includes/header')
+
 	</header>
 
   <!-- Page Content -->

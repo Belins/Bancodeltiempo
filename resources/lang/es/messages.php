@@ -64,4 +64,6 @@ return [
     'ClienteInfoEjemplo' => 'Necesitas que te cuiden el jardin y como ya has trabajado de informatico tienes 1h para gastar
         en este caso lo gastas en contratar un jardinero.',
     'Ejemplo' => 'Ejemplo',
+    'Perfil' => 'Ver tu perfil',
+    'Gestion' => 'Gestión de usuarios',
 ];

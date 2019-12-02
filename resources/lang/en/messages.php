@@ -63,5 +63,7 @@ return [
         necessary to the client.',
     'ClienteInfoEjemplo' => 'You need to take care of the garden and since you have already worked as an informatic you have 1h to spend
         In this case you spend it on hiring a gardener.',
-    'Ejemplo' => 'Example'
+    'Ejemplo' => 'Example',
+    'Perfil' => 'View your profile',
+    'Gestion' => 'User administration',
 ];
