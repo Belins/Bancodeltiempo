@@ -44,7 +44,7 @@
                         o incluso el simple echo de enseñar parte de tu conocimiento en un campo a algun otro usuario.-->
                     </p>
                     <p>
-                            {{ trans('messages.Trueques') }}
+                            {{ trans('messages.Trueques1') }} <b>{{ trans('messages.Trabajador') }}</b> {{ trans('messages.Trueques2') }} <b>{{ trans('messages.Cliente') }}</b>.
                         <!--Los trueques funcionaran de la siguiente manera, un usuario de la web podra disponer de dos roles.
                         Uno de los roles será <b>TRABAJADOR</b> y el otro será <b>CLIENTE</b>.-->
                     </p>
@@ -60,7 +60,7 @@
                             que transcurra ejecutandolo le dara ese tiempo trabajado para que lo pueda gastar en un servicio
                             de otro usuario.-->
                         </p>
-                        <a class="ejemplo">{{ trans('messages.TrabajadorInfoEjemplo') }}<!-- <b>Ejemplo:</b> Como informatico te contratan y tardas 1h para arreglar un ordenador, al finalizar
+                        <a class="ejemplo"><b>{{ trans('messages.Ejemplo') }}:</b> {{ trans('messages.TrabajadorInfoEjemplo') }}<!-- <b>Ejemplo:</b> Como informatico te contratan y tardas 1h para arreglar un ordenador, al finalizar
                             el trabajo te daran 1h para que puedas gastar tu contratando un servicio a otro usuario.-->
                         </a><br><br>
                         <li><b>{{ trans('messages.Cliente') }}:<!--Cliente :--></b></li><br>
@@ -70,7 +70,7 @@
                             por haber trabajado. Una vez encuentre el servicio que necesita contactara con el trabajador y se le cobrara el tiempo 
                             necesario al cliente.-->
                         </p>
-                        <a class="ejemplo">{{ trans('messages.ClienteInfoEjemplo') }}<!--<b>Ejemplo:</b> Necesitas que te cuiden el jardin y como ya has trabajado de informatico tienes 1h para gastar
+                        <a class="ejemplo"><b>{{ trans('messages.Ejemplo') }}:</b> {{ trans('messages.ClienteInfoEjemplo') }}<!--<b>Ejemplo:</b> Necesitas que te cuiden el jardin y como ya has trabajado de informatico tienes 1h para gastar
                             en este caso lo gastas en contratar un jardinero.-->
                         </a>
                     </ul>
