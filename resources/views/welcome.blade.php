@@ -62,7 +62,7 @@
 	                        </div>
 	                        <div class="form-group text-center">
 	                            <small><a href="#" data-toggle="modal" data-target="#modalPassword">¿Contraseña olvidada?</a></small><br>
-	                            <small><a href="{{route('registro')}}" data-toggle="modal" data-target="#modalSubscriptionForm" >¿No tienes cuenta? Registrate!</a></small>
+	                            <small><a href="#" data-toggle="modal" data-target="#modalSubscriptionForm" >¿No tienes cuenta? Registrate!</a></small>
 	                        </div>
 	                    </form>
 	                </li>
@@ -210,7 +210,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  
 </body>
+@include('modalregistro').
 
 </html>
