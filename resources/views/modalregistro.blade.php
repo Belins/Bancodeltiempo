@@ -1,8 +1,4 @@
-<html>
-    <head>
-        <title>modal</title>
-    </head>
-    <body>
+
         <div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -38,5 +34,3 @@
         <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalSubscriptionForm">Launch
             Modal Subscription Form</a>
         </div>
-    </body>
-</html>
