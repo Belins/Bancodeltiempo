@@ -25,10 +25,10 @@ class registrorequest extends FormRequest
     {
         return [
             'name'=>'required|min:2|max:15',
-            'lname'=>'required|min:2|max:15',
-            'passwd'=>'required|password',
+            'lastname'=>'required|min:2|max:15',
             'email'=>'required|email',
-            'phone'=>'required|min:9|max:9'
+            'password'=>'required|min:2|max:15',
+            'phone'=>'required|min:8|max:10'
         ];
     }
 }
