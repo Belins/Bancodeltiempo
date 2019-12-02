@@ -16,7 +16,7 @@
 <body>
 <header>
 	@include('/includes/header')
-	</header>
+</header>
 
   <!-- Page Content -->
   <div class="container">
