@@ -28,7 +28,7 @@
                             <input id="emailInput" placeholder="{{ trans('messages.Email') }}" class="form-control form-control-sm" type="text" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required=""><!--Email-->
                         </div>
                         <div class="form-group">
-                            <input id="passwordInput" placeholder="{{ trans('messages.Contraseña') }}" class="form-control form-control-sm" type="text" required=""><!--Contraseña-->
+                            <input id="passwordInput" placeholder="{{ trans('messages.Contraseña') }}" class="form-control form-control-sm" type="password" required=""><!--Contraseña-->
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block">{{ trans('messages.Login') }}</button><!--Login-->
