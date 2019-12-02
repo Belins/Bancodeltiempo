@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\registrorequest;
 class RegistroController extends Controller
 {
     /**
@@ -32,16 +32,16 @@ class RegistroController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(registrorequest $request)
     {
         $regis = new User();
-        $regis->name = $request('name');
-        $regis->lastname = $request('lastname');
-        $regis->email = $request('email');
-        $regis->password = $request('password');
-        $regis->phone = $request('phone');
+        $regis->name = request('name');
+        $regis->lastname = request('lastname');
+        $regis->email = request('email');
+        $regis->password = request('password');
+        $regis->phone = request('phone');
         $regis->save();
-        return view('welcome');
+        return redirect('/registro');
     }
 
     /**

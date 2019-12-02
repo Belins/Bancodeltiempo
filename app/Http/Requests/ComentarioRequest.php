@@ -24,9 +24,9 @@ class ComentarioRequest extends FormRequest
     public function rules()
     {
         return [
-            'Nombre'=>'required|min:2|max:15',
-            'Email'=>'required|email',
-            'Comentario'=>'required'
+            'nombre'=>'required|min:2|max:15',
+            'email'=>'required|email',
+            'mensaje'=>'required'
         ];
     }
 }

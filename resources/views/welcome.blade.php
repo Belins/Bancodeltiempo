@@ -58,7 +58,7 @@
 	                            <button type="submit" class="btn btn-primary btn-block">Login</button>
 	                        </div>
 	                        <div class="form-group text-center">
-	                            <small><a href="{{route('registro')}}">¿No tienes cuenta? Registrate!</a></small>
+	                            <small><a href="{{route('registro')}}" data-toggle="modal" data-target="#modalSubscriptionForm">¿No tienes cuenta? Registrate!</a></small>
 	                        </div>
 	                    </form>
 	                </li>
@@ -179,24 +179,27 @@
                 	  <fieldset class="form-group">
                         <input type="text" class="form-control" name="nombre" placeholder="Nombre">
                     </fieldset>
+                     @if ($errors ->has('nombre'))
+                    <a class="error">{{ $errors->first('nombre') }}</a><br>
+                    @endif
                     <fieldset class="form-group">
                         <input type="email" class="form-control" name="email" placeholder="Introduce email">
                     </fieldset>
+                    @if ($errors ->has('email'))
+                    <a class="error">{{ $errors->first('email') }}</a><br>
+                    @endif
                     <fieldset class="form-group">
                         <textarea class="form-control" name="mensaje" placeholder="Mensaje"></textarea>
                     </fieldset>
+                    @if ($errors ->has('mensaje'))
+                    <a class="error">{{ $errors->first('mensaje') }}</a><br>
+                    @endif
                     <fieldset class="form-group text-xs-right">
                         <button type="submit" class="bg-faded btn-sm">Enviar</button>
                     </fieldset>
-                    @if ($errors ->has('nombre'))
-                    <a class="error">{{ $error->first('nombre') }}</a><br>
-                    @endif
-                    @if ($errors ->has('nombre'))
-                    <a class="error">{{ $error->first('email') }}</a><br>
-                    @endif
-                    @if ($errors ->has('nombre'))
-                    <a class="error">{{ $error->first('mensaje') }}</a><br>
-                    @endif
+                   
+                    
+                    
                 </form>
             </div>
         </div>
@@ -208,5 +211,5 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
+@include('registrar').
 </html>
