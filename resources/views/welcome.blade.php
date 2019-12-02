@@ -103,11 +103,11 @@
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
-            <h2 class="card-title">Trabajador</h2>
-            <p class="card-text">El usuario podrá ofrecer sus servicios para que otros usuarios se veneficien de ello, a cambio de tiempo.</p>
+            <h2 class="card-title">{{ trans('messages.Trabajador') }}</h2><!--Trabajador-->
+            <p class="card-text">{{ trans('messages.TrabajadorDes') }}</p><!--El usuario podrá ofrecer sus servicios para que otros usuarios se veneficien de ello, a cambio de tiempo.-->
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
+            <a href="#" class="btn btn-primary btn-sm">{{ trans('messages.Leer') }}</a><!--Leer más-->
           </div>
         </div>
       </div>
@@ -115,11 +115,11 @@
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
-            <h2 class="card-title">Cliente</h2>
-            <p class="card-text">El usuario podrá contratar a un trabajador para obtener conocimientos o su servicio del trabajador.</p>
+            <h2 class="card-title">{{ trans('messages.Cliente') }}</h2><!--Cliente-->
+            <p class="card-text">{{ trans('messages.ClienteDes') }}</p><!--El usuario podrá contratar a un trabajador para obtener conocimientos o su servicio del trabajador.-->
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
+            <a href="#" class="btn btn-primary btn-sm">{{ trans('messages.Leer') }}</a><!--Leer más-->
           </div>
         </div>
       </div>
@@ -127,11 +127,11 @@
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
-            <h2 class="card-title">Blog</h2>
-            <p class="card-text">En esta todos los usuarios podrán participar en un blog para itercambiar conocimientos sin necesidad de contratar a nadie.</p>
+            <h2 class="card-title">{{ trans('messages.Blog') }}</h2><!--Blog-->
+            <p class="card-text">{{ trans('messages.BlogDes') }}</p><!--En esta todos los usuarios podrán participar en un blog para itercambiar conocimientos sin necesidad de contratar a nadie.-->
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
+            <a href="#" class="btn btn-primary btn-sm">{{ trans('messages.Leer') }}</a><!--Leer más-->
           </div>
         </div>
       </div>
@@ -148,20 +148,20 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-                <h5>Banco Del Tiempo</h5>
+                <h5>{{ trans('messages.Banco') }}</h5><!--Banco Del Tiempo-->
                 <div class="row">
                     <div class="col-6">
                         <ul class="list-unstyled">
-                            <li><a href="">Foro</a></li>
-                            <li><a href="">Beneficios</a></li>
-                            <li><a href="">Partners</a></li>
+                            <li><a href="">{{ trans('messages.Foro') }}</a></li><!--Foro-->
+                            <li><a href="">{{ trans('messages.Beneficios') }}</a></li><!--Beneficios-->
+                            <li><a href="">{{ trans('messages.Partners') }}</a></li><!--Partners-->
                         </ul>
                     </div>
                     <div class="col-6">
                         <ul class="list-unstyled">
-                            <li><a href="">Quienes somos</a></li>
-                            <li><a href="">Soporte</a></li>
-                            <li><a href="">Términos</a></li>
+                            <li><a href="">{{ trans('messages.Quienes') }}</a></li><!--Quienes somos-->
+                            <li><a href="">{{ trans('messages.Soporte') }}</a></li><!--Soporte-->
+                            <li><a href="">{{ trans('messages.Terminos') }}</a></li><!--Términos-->
                         </ul>
                     </div>
                 </div>
@@ -174,23 +174,23 @@
                 <br>
             </div>
             <div class="col-md-2">
-                <h5 class="text-md-right">Contacto</h5>
+                <h5 class="text-md-right">Contacto</h5><!--Contacto-->
                 <hr>
             </div>
             <div class="col-md-5">
                 <form id="store" method="post" action="{{route('guardarcontacto')}}">
                     @csrf
                 	<fieldset class="form-group">
-                        <input type="text" class="form-control" name="nombre" placeholder="Nombre" onkeyup="this.value=NumText(this.value)" required>
+                        <input type="text" class="form-control" name="nombre" placeholder="{{ trans('messages.Nombre') }}" onkeyup="this.value=NumText(this.value)" required><!--Nombre-->
                     </fieldset>
                     <fieldset class="form-group">
-                        <input type="email" class="form-control" name="email" placeholder="Introduce email" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required>
+                        <input type="email" class="form-control" name="email" placeholder="{{ trans('messages.IntroEmail') }}" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required><!--Introduce email-->
                     </fieldset>
                     <fieldset class="form-group">
-                        <textarea class="form-control" name="mensaje" placeholder="Mensaje" onkeyup="this.value=NumTextComment(this.value)" required></textarea>
+                        <textarea class="form-control" name="mensaje" placeholder="{{ trans('messages.Mensaje') }}" onkeyup="this.value=NumTextComment(this.value)" required></textarea><!--Mensaje-->
                     </fieldset>
                     <fieldset class="form-group text-xs-right">
-                        <button type="submit" class="bg-faded btn-sm">Enviar</button>
+                        <button type="submit" class="bg-faded btn-sm">{{ trans('messages.Enviar') }}</button><!--Enviar-->
                     </fieldset>
                     @if ($errors ->has('nombre'))
                     <a class="error">{{ $error->first('nombre') }}</a><br>
