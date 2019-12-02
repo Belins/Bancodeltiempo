@@ -19,4 +19,10 @@ Route::get('/registro',function(){
     return view('usuarios/gestion');
 })->name('registro');
 
+Route::get('/infGeneral', function(){
+    return view('info.infgeneral');
+})->name('infgeneral');
+
 Route::post('/comentario','ContactoController@store')->name('guardarcontacto');
+
+Route::post('/registro/guardar', 'RegistroController@store')->name('guardarregistro');

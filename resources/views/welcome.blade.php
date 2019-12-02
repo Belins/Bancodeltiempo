@@ -39,7 +39,7 @@
 		      <a class="nav-link" href="#">{{ trans('messages.Quienes') }}</a><!--Quienes somos-->
 		    </li>
 		    <li class="nav-item">
-		      <a class="nav-link" href="#">{{ trans('messages.Como') }}</a><!--Como funciona-->
+		      <a class="nav-link" href="{{route('infgeneral')}}">{{ trans('messages.Como') }}</a><!--Como funciona-->
 		    </li>
 		    <li class="nav-item">
 		      <a class="nav-link" href="#">{{ trans('messages.Foro') }}</a><!--Foro-->
@@ -62,7 +62,7 @@
 	                        </div>
 	                        <div class="form-group text-center">
 	                            <small><a href="#" data-toggle="modal" data-target="#modalPassword">¿Contraseña olvidada?</a></small><br>
-                              <small><a href="{{route('registro')}}"  data-target="#modalPassword">No tengo cuenta</a></small>
+	                            <small><a href="{{route('registro')}}" data-toggle="modal" data-target="#modalSubscriptionForm" >¿No tienes cuenta? Registrate!</a></small>
 	                        </div>
 	                    </form>
 	                </li>
@@ -85,7 +85,7 @@
       <div class="col-lg-5">
         <h1 class="font-weight-light">{{ trans('messages.Banco') }}</h1><!--Banco del tiempo-->
         <p>{{ trans('messages.Info') }}</p><!--Lo que estamos buscando con esta empresa es una comunidad sana donde la gente que participe en ella se dedique hacer truque de su tiempo a cambio del tiempo de otro usuario SIN necesidad de usar ningun tipo de DINERO.-->
-        <a class="btn btn-primary" href="#">{{ trans('messages.Leyendo') }}</a><!--Seguir leyendo!-->
+        <a class="btn btn-primary" href="{{route('infgeneral')}}">{{ trans('messages.Leyendo') }}</a><!--Seguir leyendo!-->
       </div>
       <!-- /.col-md-4 -->
     </div>
@@ -210,7 +210,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  
 </body>
 
 </html>

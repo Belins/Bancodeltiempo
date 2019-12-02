@@ -79,3 +79,22 @@ footer .form-control {
 #registro{
   text-align: center;
 }
+
+#infoGen{
+  margin-top:2%;
+}
+
+#imgtrueque{
+  width: 35%;
+  height: 35%;
+}
+
+.ejemplo{
+  font-size: 0.8em;
+}
+
+.imgroles{
+  width:65%;
+  height:50%;
+  margin-bottom: 2%;
+}
