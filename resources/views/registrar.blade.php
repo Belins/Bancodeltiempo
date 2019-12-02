@@ -26,7 +26,7 @@
 	<div class="row d-flex align-items-center justify-content-center p-4">
 			<img id="logo" src="{{asset('img/logo.JPG')}}">
 		<div class="p-1">
-			<p class="display-4">Banco del Tiempo</p>
+			<p class="display-4">{{ trans('messages.Banco') }}</p><!--Banco del Tiempo-->
 		</div>
 	</div>
 </header>
@@ -36,45 +36,45 @@
             <div class="well well-sm">
                 <div id="ContenedorRegistro">
                     <form class="form-vertical" action="{{route('guardarregistro')}}" method="post">
-                        <legend class="text-center header">Registro</legend>
+                        <legend class="text-center header">{{ trans('messages.Registro') }}</legend><!--Registro-->
                         <fieldset>
                             <div class="form-group">
                                 <span class="col-md-1 text-center"><i class="fa fa-user bigicon"></i></span>
                                 <div class="col-md-12">
-                                    <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control">
+                                    <input id="fname" name="name" type="text" placeholder="{{ trans('messages.Nombre') }}" class="form-control"><!--Nombre-->
                                 </div>
                             </div>
                             <div class="form-group">
                                 <span class="col-md-1 text-center"><i class="fa fa-user bigicon"></i></span>
                                 <div class="col-md-12">
-                                    <input id="lname" name="lastname" type="text" placeholder="Apellido" class="form-control">
+                                    <input id="lname" name="lastname" type="text" placeholder="{{ trans('messages.Apellido') }}" class="form-control"><!--Apellido-->
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <span class="col-md-1 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
                                 <div class="col-md-12">
-                                    <input id="email" name="email" type="text" placeholder="Email" class="form-control">
+                                    <input id="email" name="email" type="text" placeholder="{{ trans('messages.Email') }}" class="form-control"><!--Email-->
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <span class="col-md-1 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
                                 <div class="col-md-12">
-                                    <input id="passwd" name="password" type="password" placeholder="Contraseña" class="form-control">
+                                    <input id="passwd" name="password" type="password" placeholder="{{ trans('messages.Contraseña') }}" class="form-control"><!--Contraseña-->
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <span class="col-md-1 text-center"><i class="fa fa-phone-square bigicon"></i></span>
                                 <div class="col-md-12">
-                                    <input id="phone" name="phone" type="text" placeholder="Telefono" class="form-control">
+                                    <input id="phone" name="phone" type="text" placeholder="{{ trans('messages.Telefono') }}" class="form-control"><!--Telefono-->
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-md-12 text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                                    <button type="submit" class="btn btn-primary btn-lg">{{ trans('messages.Enviar') }}</button><!--Enviar-->
                                 </div>
                             </div>
                                 @if ($errors ->has('name'))
