@@ -52,7 +52,7 @@
 	               <li class="p-3">
 	                   <form class="form" role="form">
 	                        <div class="form-group">
-	                            <input id="emailInput" placeholder="{{ trans('messages.Email') }}" class="form-control form-control-sm" type="text" required=""><!--Email-->
+	                            <input id="emailInput" placeholder="{{ trans('messages.Email') }}" class="form-control form-control-sm" type="text" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required=""><!--Email-->
 	                        </div>
 	                        <div class="form-group">
 	                            <input id="passwordInput" placeholder="{{ trans('messages.Contraseña') }}" class="form-control form-control-sm" type="text" required=""><!--Contraseña-->
