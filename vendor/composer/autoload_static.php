@@ -415,10 +415,7 @@ class ComposerStaticInita299a68c8b82894d2ce96f3ab7fd0cc5
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\ContactoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ContactoController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-<<<<<<< HEAD
-=======
         'App\\Http\\Controllers\\RegistroController' => __DIR__ . '/../..' . '/app/Http/Controllers/RegistroController.php',
->>>>>>> ventanaregistro
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
