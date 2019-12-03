@@ -79,13 +79,24 @@ class RegistroController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $name=$request->input("name");
+        /*$name=$request->input("name");
         $id=$request->input("id");
         User::where("id",$id)->update(["name"=>$name]);
     $users=User::all()->where("id",$id);
     foreach ($users as $user) {
-        return view("/gestionUsuario");
-    }
+        return redirect("/users/$user->id");
+    }*/
+
+    DB::table('users')->where('id', $id)
+    ->chunkById($id, function ($users) {
+        foreach ($users as $user) {
+            DB::table('users')
+                ->where('id', $user->id)
+                ->update(['name' => 'mas']);
+        }
+    });
+
+
     }
 
     /**
