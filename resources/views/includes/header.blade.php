@@ -23,21 +23,22 @@
             <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-info dropdown-toggle">{{ trans('messages.Login/Registro') }}</button><!--Inicia/Registra-->
             <ul class="dropdown-menu dropdown-menu-right mt-2">
                <li class="p-3">
-                   <form class="form"  role="form">
+                   <form class="form" action="{{route('iniciarsesion')}}" method="post" role="form">
+
                         <div class="form-group">
-                            <input id="emailInput" placeholder="{{ trans('messages.Email') }}" class="form-control form-control-sm" type="text" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required=""><!--Email-->
+                            <input name="email" placeholder="{{ trans('messages.Email') }}" class="form-control form-control-sm" type="text" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required=""><!--Email-->
                         </div>
                         <div class="form-group">
-                            <input id="passwordInput" placeholder="{{ trans('messages.Contraseña') }}" class="form-control form-control-sm" type="text" required=""><!--Contraseña-->
+                            <input name="password" placeholder="{{ trans('messages.Contraseña') }}" class="form-control form-control-sm" type="text" required=""><!--Contraseña-->
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block">{{ trans('messages.Login') }}</button><!--Login-->
                         </div>
+                      </form>
                         <div class="form-group text-center">
                             <small><a href="#" data-toggle="modal" data-target="#modalPassword">{{ trans('messages.Olvido') }}</a></small><br><!--Contraseña olvidada?-->
                             <small><a href="{{route('registro')}}" data-toggle="modal" data-target="#modalSubscriptionForm" >{{ trans('messages.NoCuenta') }}</a></small><!--¿No tienes cuenta? Regístrate!-->
                         </div>
-                    </form>
                 </li>
             </ul>
         </li>

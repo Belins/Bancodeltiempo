@@ -26,3 +26,6 @@ Route::get('/infGeneral', function(){
 Route::post('/comentario','ContactoController@store')->name('guardarcontacto');
 Route::post('/registro/guardar', 'RegistroController@store')->name('guardarregistro');
 
+Route::post('/iniciosesion', 'HomeController@index')->name('iniciarsesion');
+
+

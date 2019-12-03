@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use App\Role;
 use Illuminate\Http\Request;
 use App\Http\Requests\registrorequest;
 class RegistroController extends Controller
@@ -38,10 +39,12 @@ class RegistroController extends Controller
         $regis->name = request('name');
         $regis->lastname = request('lastname');
         $regis->email = request('email');
-        $regis->password = request('password');
+        $regis->password = request(bcrypt('password'));
         $regis->phone = request('phone');
         $regis->save();
-        return redirect('/registro');
+        $regis->roles()->attach(Role::where('name', 'user')->first());
+
+        return redirect('/');
     }
 
     /**
