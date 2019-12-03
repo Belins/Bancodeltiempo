@@ -23,7 +23,8 @@
             <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-info dropdown-toggle">@lang('messages.Login/Registro') </button><!--Inicia/Registra-->
             <ul class="dropdown-menu dropdown-menu-right mt-2">
                <li class="p-3">
-                   <form class="form" role="form">
+                   <form class="form" action="" method="post" role="form">
+
                         <div class="form-group">
                             <input id="emailInput" placeholder="@lang('messages.Email') " class="form-control form-control-sm" type="text" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required=""><!--Email-->
                         </div>
@@ -33,11 +34,11 @@
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block">@lang('messages.Login') </button><!--Login-->
                         </div>
+                      </form>
                         <div class="form-group text-center">
                             <small><a href="#" data-toggle="modal" data-target="#modalPassword">@lang('messages.Olvido') </a></small><br><!--Contraseña olvidada?-->
-                            <small><a href="{{route('registro')}}" data-toggle="modal" data-target="#modalSubscriptionForm" >@lang('messages.NoCuenta') </a></small><!--¿No tienes cuenta? Regístrate!-->
+                            <small><a href="" data-toggle="modal" data-target="#modalSubscriptionForm" >@lang('messages.NoCuenta') </a></small><!--¿No tienes cuenta? Regístrate!-->
                         </div>
-                    </form>
                 </li>
             </ul>
         </li>
