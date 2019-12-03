@@ -9,39 +9,39 @@
                 <div id="registro" class="col-md-12">
                 <form id="store" method="post" action="{{route('guardarregistro')}}">
                     @csrf
-                    <legend class="text-center header">Registro</legend>
+                    <legend class="text-center header">{{ trans('messages.Registro') }}</legend><!--Registro-->
                     @if ($errors ->has('name'))
                     <a class="error">{{ $errors->first('name') }}</a><br>
                     @endif
                     <fieldset class="form-group">
-                        <input type="text" class="form-control" name="name" placeholder="Nombre">
+                        <input type="text" class="form-control" name="name" placeholder="{{ trans('messages.Nombre') }}" onkeyup="this.value=NumText(this.value)" required><!--Nombre-->
                     </fieldset>
                     @if ($errors ->has('lastname'))
                     <a class="error">{{ $errors->first('lastname') }}</a><br>
                     @endif
                     <fieldset class="form-group">
-                        <input type="text" class="form-control" name="lastname" placeholder="Apellido">
+                        <input type="text" class="form-control" name="lastname" placeholder="{{ trans('messages.Apellido') }}" onkeyup="this.value=NumText(this.value)" required><!--Apellido-->
                     </fieldset>
                     @if ($errors ->has('email'))
                     <a class="error">{{ $errors->first('email') }}</a><br>
                     @endif
                     <fieldset class="form-group">
-                        <input type="email" class="form-control" name="email" placeholder="email">
+                        <input type="email" class="form-control" name="email" placeholder="{{ trans('messages.Email') }}" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required><!--Email-->
                     </fieldset>
                     @if ($errors ->has('password'))
                     <a class="error">{{ $errors->first('password') }}</a><br>
                     @endif
                     <fieldset class="form-group">
-                        <input type="password" class="form-control" name="password" placeholder="password">
+                        <input type="password" class="form-control" name="password" placeholder="{{ trans('messages.Contraseña') }}" required><!--Contraseña-->
                     </fieldset>
                     @if ($errors ->has('phone'))
                     <a class="error">{{ $errors->first('phone') }}</a><br>
                     @endif
                     <fieldset class="form-group">
-                        <input type="text" class="form-control" name="phone" placeholder="telefono">
+                        <input type="text" class="form-control" name="phone" placeholder="{{ trans('messages.Telefono') }}" onkeyup="this.value=Num(this.value)" required><!--Telefono-->
                     </fieldset>
                     <fieldset class="form-group text-xs-right">
-                        <button type="submit" id="btnregistro" class="btn btn-primary btn-lg">Enviar</button>
+                        <button type="submit" id="btnregistro" class="btn btn-primary btn-lg">{{ trans('messages.Enviar') }}</button><!--Enviar-->
                     </fieldset>
                 </form>
             </div>
