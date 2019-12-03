@@ -65,12 +65,7 @@ return [
         en este caso lo gastas en contratar un jardinero.',
     'Ejemplo' => 'Ejemplo',
     'Perfil' => 'Ver tu perfil',
-<<<<<<< HEAD
-    'Gestion' => 'Gestión de usuarios',
-    'Datos' => 'Datos',
-=======
     'Gestion' => 'Gestión de usuario',
     'Actividad' => 'Ver tu actividad',
     'Ofertas' => 'Ver ofertas',
->>>>>>> traduccion
 ];
