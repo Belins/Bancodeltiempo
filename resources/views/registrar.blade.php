@@ -1,172 +1,50 @@
-<!DOCTYPE html>
-<html lang="es">
-
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="Banco Del Tiempo">
-
-  <title>Configuración de usuario</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/small-business.css" rel="stylesheet">
-  <link href="css/registro.css" rel="stylesheet">
-  
-  <!-- Stilo para las redes sociales -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href="css/registro.css" rel="stylesheet">
+     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
-<body>
-<header>
-	<div class="row d-flex align-items-center justify-content-center p-4">
-			<img id="logo" src="{{asset('img/logo.JPG')}}">
-		<div class="p-1">
-			<p class="display-4">Banco del Tiempo</p>
-		</div>
-	</div>
-</header>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="well well-sm">
-                <div id="ContenedorRegistro">
-                    <form class="form-vertical" action="{{route('guardarregistro')}}" method="post">
-                        <legend class="text-center header">Registro</legend>
-                        <fieldset>
-                            <div class="form-group">
-                                <span class="col-md-1 text-center"><i class="fa fa-user bigicon"></i></span>
-                                <div class="col-md-12">
-                                    <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <span class="col-md-1 text-center"><i class="fa fa-user bigicon"></i></span>
-                                <div class="col-md-12">
-                                    <input id="lname" name="lastname" type="text" placeholder="Apellido" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <span class="col-md-1 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
-                                <div class="col-md-12">
-                                    <input id="email" name="email" type="text" placeholder="Email" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <span class="col-md-1 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
-                                <div class="col-md-12">
-                                    <input id="passwd" name="password" type="password" placeholder="Contraseña" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <span class="col-md-1 text-center"><i class="fa fa-phone-square bigicon"></i></span>
-                                <div class="col-md-12">
-                                    <input id="phone" name="phone" type="text" placeholder="Telefono" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-12 text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
-                                </div>
-                            </div>
-                                @if ($errors ->has('name'))
-                                <a class="error">{{ $error->first('name') }}</a><br>
-                                @endif
-                                @if ($errors ->has('lname'))
-                                <a class="error">{{ $error->first('lname') }}</a><br>
-                                @endif
-                                @if ($errors ->has('passwd'))
-                                <a class="error">{{ $error->first('passwd') }}</a><br>
-                                @endif
-                                @if ($errors ->has('email'))
-                                <a class="error">{{ $error->first('email') }}</a><br>
-                                @endif
-                                @if ($errors ->has('phone'))
-                                <a class="error">{{ $error->first('phone') }}</a><br>
-                                @endif
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <h5>Banco Del Tiempo</h5>
-                <div class="row">
-                    <div class="col-6">
-                        <ul class="list-unstyled">
-                            <li><a href="">Foro</a></li>
-                            <li><a href="">Beneficios</a></li>
-                            <li><a href="">Partners</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6">
-                        <ul class="list-unstyled">
-                            <li><a href="">Quienes somos</a></li>
-                            <li><a href="">Soporte</a></li>
-                            <li><a href="">Términos</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <ul class="nav">
-                    <li class="nav-item"><a href="" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
-                </ul>
-                <br>
-            </div>
-            <div class="col-md-2">
-                <h5 class="text-md-right">Contacto</h5>
-                <hr>
-            </div>
-            <div class="col-md-5">
-                <form id="store" method="post" action="{{route('guardarcontacto')}}">
+<div class="modal fade" id="modalSubscriptionForm"  role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog bg-danger" role="document">
+            <div class="modal-content bg-dark">
+                <div id="registro" class="col-md-12">
+                <form id="store" method="post" action="{{route('guardarregistro')}}">
                     @csrf
-                	<fieldset class="form-group">
-                        <input type="text" class="form-control" name="nombre" placeholder="Nombre">
-                    </fieldset>
+                    <legend class="text-center header">{{ trans('messages.Registro') }}</legend><!--Registro-->
+                    @if ($errors ->has('name'))
+                    <a class="error">{{ $errors->first('name') }}</a><br>
+                    @endif
                     <fieldset class="form-group">
-                        <input type="email" class="form-control" name="email" placeholder="Introduce email">
+                        <input type="text" class="form-control" name="name" placeholder="{{ trans('messages.nombre') }}" onkeyup="this.value=NumText(this.value)" required><!--Nombre-->
                     </fieldset>
+                    @if ($errors ->has('lastname'))
+                    <a class="error">{{ $errors->first('lastname') }}</a><br>
+                    @endif
                     <fieldset class="form-group">
-                        <textarea class="form-control" name="mensaje" placeholder="Mensaje"></textarea>
+                        <input type="text" class="form-control" name="lastname" placeholder="{{ trans('messages.Apellido') }}" onkeyup="this.value=NumText(this.value)" required><!--Apellido-->
+                    </fieldset>
+                    @if ($errors ->has('email'))
+                    <a class="error">{{ $errors->first('email') }}</a><br>
+                    @endif
+                    <fieldset class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="{{ trans('messages.Email') }}" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required><!--Email-->
+                    </fieldset>
+                    @if ($errors ->has('password'))
+                    <a class="error">{{ $errors->first('password') }}</a><br>
+                    @endif
+                    <fieldset class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="{{ trans('messages.Contraseña') }}" required><!--Contraseña-->
+                    </fieldset>
+                    @if ($errors ->has('phone'))
+                    <a class="error">{{ $errors->first('phone') }}</a><br>
+                    @endif
+                    <fieldset class="form-group">
+                        <input type="text" class="form-control" name="phone" placeholder="{{ trans('messages.Telefono') }}" onkeyup="this.value=Num(this.value)" required><!--Telefono-->
                     </fieldset>
                     <fieldset class="form-group text-xs-right">
-                        <button type="submit" class="bg-faded btn-sm">Enviar</button>
+                        <button type="submit" id="btnregistro" class="btn btn-primary btn-lg">{{ trans('messages.Enviar') }}</button><!--Enviar-->
                     </fieldset>
-                    @if ($errors ->has('nombre'))
-                    <a class="error">{{ $error->first('nombre') }}</a><br>
-                    @endif
-                    @if ($errors ->has('nombre'))
-                    <a class="error">{{ $error->first('email') }}</a><br>
-                    @endif
-                    @if ($errors ->has('nombre'))
-                    <a class="error">{{ $error->first('mensaje') }}</a><br>
-                    @endif
                 </form>
             </div>
+            </div>
         </div>
-    </div>
-</footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
-</html>
+</div>

@@ -1,8 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\Http\Requests\ComentarioRequest;
 use Illuminate\Http\Request;
+use App\mensaje;
 
 class ContactoController extends Controller
 {
@@ -34,10 +34,11 @@ class ContactoController extends Controller
      */
     public function store(ComentarioRequest $request)
     {
-        $mensaje = new Mensajes;
-        $mensaje->nombre = $request->input('nombre');
-        $mensaje->email = $request->input('email');
-        $mensaje->comentario = $request->input('mensaje');
+
+        $mensaje = new mensaje();
+        $mensaje->nombre = request('nombre');
+        $mensaje->email = request('email');
+        $mensaje->Comentario = request('mensaje');
         $mensaje->save();
         return view('welcome');
     }
