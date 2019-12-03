@@ -28,7 +28,13 @@ Route::get('/gestionUsuario', function(){
 })->name('gestionUsuario');
 
 Route::post('/comentario','ContactoController@store')->name('guardarcontacto');
-Route::post('/registro/guardar', 'RegistroController@store')->name('guardarregistro');
 
-Route::get("/gestionUsuario/{id}","RegistroController@edit");
-Route::post("/gestionUsuario","RegistroController@update")->name("update");
+/*Route::post('/registro/guardar', 'Auth\RegisterController@create')->name('guardarregistro');
+
+Route::post('/iniciosesion', 'HomeController@index')->name('iniciarsesion');*/
+
+
+
+Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -17,7 +17,7 @@
 <body>
 
   <header>
-  @include('/includes/header')
+  @include('/includes/headerUser')
 
 	</header>
 
