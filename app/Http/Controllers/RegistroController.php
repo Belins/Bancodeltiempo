@@ -63,7 +63,11 @@ class RegistroController extends Controller
      */
     public function edit($id)
     {
-        //
+        $users = User::all()->where("id","=",$id);
+        foreach ($users as $user) {
+            return view("gestionUsuario",["id"=>$id,"name"=>$user->name,
+                "lastname"=>$user->lastname,"email"=>$user->email,"phone"=>$user->phone,"password"=>$user->password]);
+        }
     }
 
     /**
@@ -75,7 +79,13 @@ class RegistroController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $name=$request->input("name");
+        $id=$request->input("id");
+        User::where("id",$id)->update(["name"=>$name]);
+    $users=User::all()->where("id",$id);
+    foreach ($users as $user) {
+        return view("/gestionUsuario");
+    }
     }
 
     /**

@@ -66,4 +66,5 @@ return [
     'Ejemplo' => 'Example',
     'Perfil' => 'View your profile',
     'Gestion' => 'User administration',
+    'Datos' => 'Data',
 ];
