@@ -7,14 +7,14 @@
         <div class="modal-dialog bg-danger" role="document">
             <div class="modal-content bg-dark">
                 <div id="registro" class="col-md-12">
-                <form id="store" method="post" action="{{route('guardarregistro')}}">
+                <form id="store" method="post" action="">
                     @csrf
                     <legend class="text-center header">{{ trans('messages.Registro') }}</legend><!--Registro-->
                     @if ($errors ->has('name'))
                     <a class="error">{{ $errors->first('name') }}</a><br>
                     @endif
                     <fieldset class="form-group">
-                        <input type="text" class="form-control" name="name" placeholder="{{ trans('messages.nombre') }}" onkeyup="this.value=NumText(this.value)" required><!--Nombre-->
+                        <input type="text" class="form-control" name="name" placeholder="{{ trans('messages.Nombre') }}" onkeyup="this.value=NumText(this.value)" required><!--Nombre-->
                     </fieldset>
                     @if ($errors ->has('lastname'))
                     <a class="error">{{ $errors->first('lastname') }}</a><br>
