@@ -23,7 +23,7 @@
             <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-info dropdown-toggle">{{ trans('messages.Login/Registro') }}</button><!--Inicia/Registra-->
             <ul class="dropdown-menu dropdown-menu-right mt-2">
                <li class="p-3">
-                   <form class="form" action="{{route('iniciarsesion')}}" method="post" role="form">
+                   <form class="form" action="" method="post" role="form">
 
                         <div class="form-group">
                             <input name="email" placeholder="{{ trans('messages.Email') }}" class="form-control form-control-sm" type="text" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required=""><!--Email-->
@@ -37,7 +37,7 @@
                       </form>
                         <div class="form-group text-center">
                             <small><a href="#" data-toggle="modal" data-target="#modalPassword">{{ trans('messages.Olvido') }}</a></small><br><!--Contraseña olvidada?-->
-                            <small><a href="{{route('registro')}}" data-toggle="modal" data-target="#modalSubscriptionForm" >{{ trans('messages.NoCuenta') }}</a></small><!--¿No tienes cuenta? Regístrate!-->
+                            <small><a href="" data-toggle="modal" data-target="#modalSubscriptionForm" >{{ trans('messages.NoCuenta') }}</a></small><!--¿No tienes cuenta? Regístrate!-->
                         </div>
                 </li>
             </ul>

@@ -7,7 +7,7 @@
         <div class="modal-dialog bg-danger" role="document">
             <div class="modal-content bg-dark">
                 <div id="registro" class="col-md-12">
-                <form id="store" method="post" action="{{route('guardarregistro')}}">
+                <form id="store" method="post" action="">
                     @csrf
                     <legend class="text-center header">{{ trans('messages.Registro') }}</legend><!--Registro-->
                     @if ($errors ->has('name'))

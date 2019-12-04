@@ -97,6 +97,7 @@ class ComposerStaticInita299a68c8b82894d2ce96f3ab7fd0cc5
         'L' => 
         array (
             'League\\Flysystem\\' => 17,
+            'Laravel\\Ui\\' => 11,
             'Laravel\\Tinker\\' => 15,
         ),
         'J' => 
@@ -298,6 +299,10 @@ class ComposerStaticInita299a68c8b82894d2ce96f3ab7fd0cc5
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
         ),
+        'Laravel\\Ui\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel/ui/src',
+        ),
         'Laravel\\Tinker\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
@@ -416,6 +421,7 @@ class ComposerStaticInita299a68c8b82894d2ce96f3ab7fd0cc5
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\ContactoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ContactoController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\RegistroController' => __DIR__ . '/../..' . '/app/Http/Controllers/RegistroController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -2091,6 +2097,13 @@ class ComposerStaticInita299a68c8b82894d2ce96f3ab7fd0cc5
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
         'Laravel\\Tinker\\TinkerServiceProvider' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerServiceProvider.php',
+        'Laravel\\Ui\\AuthCommand' => __DIR__ . '/..' . '/laravel/ui/src/AuthCommand.php',
+        'Laravel\\Ui\\Presets\\Bootstrap' => __DIR__ . '/..' . '/laravel/ui/src/Presets/Bootstrap.php',
+        'Laravel\\Ui\\Presets\\Preset' => __DIR__ . '/..' . '/laravel/ui/src/Presets/Preset.php',
+        'Laravel\\Ui\\Presets\\React' => __DIR__ . '/..' . '/laravel/ui/src/Presets/React.php',
+        'Laravel\\Ui\\Presets\\Vue' => __DIR__ . '/..' . '/laravel/ui/src/Presets/Vue.php',
+        'Laravel\\Ui\\UiCommand' => __DIR__ . '/..' . '/laravel/ui/src/UiCommand.php',
+        'Laravel\\Ui\\UiServiceProvider' => __DIR__ . '/..' . '/laravel/ui/src/UiServiceProvider.php',
         'League\\Flysystem\\AdapterInterface' => __DIR__ . '/..' . '/league/flysystem/src/AdapterInterface.php',
         'League\\Flysystem\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractAdapter.php',
         'League\\Flysystem\\Adapter\\AbstractFtpAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractFtpAdapter.php',
@@ -3334,7 +3347,6 @@ class ComposerStaticInita299a68c8b82894d2ce96f3ab7fd0cc5
         'Ramsey\\Uuid\\UuidFactory' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactory.php',
         'Ramsey\\Uuid\\UuidFactoryInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactoryInterface.php',
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
-        'RoleTableSeeder' => __DIR__ . '/../..' . '/database/seeds/RoleTableSeeder.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
         'SebastianBergmann\\CodeCoverage\\Driver\\Driver' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Driver/Driver.php',

@@ -16,6 +16,21 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 50);
+            $table->string('email', 50);
+            $table->string('phone')->nullable();
+            $table->string('localidad', 50)->nullable();
+            $table->boolean('admin');
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
+            $table->timestamps();
+        });
+    }
+
+            /*
+        Schema::create('users', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name', 50);
             $table->string('lastname', 50);
             $table->string('email', 100);
             $table->integer('phone');
@@ -23,9 +38,8 @@ class CreateUsersTable extends Migration
             $table->boolean('verificated')->default(0);
             $table->string('codigo',20)->nullable();
             $table->timestamps();
-        });
-    }
-
+            */
+        
     /**
      * Reverse the migrations.
      *
