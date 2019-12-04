@@ -5,46 +5,69 @@
 <div class="modal fade" id="modalSubscriptionForm"  role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
         <div class="modal-dialog bg-danger" role="document">
-            <div class="modal-content bg-dark">
-                <div id="registro" class="col-md-12">
-                <form id="store" method="post" action="">
-                    @csrf
-                    <legend class="text-center header">{{ trans('messages.Registro') }}</legend><!--Registro-->
-                    @if ($errors ->has('name'))
-                    <a class="error">{{ $errors->first('name') }}</a><br>
-                    @endif
-                    <fieldset class="form-group">
-                        <input type="text" class="form-control" name="name" placeholder="{{ trans('messages.Nombre') }}" onkeyup="this.value=NumText(this.value)" required><!--Nombre-->
-                    </fieldset>
-                    @if ($errors ->has('lastname'))
-                    <a class="error">{{ $errors->first('lastname') }}</a><br>
-                    @endif
-                    <fieldset class="form-group">
-                        <input type="text" class="form-control" name="lastname" placeholder="{{ trans('messages.Apellido') }}" onkeyup="this.value=NumText(this.value)" required><!--Apellido-->
-                    </fieldset>
-                    @if ($errors ->has('email'))
-                    <a class="error">{{ $errors->first('email') }}</a><br>
-                    @endif
-                    <fieldset class="form-group">
-                        <input type="email" class="form-control" name="email" placeholder="{{ trans('messages.Email') }}" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required><!--Email-->
-                    </fieldset>
-                    @if ($errors ->has('password'))
-                    <a class="error">{{ $errors->first('password') }}</a><br>
-                    @endif
-                    <fieldset class="form-group">
-                        <input type="password" class="form-control" name="password" placeholder="{{ trans('messages.Contraseña') }}" required><!--Contraseña-->
-                    </fieldset>
-                    @if ($errors ->has('phone'))
-                    <a class="error">{{ $errors->first('phone') }}</a><br>
-                    @endif
-                    <fieldset class="form-group">
-                        <input type="text" class="form-control" name="phone" placeholder="{{ trans('messages.Telefono') }}" onkeyup="this.value=Num(this.value)" required><!--Telefono-->
-                    </fieldset>
-                    <fieldset class="form-group text-xs-right">
-                        <button type="submit" id="btnregistro" class="btn btn-primary btn-lg">{{ trans('messages.Enviar') }}</button><!--Enviar-->
-                    </fieldset>
-                </form>
-            </div>
+            <div class="modal-content bg-dark text-white">
+                
+                <form method="POST" action="{{ route('register') }}">
+                        @csrf
+                        <h4 class="text-center p-3">{{ trans('messages.Registro') }}</h4>
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Nombre') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Email') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Contraseña') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0 text-center">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary mb-3">
+                                    {{ trans('messages.Enviar') }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
             </div>
         </div>
 </div>
