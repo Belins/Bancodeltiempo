@@ -68,4 +68,5 @@ return [
     'Gestion' => 'Gestión de usuario',
     'Actividad' => 'Ver tu actividad',
     'Ofertas' => 'Ver ofertas',
+    'Idiomas' => 'Idiomas'
 ];

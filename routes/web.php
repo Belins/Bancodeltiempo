@@ -34,3 +34,8 @@ Route::post('/iniciosesion', 'HomeController@index')->name('iniciarsesion');*/
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('locale/{locale}', function($locale){
+	Session::put('locale',$locale);
+	return redirect()->back();
+})->name('locale');
