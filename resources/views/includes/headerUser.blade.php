@@ -1,4 +1,4 @@
-   <!-- Scripts -->
+ <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <div class="row d-flex align-items-center justify-content-center">
@@ -21,7 +21,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="">{{ trans('messages.Perfil') }}</a><!--Ver tu perfil-->
                 </li>
-                <li class="nav-item float-right">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        @lang('messages.Idiomas')
+                    </a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item bg-dark text-light" href="{{route('locale', ['locale' => 'es'])}}">Es</a>
+                        <a class="dropdown-item bg-dark text-light" href="{{route('locale', ['locale' => 'en'])}}">En</a>
+                    </div>
+                </li>
+                        <li class="nav-item float-right">
                     <a class="nav-link" href="{{route('admin')}}">Gestionar web</a><!--Gestionar Web-->
                 </li>
             </ul>

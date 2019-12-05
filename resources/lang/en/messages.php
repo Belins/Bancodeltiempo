@@ -66,4 +66,7 @@ return [
     'Ejemplo' => 'Example',
     'Perfil' => 'View your profile',
     'Gestion' => 'User administration',
+    'Actividad' => 'View your activity',
+    'Ofertas' => 'View offers',
+    'Idiomas' => 'Languages',
 ];
