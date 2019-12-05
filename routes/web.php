@@ -25,6 +25,10 @@ Route::get('/infGeneral', function(){
 
 Route::post('/comentario','ContactoController@store')->name('guardarcontacto');
 
+Route::get('/gestionUsuario','GestionUsuarioController@SacarUser')->name('GestionUsuario');
+
+Route::post('/modificarUsuario','GestionUsuarioController@ModUser')->name('ModificarUsuario');
+
 /*Route::post('/registro/guardar', 'Auth\RegisterController@create')->name('guardarregistro');
 
 Route::post('/iniciosesion', 'HomeController@index')->name('iniciarsesion');*/

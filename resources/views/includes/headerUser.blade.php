@@ -1,3 +1,4 @@
+
  <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -7,7 +8,7 @@
     </div>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <!-- Links -->
-            <a class="navbar-brand" href="{{route('welcome')}}">{{ trans('messages.Inicio') }}</a><!--Inicio-->
+            <a class="navbar-brand" href="{{route('home')}}">{{ trans('messages.Inicio') }}</a><!--Inicio-->
             <ul class="navbar-nav">
                 <li class="nav-item">
                   <a class="nav-link" href="#">{{ trans('messages.Quienes') }}</a><!--Quienes somos-->
@@ -19,7 +20,7 @@
                   <a class="nav-link" href="#">{{ trans('messages.Foro') }}</a><!--Foro-->
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">{{ trans('messages.Perfil') }}</a><!--Ver tu perfil-->
+                    <a class="nav-link" href="{{route('GestionUsuario',['id'=>Auth::user()->id])}}">{{ trans('messages.Perfil') }}</a><!--Ver tu perfil-->
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

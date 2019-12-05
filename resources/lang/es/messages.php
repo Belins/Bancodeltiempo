@@ -65,8 +65,11 @@ return [
         en este caso lo gastas en contratar un jardinero.',
     'Ejemplo' => 'Ejemplo',
     'Perfil' => 'Ver tu perfil',
-    'Gestion' => 'Gestión de usuario',
     'Actividad' => 'Ver tu actividad',
     'Ofertas' => 'Ver ofertas',
-    'Idiomas' => 'Idiomas'
+    'Idiomas' => 'Idiomas',
+    'Gestion' => 'Gestión de usuarios',
+    'IntroPhone' => 'Enter your tlf number',
+    'Telefono' => 'Telefono',
+    'Localidad' => 'Localidad',
 ];
