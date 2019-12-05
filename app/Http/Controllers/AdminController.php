@@ -3,18 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
-    /**
+        /**
      * Create a new controller instance.
      *
      * @return void
      */
     public function __construct()
     {
-        $this->middleware(['auth', 'verified']);
+       $this->middleware(['auth', 'verified']);
     }
 
     /**
@@ -24,7 +23,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        
-            return view('home'); 
+        if(auth()->user()->admin == 1){
+            return view('homeadmin');
+        }
+        else{
+        	return view('home');
+        }
     }
 }
