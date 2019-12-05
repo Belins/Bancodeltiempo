@@ -4,7 +4,7 @@
 </div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
       <!-- Links -->
-      <a class="navbar-brand" href="{{route('welcome')}}">{{ trans('messages.Inicio') }}</a><!--Inicio-->
+      <a class="navbar-brand" href="{{route('home')}}">{{ trans('messages.Inicio') }}</a><!--Inicio-->
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="#">{{ trans('messages.Quienes') }}</a><!--Quienes somos-->
@@ -16,7 +16,7 @@
           <a class="nav-link" href="#">{{ trans('messages.Foro') }}</a><!--Foro-->
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">{{ trans('messages.Perfil') }}</a><!--Ver tu perfil-->
+            <a class="nav-link" href="{{route('GestionUsuario',['id'=>Auth::user()->id])}}">{{ trans('messages.Perfil') }}</a><!--Ver tu perfil-->
         </li>
       </ul>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">

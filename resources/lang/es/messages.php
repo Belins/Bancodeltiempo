@@ -66,4 +66,7 @@ return [
     'Ejemplo' => 'Ejemplo',
     'Perfil' => 'Ver tu perfil',
     'Gestion' => 'Gestión de usuarios',
+    'IntroPhone' => 'Enter your tlf number',
+    'Telefono' => 'Telefono',
+    'Localidad' => 'Localidad',
 ];
