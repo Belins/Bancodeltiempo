@@ -19,7 +19,7 @@
     </header>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container mt-5">
         <div id="infoGen">
             <div class="row">
                 <div class="col-12">
@@ -93,6 +93,7 @@
             </div>
         </div>
     </div>
+    <br><br>
     <!-- /.container -->
 
     <!-- Footer -->
