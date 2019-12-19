@@ -10,13 +10,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                
                 <form method="POST" action="{{route('editarUsuario')}}">
                         @csrf
                         <h4 class="text-center p-3">{{ trans('messages.Gestion') }}</h4>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Nombre') }}</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{$usuario->name}}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{$DatosUsuario->name}}" required autocomplete="name" autofocus>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
