@@ -105,13 +105,11 @@
   <!-- /.container -->
 
   <!-- Footer -->
-  <footer class="footer">
-    @include('/includes/footer')
-  </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    @include('/includes/footer')
+
+
+  
 
 </body>
 @include('registrar').

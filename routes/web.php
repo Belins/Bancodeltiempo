@@ -46,3 +46,12 @@ Route::get('locale/{locale}', function($locale){
 	return redirect()->back();
 })->name('locale');
 
+///////ZONA ADMINISTRADOR////////
+
+Route::get('/usuarios','GestionUsuarioController@index')->name('mostrarUsuarios'); //Mostrar usuarios editar y eliminar
+
+Route::get('/mostrarUsuario','GestionUsuarioController@show')->name('mostrarUsuario');//Datos de usuario
+
+Route::get('/editarUsuario','GestionUsuarioController@update')->name('editarUsuario');//Editar usuario
+
+Route::get('/eliminarUsuario','GestionUsuarioController@show')->name('eliminarUsuario');//Eliminar usuario

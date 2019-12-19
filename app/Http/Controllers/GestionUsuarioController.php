@@ -27,4 +27,19 @@ class GestionUsuarioController extends Controller
         
         return view('GestionUsuario',['id'=>$id]);
     }
+
+    //Funcion para mostrar todos los usuarios existentes
+    public function index(){
+        
+        $Usuarios = User::all();
+        
+        return view('admin.gestionUsuarios',['usuarios'=>$Usuarios]);
+    }
+
+    //Mostrar datos del usuario para el admin
+    public function show(request $id){
+
+        $DatosUsuario = User::where('id',$id);
+        return view('admin.FormDatosUser',['DatosUsuario'=>$DatosUsuario]);
+    }
 }

@@ -22,6 +22,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('GestionUsuario',['id'=>Auth::user()->id])}}">{{ trans('messages.Perfil') }}</a><!--Ver tu perfil-->
                 </li>
+                <li class="nav-item float-right">
+                    <a class="nav-link" href="{{route('admin')}}">Gestionar web</a><!--Gestionar Web-->
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         @lang('messages.Idiomas')
@@ -31,11 +36,6 @@
                         <a class="dropdown-item bg-dark text-light" href="{{route('locale', ['locale' => 'en'])}}">En</a>
                     </div>
                 </li>
-                        <li class="nav-item float-right">
-                    <a class="nav-link" href="{{route('admin')}}">Gestionar web</a><!--Gestionar Web-->
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }} <span class="caret"></span>
