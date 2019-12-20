@@ -1,12 +1,10 @@
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}" defer></script>
 
-<div class="row d-flex align-items-center justify-content-center p-4">
-    <img id="logo" src="{{asset('img/logo.JPG')}}">
-    <div class="p-1">
+<div class="row d-flex align-items-center justify-content-center p-1">
+    <img id="logo" src="{{asset('img/logo.JPG')}}" style="height: 60px; width: 120px; ">
         <p class="display-4">@lang('messages.Banco') </p>
         <!--Banco del Tiempo -->
-    </div>
 </div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <!-- Links -->

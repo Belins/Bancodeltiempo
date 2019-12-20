@@ -1,7 +1,7 @@
-<div class="row d-flex align-items-center justify-content-center p-4">
-    <img id="logo" src="{{asset('img/logo.JPG')}}">
+<div class="row d-flex align-items-center justify-content-center p-1">
+    <img id="logo" src="{{asset('img/logo.JPG')}}" style="height: 80px; width: 150px; ">
     <div class="p-1">
-        <p class="display-4">@lang('messages.Banco') </p>
+        <p class="display-4" style="font-family: 'Titulo'">@lang('messages.Banco') </p>
         <!--Banco del Tiempo -->
     </div>
 </div>

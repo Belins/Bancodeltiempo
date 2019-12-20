@@ -5,7 +5,8 @@
  */
 body{
   margin:0;
-
+  background-image: url("../img/fondo.jpg");
+  background-size: cover;
 }
 .infoForm{
   color:white;
@@ -97,4 +98,9 @@ footer .form-control {
   width:65%;
   height:50%;
   margin-bottom: 2%;
+}
+
+@font-face {
+  font-family: "Titulo";
+  src: url(../Fonts/FFF_Tusj.ttf);
 }
