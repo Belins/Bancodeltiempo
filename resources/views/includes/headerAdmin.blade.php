@@ -21,6 +21,10 @@
             <a class="nav-link" href="{{route('mostrarUsuarios')}}">@lang('messages.Gestion') </a>
             <!--Gestión de usuarios-->
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('EmailContactos')}}">@lang('messages.ResponderEmails') </a>
+            <!--Gestión de usuarios-->
+        </li>
     </ul>
     <ul class="navbar-nav ml-auto">
 

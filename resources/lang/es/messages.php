@@ -72,4 +72,5 @@ return [
     'IntroPhone' => 'Enter your tlf number',
     'Telefono' => 'Telefono',
     'Localidad' => 'Localidad',
+    'ResponderEmails' => 'Responder Emails',
 ];

@@ -71,4 +71,5 @@ return [
     'Actividad' => 'View your activity',
     'Ofertas' => 'View offers',
     'Idiomas' => 'Languages',
+    'ResponderEmails' => 'Reply Emails',
 ];

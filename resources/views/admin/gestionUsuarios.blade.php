@@ -2,7 +2,7 @@
 @include('/includes/headerAdmin')
 
 <h1 style="text-align:center;">Gestion de usuarios</h1>
-<div id="datos">
+<div id="container">
     <table class="table table-striped table-dark">
         <thead>
             <tr>
@@ -28,5 +28,3 @@
         </tbody>
     </table>
 </div>
-
-@include('/includes/footer')

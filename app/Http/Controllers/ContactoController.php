@@ -13,7 +13,8 @@ class ContactoController extends Controller
      */
     public function index()
     {
-        //
+        $mensajes = mensaje::all();
+        return view('admin.ListaMensajes',['mensajes'=>$mensajes]);
     }
 
     /**
