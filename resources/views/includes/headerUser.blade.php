@@ -19,12 +19,6 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#">{{ trans('messages.Foro') }}</a><!--Foro-->
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('GestionUsuario',['id'=>Auth::user()->id])}}">{{ trans('messages.Perfil') }}</a><!--Ver tu perfil-->
-                </li>
-                <li class="nav-item float-right">
-                    <a class="nav-link" href="{{route('admin')}}">Gestionar web</a><!--Gestionar Web-->
-                </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
@@ -51,6 +45,7 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
+                        <a class="dropdown-item" href="{{route('GestionUsuario',['id'=>Auth::user()->id])}}">Perfil</a><!--Ver tu perfil-->
                     </div>
                 </li>
             </ul>

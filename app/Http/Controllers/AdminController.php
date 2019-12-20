@@ -23,11 +23,6 @@ class AdminController extends Controller
      */
     public function index()
     {
-        if(auth()->user()->admin == 1){
-            return view('homeadmin');
-        }
-        else{
-        	return view('home');
-        }
+        return view('homeadmin');
     }
 }
