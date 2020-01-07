@@ -9,7 +9,7 @@ class GestionUsuarioController extends Controller
 {
     //Funcion para mostrar formulario con los datos del usuario//
     public function SacarUser(request $id){
-        $DatosUsuario = User::find($id);
+        $DatosUsuario = User::find('id',$id);
         return view('GestionUsuario',['DatosUsuario'=>$DatosUsuario]);
     }
 
