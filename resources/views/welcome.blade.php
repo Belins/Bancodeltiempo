@@ -42,14 +42,6 @@
     </div>
     <!-- /.row -->
 
-    <!-- Call to Action Well -->
-    <div class="card text-white bg-secondary my-5 py-4 text-center">
-      <div class="card-body">
-        <p id="importante" class="text-white m-0">@lang('messages.Comunidad') </p>
-        <!--En nuestra comunidad el usuario tendra tres servicios para interaccionar.-->
-      </div>
-    </div>
-
     <!-- Content Row -->
     <div class="row">
       <div class="col-md-4 mb-5">
