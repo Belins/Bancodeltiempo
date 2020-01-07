@@ -36,8 +36,8 @@
         <li class="dropdown order-1">
             <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-info dropdown-toggle">@lang('messages.Login/Registro')</button>
             <!--Inicia/Registra-->
-            <ul class="dropdown-menu dropdown-menu-right mt-2 w-150">
-                <li class="p-3">
+            <ul class="dropdown-menu dropdown-menu-right mt-2 w-100">
+                <li class="p-2 bg-dark w-100">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -64,7 +64,7 @@
                             <!--Login-->
                             @if (Route::has('password.request'))
                             <a class="btn btn-link" href="{{ route('password.request') }}">
-                                {{ __('Forgot Your Password?') }}
+                                {{ __('¿Contraseña olvidada?') }}
                             </a>
                             @endif
                         </div>
