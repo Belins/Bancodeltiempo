@@ -42,6 +42,7 @@ class ModelMakeCommand extends GeneratorCommand
 
         if ($this->option('all')) {
             $this->input->setOption('factory', true);
+            $this->input->setOption('seed', true);
             $this->input->setOption('migration', true);
             $this->input->setOption('controller', true);
             $this->input->setOption('resource', true);
@@ -151,7 +152,7 @@ class ModelMakeCommand extends GeneratorCommand
     protected function getOptions()
     {
         return [
-            ['all', 'a', InputOption::VALUE_NONE, 'Generate a migration, factory, and resource controller for the model'],
+            ['all', 'a', InputOption::VALUE_NONE, 'Generate a migration, seeder, factory, and resource controller for the model'],
             ['controller', 'c', InputOption::VALUE_NONE, 'Create a new controller for the model'],
             ['factory', 'f', InputOption::VALUE_NONE, 'Create a new factory for the model'],
             ['force', null, InputOption::VALUE_NONE, 'Create the class even if the model already exists'],
