@@ -16,6 +16,7 @@
   <a href="#"><i class="fa fa-linkedin"></i></a>
   <p><button>Contacto</button></p>
 </div>
+
 @include('/includes/footer')
 </body>
 </html>

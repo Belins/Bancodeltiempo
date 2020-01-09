@@ -17,7 +17,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'admin',
+        'name', 'email', 'password', 'admin', 'role'
     ];
 
     /**
@@ -39,11 +39,7 @@ class User extends Authenticatable implements MustVerifyEmail
     ];
 
     public function isAdmin(){
-        return ($this->role == "admin");
-    }
-
-    public function isUser(){
-        return ($this->role == "user");
+        return $this->admin;
     }
 
 }

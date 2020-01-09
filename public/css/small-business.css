@@ -107,3 +107,11 @@ footer .form-control {
   font-family: "Titulo";
   src: url(../Fonts/FFF_Tusj.ttf);
 }
+
+#txt1{
+  background-color: hsla(35, 70%, 70%, 0.3);
+}
+
+#trj{
+  background-color: hsla(35, 70%, 70%, 0.6);
+}
