@@ -38,6 +38,9 @@ Route::post('/iniciosesion', 'HomeController@index')->name('iniciarsesion');*/
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('admin');
+Route::get('/solicitud/{id}', 'OfertaController@show')->name('oferta.show')->middleware('admin');
+
+
 Route::get('/admin', 'AdminController@index')->name('admin');
 
 Route::get('locale/{locale}', function($locale){

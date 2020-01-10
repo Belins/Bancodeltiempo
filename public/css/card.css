@@ -4,10 +4,17 @@
   text-align: center;
   margin: 15px;
 }
+#tarjeta{
+  background-color: hsla(35, 70%, 70%, 0.6);
+}
 
 .title {
   color: #47474a;
   font-size: 15px;
+}
+
+#contenedor{
+  margin-top: 3%;
 }
 
 button {
@@ -23,7 +30,7 @@ button {
 
 a {
   text-decoration: none;
-  font-size: 15px;
+  font-size: 17px;
   color: black;
 }
 

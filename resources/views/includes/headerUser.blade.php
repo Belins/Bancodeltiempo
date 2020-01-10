@@ -11,15 +11,13 @@
             <a class="navbar-brand" href="{{route('home')}}">{{ trans('messages.Inicio') }}</a><!--Inicio-->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">{{ trans('messages.Quienes') }}</a><!--Quienes somos-->
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{route('infgeneral')}}">{{ trans('messages.Como') }}</a><!--Como funciona-->
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="#">{{ trans('messages.Foro') }}</a><!--Foro-->
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">{{ trans('messages.AñadirOferta') }}</a><!--Foro-->
+                </li>
             </ul>
+
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
