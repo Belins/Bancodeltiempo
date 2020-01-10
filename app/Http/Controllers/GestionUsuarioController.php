@@ -28,18 +28,22 @@ class GestionUsuarioController extends Controller
         return view('GestionUsuario',['id'=>$id]);
     }
 
-    //Funcion para mostrar todos los usuarios existentes
-    public function index(){
-        
-        $Usuarios = User::all();
-        
+    //Funcion para mostrar todos los usuarios existentes en el panel de admin
+    public function index(){  
+        $Usuarios = User::all(); 
         return view('admin.gestionUsuarios',['usuarios'=>$Usuarios]);
     }
 
     //Mostrar datos del usuario para el admin
-    public function show(request $id){
-
+    public function show($id){
         $DatosUsuario = User::where('id',$id);
         return view('admin.FormDatosUser',['DatosUsuario'=>$DatosUsuario]);
+    }
+
+    //Eliminar usuario desde panel de admin
+    public function DeleteUser(request $id){
+        $user = User::where('id',$id);
+        $user->delete();
+        return redirect()->route('mostrarUsuarios');
     }
 }

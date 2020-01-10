@@ -1,5 +1,5 @@
 <div class="row d-flex align-items-center justify-content-center p-1">
-    <img id="logo" src="{{asset('img/logo.JPG')}}" style="height: 80px; width: 150px; ">
+    <img id="logo" src="{{asset('img/logo.png')}}" style="height: 80px; width: 150px; ">
     <div class="p-1">
         <p class="display-4" style="font-family: 'Titulo'">@lang('messages.Banco') </p>
         <!--Banco del Tiempo -->
