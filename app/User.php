@@ -11,6 +11,10 @@ class User extends Authenticatable implements MustVerifyEmail
 
        use Notifiable;
 
+    public function ofertas(){
+        return $this->hasMany('App\Oferta', 'user_id');
+    }
+
     /**
      * The attributes that are mass assignable.
      *

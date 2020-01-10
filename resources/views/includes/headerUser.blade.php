@@ -4,9 +4,7 @@
 
     <div class="row d-flex align-items-center justify-content-center">
         <img id="logo" src="{{asset('img/logo.JPG')}}" style="height: 70px; width: 140px; ">
-        <div class="p-1">
-            <p class="display-4" style="font-family: 'Titulo'; box-shadow: 5px 4px 8px 0px; background-color: hsla(35, 70%, 70%, 0.3); border-radius: 20px;">@lang('messages.Banco') </p> <!--Banco del Tiempo -->
-        </div>
+        <p class="display-4" style="font-family: 'Titulo'; box-shadow: 5px 4px 8px 0px; background-color: hsla(35, 70%, 70%, 0.3); border-radius: 20px;">@lang('messages.Banco') </p> <!--Banco del Tiempo -->
     </div>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <!-- Links -->

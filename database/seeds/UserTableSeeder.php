@@ -19,6 +19,8 @@ class UserTableSeeder extends Seeder
         $user->name = 'david';
         $user->email = 'dbelinchonal18dw@ikzubirimanteo.com';
         $user->password = bcrypt('dbelinchonal18dw');
+        $user->especialidad = 'Mecanico';
+        $user->puntuacion = 5;
         $user->admin = 1;
         $user->role = 'admin';
         $user->save();
@@ -27,6 +29,8 @@ class UserTableSeeder extends Seeder
         $user->name = 'iñigo';
         $user->email = 'iperezes18dw@ikzubirimanteo.com';
         $user->password = bcrypt('iperezes18dw');
+        $user->especialidad = 'Programador';
+        $user->puntuacion = 3;
         $user->admin = 1;
         $user->role = 'admin';
         $user->save();
@@ -36,6 +40,8 @@ class UserTableSeeder extends Seeder
         $user->name = 'user';
         $user->email = 'dbelinchonal16ms@ikzubirimanteo.com';
         $user->password = bcrypt('dbelinchonal16ms');
+        $user->especialidad = 'Jardinero';
+        $user->puntuacion = 4;
         $user->admin = 0;
         $user->role = 'user';
         $user->save();
