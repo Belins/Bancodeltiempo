@@ -15,10 +15,6 @@
             <a class="nav-link" href="#">@lang('messages.Foro') </a>
             <!--Foro-->
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{route('mostrarUsuarios')}}">@lang('messages.Gestion') </a>
-            <!--Gestión de usuarios-->
-        </li>
     </ul>
     <ul class="navbar-nav ml-auto">
 

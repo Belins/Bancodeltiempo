@@ -1,18 +1,18 @@
 @extends('layouts.admin')
 @section('contenidoAdmin')
-    <h1 style="text-align:center;">Gestion de usuarios</h1>
+    <h1 style="text-align:center;">@lang('messages.Gestion')</h1>
     <div id="datos">
         <table class="table table-striped table-dark">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Localidad</th>
-                    <th scope="col">Telefono</th>
-                    <th scope="col">Rol de usuario</th>
-                    <th scope="col">editar</th>
-                    <th scope="col">eliminar</th>
+                    <th scope="col">@lang('messages.Nombre')</th>
+                    <th scope="col">@lang('messages.Email')</th>
+                    <th scope="col">@lang('messages.Localidad')</th>
+                    <th scope="col">@lang('messages.Telefono')</th>
+                    <th scope="col">@lang('messages.Rol_de_usuario')</th>
+                    <th scope="col">@lang('messages.Editar')</th>
+                    <th scope="col">@lang('messages.Eliminar')</th>
                 </tr>
             </thead>
             <tbody>

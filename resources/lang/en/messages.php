@@ -71,4 +71,10 @@ return [
     'Actividad' => 'View your activity',
     'Ofertas' => 'View offers',
     'Idiomas' => 'Languages',
+    'Gestion_de_mensajes'=>'Messages Management',
+    'Gestion_de_ofertas' =>'Offer Management',
+    'Editar'=>'Edit',
+    'Eliminar'=>'Delete',
+    'Localidad'=>'Location',
+    'Rol_de_usuario'=>'User Role'
 ];

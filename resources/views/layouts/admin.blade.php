@@ -9,10 +9,10 @@
                                         <div class="span3">
                                                 <div class="sidebar">
                                                         <ul class="widget widget-menu unstyled">
-                                                                <li class="active"><a href="{{route('admin')}}"><i class="menu-icon icon-home"></i>Inicio</a></li>
-                                                                <li><a href="{{route('mostrarUsuarios')}}"><i class="menu-icon icon-cog"></i>Gestion de usuarios</a></li>
-                                                                <li><a href="message.html"><i class="menu-icon icon-inbox"></i>Inbox <b class="label green pull-right">11</b></a></li>
-                                                                <li><a href="task.html"><i class="menu-icon icon-tasks"></i>Tasks <b class="label orange pull-right">19</b> </a></li>
+                                                                <li class="active"><a href="{{route('admin')}}"><i class="menu-icon icon-home"></i>@lang('messages.Inicio')</a></li>
+                                                                <li><a href="{{route('mostrarUsuarios')}}"><i class="menu-icon icon-cog"></i>@lang('messages.Gestion')</a></li>
+                                                                <li><a href="message.html"><i class="menu-icon icon-inbox"></i>@lang('messages.Gestion_de_mensajes') <b class="label green pull-right">11</b></a></li>
+                                                                <li><a href="task.html"><i class="menu-icon icon-tasks"></i>@lang('messages.Gestion_de_ofertas') <b class="label orange pull-right">19</b> </a></li>
                                                         </ul>
                                                          <!--/.widget-nav-->
                                                         <ul class="widget widget-menu unstyled">

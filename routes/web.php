@@ -49,8 +49,8 @@ Route::get('locale/{locale}', function($locale){
 
 Route::get('/usuarios','GestionUsuarioController@index')->name('mostrarUsuarios'); //Mostrar usuarios editar y eliminar
 
-Route::get('/mostrarUsuario','GestionUsuarioController@show')->name('mostrarUsuario');//Datos de usuario
+Route::get('/mostrarUsuario/{id}','GestionUsuarioController@show')->name('mostrarUsuario');//Datos de usuario
 
 Route::get('/editarUsuario','GestionUsuarioController@update')->name('editarUsuario');//Editar usuario
 
-Route::get('/eliminarUsuario','GestionUsuarioController@DeleteUser')->name('eliminarUsuario');//Eliminar usuario
+Route::get('/eliminarUsuario/{id}','GestionUsuarioController@DeleteUser')->name('eliminarUsuario');//Eliminar usuario

@@ -41,9 +41,8 @@ class GestionUsuarioController extends Controller
     }
 
     //Eliminar usuario desde panel de admin
-    public function DeleteUser(request $id){
-        $user = User::where('id',$id);
-        $user->delete();
-        return redirect()->route('mostrarUsuarios');
+    public function DeleteUser($id){
+        User::destroy($id);
+        return redirect(route('mostrarUsuarios'));
     }
 }
