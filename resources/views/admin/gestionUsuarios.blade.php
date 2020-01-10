@@ -21,7 +21,7 @@
                     <th scope="row">{{$usuario->id}}</th>
                     <td>{{$usuario->name}}</td>
                     <td>{{$usuario->email}}</td>
-                    <td></td>
+                    <td>{{$usuario->localidad}}</td>
                     <td>{{$usuario->phone}}</td>
                     <td>{{$usuario->role}}</td>
                     <td><a href="{{route('mostrarUsuario',$usuario->id)}}"><span class="glyphicon glyphicon-pencil">editar</span></a></td>

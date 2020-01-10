@@ -51,6 +51,6 @@ Route::get('/usuarios','GestionUsuarioController@index')->name('mostrarUsuarios'
 
 Route::get('/mostrarUsuario/{id}','GestionUsuarioController@show')->name('mostrarUsuario');//Datos de usuario
 
-Route::get('/editarUsuario','GestionUsuarioController@update')->name('editarUsuario');//Editar usuario
+Route::post('/editarUsuario/{id}','GestionUsuarioController@Alter')->name('editarUsuario');//Editar usuario
 
 Route::get('/eliminarUsuario/{id}','GestionUsuarioController@DeleteUser')->name('eliminarUsuario');//Eliminar usuario
