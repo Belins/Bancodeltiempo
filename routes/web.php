@@ -63,5 +63,9 @@ Route::get('/GestionMensajes','ContactoController@index')->name('mostrarMensajes
 
 Route::get('/GestionMensajes/{id}','ContactoController@destroy')->name('eliminarMensaje');
 
+Route::get('/CrearEmail/{id}','EmailController@CreateEmail')->name('CrearEmail');
+
+Route::post('/contactar', 'EmailController@contact')->name('contact');
+
   ////GESTION DE OFERTAS////
 

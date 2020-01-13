@@ -18,7 +18,7 @@
                     <th scope="row">{{$mensaje->id}}</th>
                     <td>{{$mensaje->nombre}}</td>                  
                     <td class="columnaMensaje">{{$mensaje->comentario}}</td>
-                    <td><a href=""><span class="glyphicon glyphicon-pencil">contestar</span></a></td>
+                    <td><a href="{{route('CrearEmail',$mensaje->id)}}"><span class="glyphicon glyphicon-pencil">contestar</span></a></td>
                     <td><a href="{{route('eliminarMensaje',$mensaje->id)}}"><span class="glyphicon glyphicon-pencil">eliminar</span></a></td>
                 </tr>
                 @endforeach

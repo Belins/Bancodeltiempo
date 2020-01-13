@@ -1692,4 +1692,12 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', end
 .columnaMensaje{
 	width: 10px;
 }
+#asunto{
+	width:50%;
+}
+#FormEmail{
+	padding: 0.5%;
+	background-color: #579cd496;
+	border-radius: 5% 5% 5% 5%;
+}
 @media(max-width:767px){body{padding:0!important}.wrapper{padding:20px 15px}}
