@@ -45,7 +45,9 @@ Route::get('locale/{locale}', function($locale){
 	return redirect()->back();
 })->name('locale');
 
-///////ZONA ADMINISTRADOR////////
+///////ZONA ADMINISTRADOR//////////
+
+  ////GESTION DE USUARIOS/////
 
 Route::get('/usuarios','GestionUsuarioController@index')->name('mostrarUsuarios'); //Mostrar usuarios editar y eliminar
 
@@ -54,3 +56,12 @@ Route::get('/mostrarUsuario/{id}','GestionUsuarioController@show')->name('mostra
 Route::post('/editarUsuario/{id}','GestionUsuarioController@Alter')->name('editarUsuario');//Editar usuario
 
 Route::get('/eliminarUsuario/{id}','GestionUsuarioController@DeleteUser')->name('eliminarUsuario');//Eliminar usuario
+
+  ////GESTION DE MENSAJES/////
+
+Route::get('/GestionMensajes','ContactoController@index')->name('mostrarMensajes');
+
+Route::get('/GestionMensajes/{id}','ContactoController@destroy')->name('eliminarMensaje');
+
+  ////GESTION DE OFERTAS////
+

@@ -76,5 +76,6 @@ return [
     'Editar'=>'Edit',
     'Eliminar'=>'Delete',
     'Localidad'=>'Location',
-    'Rol_de_usuario'=>'User Role'
+    'Rol_de_usuario'=>'User Role',
+    'GestionMensajes'=>'Message Management'
 ];

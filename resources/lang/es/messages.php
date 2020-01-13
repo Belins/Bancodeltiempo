@@ -77,4 +77,5 @@ return [
     'Editar'=>'Editar',
     'Eliminar'=>'Eliminar',
     'Rol_de_usuario'=>'Rol de usuario',
+    'GestionMensajes'=>'Gestion de mensajes',
 ];
