@@ -73,4 +73,10 @@ return [
     'Telefono' => 'Telefono',
     'Localidad' => 'Localidad',
     'AñadirOferta' => 'Añadir Oferta',
+    'Gestion_de_mensajes'=>'Gestion de mensajes',
+    'Gestion_de_ofertas' =>'Gestion de ofertas',
+    'Editar'=>'Editar',
+    'Eliminar'=>'Eliminar',
+    'Rol_de_usuario'=>'Rol de usuario',
+    'GestionMensajes'=>'Gestion de mensajes',
 ];

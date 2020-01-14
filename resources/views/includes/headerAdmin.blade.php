@@ -2,7 +2,7 @@
 <script src="{{ asset('js/app.js') }}" defer></script>
 
 <div class="row d-flex align-items-center justify-content-center p-1">
-    <img id="logo" src="{{asset('img/logo.JPG')}}" style="height: 60px; width: 120px; ">
+    <img id="logo" src="{{asset('img/logo.png')}}" style="height: 60px; width: 120px; ">
         <p class="display-4">@lang('messages.Banco') </p>
         <!--Banco del Tiempo -->
 </div>
@@ -14,10 +14,6 @@
         <li class="nav-item">
             <a class="nav-link" href="#">@lang('messages.Foro') </a>
             <!--Foro-->
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{route('mostrarUsuarios')}}">@lang('messages.Gestion') </a>
-            <!--Gestión de usuarios-->
         </li>
     </ul>
     <ul class="navbar-nav ml-auto">

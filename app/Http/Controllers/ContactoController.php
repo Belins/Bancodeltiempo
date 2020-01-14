@@ -13,7 +13,8 @@ class ContactoController extends Controller
      */
     public function index()
     {
-        //
+        $mensajes = mensaje::all();
+        return view('admin.GestionMensajes',['mensajes'=>$mensajes]);
     }
 
     /**
@@ -85,6 +86,7 @@ class ContactoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        mensaje::destroy($id);
+        return redirect(route('mostrarMensajes'));
     }
 }
