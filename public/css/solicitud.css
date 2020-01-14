@@ -1,0 +1,25 @@
+
+
+#solicitud{
+	background-color: hsla(35, 70%, 70%, 0.6);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 10%;
+	
+
+}
+
+button {
+  border: none;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 60%;
+  font-size: 18px;
+}
+
+label{
+	font-size: 120%;
+	font-weight: bold;
+}

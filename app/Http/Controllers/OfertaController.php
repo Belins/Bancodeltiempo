@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Oferta;
+use App\User;
+use Auth;
 
 class OfertaController extends Controller
 {
@@ -24,7 +26,8 @@ class OfertaController extends Controller
      */
     public function create()
     {
-        //
+        $user = User::find(Auth::user()->id);
+        return view('ofertas.create', ['user'=> $user]);
     }
 
     /**
@@ -35,7 +38,15 @@ class OfertaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ofer = new Oferta;
+        $ofer->user_id = Auth::user()->id;
+        $ofer->descripcion = $request -> get('descripcion');
+        $ofer->tiempo = $request -> input('tiempo');
+        $ofer->disp_desde = $request -> input('disp_desde');
+        $ofer->disp_hasta = $request -> input('disp_hasta');
+        
+        $ofer->save();
+        return redirect(route('home'));
     }
 
     /**
@@ -47,7 +58,7 @@ class OfertaController extends Controller
     public function show($id)
     {
         $ofer = Oferta::find($id);
-        return view('interfazusuario.solicitar',['ofer'=>$ofer]);
+        return view('ofertas.show',['ofer'=>$ofer]);
     }
 
     /**

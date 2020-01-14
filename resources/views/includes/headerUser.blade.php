@@ -14,7 +14,7 @@
                   <a class="nav-link" href="#">{{ trans('messages.Foro') }}</a><!--Foro-->
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">{{ trans('messages.AñadirOferta') }}</a><!--Foro-->
+                  <a class="nav-link" href="{{route('ofertas.create')}}">{{ trans('messages.AñadirOferta') }}</a><!--Foro-->
                 </li>
             </ul>
 
