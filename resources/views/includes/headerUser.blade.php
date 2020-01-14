@@ -44,6 +44,7 @@
                             @csrf
                         </form>
                         <a class="dropdown-item" href="{{route('GestionUsuario')}}">Perfil</a><!--Ver tu perfil-->
+                        <a class="dropdown-item" href="{{route('ofertas.index')}}">Mis ofertas</a><!--Ver tus ofertas-->
                     </div>
                 </li>
             </ul>

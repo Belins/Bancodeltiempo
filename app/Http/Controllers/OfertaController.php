@@ -16,7 +16,10 @@ class OfertaController extends Controller
      */
     public function index()
     {
-        //
+        $ofertas = Oferta::where('user_id',Auth::user()->id)->get();
+        
+
+        return view('ofertas.misofertas', ['ofertas'=> $ofertas]);
     }
 
     /**

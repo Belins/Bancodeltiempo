@@ -78,5 +78,10 @@ return [
     'Eliminar'=>'Delete',
     'Localidad'=>'Location',
     'Rol_de_usuario'=>'User Role',
-    'GestionMensajes'=>'Message Management'
+    'GestionMensajes'=>'Message Management',
+    'Especialidad'=>'Specialty',
+    'FechaInicio'=>'Start date',
+    'FechaFin'=>'End date',
+    'Tiempo'=>'Time',
+    'Descripcion'=>'Description'
 ];
