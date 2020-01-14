@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Auth;
 
 class GestionUsuarioController extends Controller
 {
     //Funcion para mostrar formulario con los datos del usuario//
-    public function SacarUser(request $id){
-        $DatosUsuario = User::find('id',$id);
+    public function SacarUser(){
+        $DatosUsuario = User::find(Auth::user()->id);
         return view('GestionUsuario',['DatosUsuario'=>$DatosUsuario]);
     }
 
