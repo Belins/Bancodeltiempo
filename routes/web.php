@@ -38,6 +38,13 @@ Route::post('/iniciosesion', 'HomeController@index')->name('iniciarsesion');*/
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('admin');
+
+Route::resource('ofertas','OfertaController')->middleware('admin');
+
+//Route::get('/ofertas/{id}', 'OfertaController@show')->name('ofertas.show')->middleware('admin');
+//Route::get('/ofertas/create', 'OfertaController@create')->name('ofertas.create')->middleware('admin');
+//Route::get('/ofertas', 'OfertaController@store')->name('ofertas.store')->middleware('admin');
+
 Route::get('/admin', 'AdminController@index')->name('admin');
 
 Route::get('locale/{locale}', function($locale){

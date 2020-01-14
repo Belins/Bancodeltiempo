@@ -30,12 +30,12 @@
         <img id="imgGen" class="img-fluid rounded mb-4 mb-lg-0" src="img/imagen.png" alt="trueque">
       </div>
       <!-- /.col-lg-8 -->
-      <div class="col-lg-5">
+      <div id="txt1" class="col-lg-5 font-weight-bold p-3">
         <h1 class="font-weight-light">@lang('messages.Banco')</h1>
         <!--Banco del tiempo-->
         <p>@lang('messages.Info')</p>
         <!--Lo que estamos buscando con esta empresa es una comunidad sana donde la gente que participe en ella se dedique hacer truque de su tiempo a cambio del tiempo de otro usuario SIN necesidad de usar ningun tipo de DINERO.-->
-        <a class="btn btn-primary" href="{{route('infgeneral')}}">@lang('messages.Leyendo') </a>
+        <a class="btn btn-dark" href="{{route('infgeneral')}}">@lang('messages.Leyendo') </a>
         <!--Seguir leyendo!-->
       </div>
       <!-- /.col-md-4 -->
@@ -45,7 +45,7 @@
     <!-- Content Row -->
     <div class="row">
       <div class="col-md-4 mb-5">
-        <div class="card h-100">
+        <div id= "trj" class="card h-100">
           <div class="card-body">
             <h2 class="card-title">@lang('messages.Trabajador') </h2>
             <!--Trabajador-->
@@ -60,7 +60,7 @@
       </div>
       <!-- /.col-md-4 -->
       <div class="col-md-4 mb-5">
-        <div class="card h-100">
+        <div class="trj card h-100">
           <div class="card-body">
             <h2 class="card-title">@lang('messages.Cliente')</h2>
             <!--Cliente-->
@@ -75,7 +75,7 @@
       </div>
       <!-- /.col-md-4 -->
       <div class="col-md-4 mb-5">
-        <div class="card h-100">
+        <div class="trj card h-100">
           <div class="card-body">
             <h2 class="card-title">@lang('messages.Blog') </h2>
             <!--Blog-->
@@ -100,6 +100,8 @@
 
     @include('/includes/footer')
 
+  <!--Bootstrap bundle para inicio de sesión-->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   
 

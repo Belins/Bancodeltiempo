@@ -11,13 +11,17 @@ class User extends Authenticatable implements MustVerifyEmail
 
        use Notifiable;
 
+    public function ofertas(){
+        return $this->hasMany('App\Oferta', 'user_id');
+    }
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'admin',
+        'name', 'email', 'password', 'admin', 'role'
     ];
 
     /**
@@ -39,11 +43,7 @@ class User extends Authenticatable implements MustVerifyEmail
     ];
 
     public function isAdmin(){
-        return ($this->role == "admin");
-    }
-
-    public function isUser(){
-        return ($this->role == "user");
+        return $this->admin;
     }
 
 }

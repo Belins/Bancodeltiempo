@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Oferta;
 
 class HomeController extends Controller
 {
@@ -24,6 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home'); 
+        $listadoOfertas = Oferta::All();
+        return view('home', ['listadoOfertas' => $listadoOfertas]);
     }
+
+
 }
