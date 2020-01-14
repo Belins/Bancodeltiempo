@@ -23,7 +23,7 @@
             @foreach($ofertas as $oferta)
             <tr>
                 <th scope="row">{{$oferta->id}}</th>
-                <td></td>                  
+                <td>{{$oferta->usuario->especialidad}}</td>                  
                 <td class="columnaMensaje">{{$oferta->disp_desde}}</td>
                 <td class="columnaMensaje">{{$oferta->disp_hasta}}</td>
                 <td class="columnaMensaje">{{$oferta->tiempo}}</td>
