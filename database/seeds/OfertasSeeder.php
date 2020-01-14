@@ -25,7 +25,7 @@ class OfertasSeeder extends Seeder
                 'disp_hasta'  => $disp_hasta,
                 'tiempo' => rand(1,5),
                 'descripcion' => Str::random(60),
-                'user_id' => rand(0,3),
+                'user_id' => rand(1,3),
             ]);
         }
         

@@ -79,4 +79,9 @@ return [
     'Eliminar'=>'Eliminar',
     'Rol_de_usuario'=>'Rol de usuario',
     'GestionMensajes'=>'Gestion de mensajes',
+    'Especialidad'=>'Especialidad',
+    'FechaInicio'=>'Fecha Inicio',
+    'FechaFin'=>'Fecha Fin',
+    'Tiempo'=>'Tiempo',
+    'Descripcion'=>'Descripcion'
 ];
