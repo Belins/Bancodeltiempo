@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('localidad', 50)->nullable();
             $table->string('especialidad',50)->nullable();
             $table->integer('puntuacion');
+            $table->integer('tiempo');
             $table->boolean('admin');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

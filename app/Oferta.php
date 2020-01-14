@@ -14,4 +14,8 @@ class Oferta extends Model
     public function usuario(){
     	return $this->belongsTo('App\User', 'user_id');
     }
+
+    public function confirmations(){
+        return $this->hasMany('App\Confirmation', 'id');
+    }
 }

@@ -23,6 +23,7 @@ class UserTableSeeder extends Seeder
         $user->localidad = 'Azkoitia';
         $user->especialidad = 'Mecanico';
         $user->puntuacion = 5;
+        $user->tiempo = 15;
         $user->admin = 1;
         $user->role = 'admin';
         $user->save();
@@ -35,6 +36,7 @@ class UserTableSeeder extends Seeder
         $user->localidad = 'Urnieta';
         $user->especialidad = 'Programador';
         $user->puntuacion = 3;
+        $user->tiempo = 15;
         $user->admin = 1;
         $user->role = 'admin';
         $user->save();
@@ -48,6 +50,7 @@ class UserTableSeeder extends Seeder
         $user->localidad = 'Donostia';
         $user->especialidad = 'Jardinero';
         $user->puntuacion = 4;
+        $user->tiempo = 15;
         $user->admin = 0;
         $user->role = 'user';
         $user->save();
