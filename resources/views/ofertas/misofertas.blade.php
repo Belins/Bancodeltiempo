@@ -7,9 +7,13 @@
 <body>
 @include('/includes/headerUser')
 
-<div id="contenedor" class="container d-flex justify-content-center">
-<table class="table table-striped table-dark">
-    <thead>
+<div id="contenedor" class="container ">
+    <div class="row justify-content-center">
+        <h1>Mis ofertas</h1>
+    </div>
+    <div class="row">
+    <table class="table table-striped table-dark">
+        <thead>
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">@lang('messages.Especialidad')</th>
@@ -24,15 +28,17 @@
             <tr>
                 <th scope="row">{{$oferta->id}}</th>
                 <td>{{$oferta->usuario->especialidad}}</td>                  
-                <td class="columnaMensaje">{{$oferta->disp_desde}}</td>
-                <td class="columnaMensaje">{{$oferta->disp_hasta}}</td>
-                <td class="columnaMensaje">{{$oferta->tiempo}}</td>
-                <td class="columnaMensaje">{{$oferta->descripcion}}</td>
-                <td><a href="{{route('eliminarMensaje',$oferta->id)}}"><span class="glyphicon glyphicon-pencil">eliminar</span></a></td>
+                <td class="">{{$oferta->disp_desde}}</td>
+                <td class="">{{$oferta->disp_hasta}}</td>
+                <td class="">{{$oferta->tiempo}}</td>
+                <td class="">{{$oferta->descripcion}}</td>
+                <td><a href=""><span class="glyphicon glyphicon-pencil">editar</span></a></td>
+                <td><a href="{{route('ofertas.destroy',$oferta->id)}}"><span class="glyphicon glyphicon-pencil">eliminar</span></a></td>
             </tr>
             @endforeach
         </tbody>
     </table>
+    </div>
 </div>
 
 </body>
