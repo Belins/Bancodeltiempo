@@ -30,7 +30,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    <img src="/public/img/avatares/{{Auth::user()->image}}" alt="avatar"> {{ Auth::user()->name }} <span class="caret"></span>
+                    <img src="/img/avatares/{{Auth::user()->image}}" alt="avatar" class="img-circle"> {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
