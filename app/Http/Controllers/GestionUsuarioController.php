@@ -21,11 +21,19 @@ class GestionUsuarioController extends Controller
         $email=$datos->get('email');
         $phone=$datos->get('tlf');
         $localidad=$datos->get('localidad');
+        $filename = $datos->file('avatar');
+        $datos->avatar->move(public_path('img/avatares'), $filename);
+        if($filename == ''){
+            $filename='predifinida.jpg';
+        }
         if($datos->get('password') != ""){
-            $password=$datos->get('password');
-        };
-        $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad]);
-        
+            $password = bcrypt($datos->get('password'));
+            $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'password'=>$password]);
+        }
+        else
+        {
+            $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad]);
+        } 
         return view('GestionUsuario',['id'=>$id]);
     }
 

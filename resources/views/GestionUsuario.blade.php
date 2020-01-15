@@ -14,8 +14,6 @@
                         @csrf
                         <h4 class="text-center p-3">{{ trans('messages.Gestion') }}</h4>
                         
-                       
-                        
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Nombre') }}</label>
                             <div class="col-md-6">
@@ -43,7 +41,7 @@
                         <div class="form-group row">
                             <label for="especialidad" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Especialidad') }}</label>
                             <div class="col-md-6">
-                                <select name="especialidad" value="{{ Auth::user()->localidad }}">
+                                <select name="especialidad">
                                     <option value="Jardinero">Jardinero</option> 
                                     <option value="Programador">Programador</option> 
                                     <option value="Mecanico">Mecanico</option>
@@ -66,7 +64,7 @@
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Contraseña') }}</label>
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
