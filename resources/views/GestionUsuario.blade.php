@@ -41,6 +41,17 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="especialidad" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Especialidad') }}</label>
+                            <div class="col-md-6">
+                                <select name="especialidad" value="{{ Auth::user()->localidad }}">
+                                    <option value="Jardinero">Jardinero</option> 
+                                    <option value="Programador">Programador</option> 
+                                    <option value="Mecanico">Mecanico</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Email') }}</label>
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ Auth::user()->email }}" required autocomplete="email">
@@ -73,6 +84,13 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="avatar" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Imagen') }}</label>
+                            <div class="col-md-6">
+                                <input id="avatar" type="file" name="avatar">
                             </div>
                         </div>
 
