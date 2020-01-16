@@ -22,7 +22,7 @@
 			<p><strong>Puntuacion: </strong> {{$oferta->usuario->puntuacion}}/5</p>		  
             <h5>{{$oferta->disp_desde}} -- {{$oferta->disp_hasta}}</h5>
         </div>
-        <a href=""><button>Editar</button></a><br>
+        <a href="{{route('editaroferta',$oferta->id)}}"><button>Editar</button></a><br>
         @if($oferta->visible == 1)
             <a href="{{route('ofertas.edit',$oferta->id)}}"><button>Desactivar</button></a>
         @else

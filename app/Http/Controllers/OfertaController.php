@@ -93,6 +93,23 @@ class OfertaController extends Controller
         //
     }
 
+    public function editofert(Request $request, $id)
+    {
+        $descripcion = $request -> get('descripcion');
+        $tiempo = $request -> input('tiempo');
+        $disp_desde = $request -> input('disp_desde');
+        $disp_hasta = $request -> input('disp_hasta');
+
+        Oferta::where('id',$id)->update(['descripcion'=>$descripcion,'tiempo'=>$tiempo,'disp_desde'=>$disp_desde,'disp_hasta'=>$disp_hasta]);
+        return redirect(route('ofertas.index'));
+    }
+
+    public function MostrarOferta($id){
+        $oferta = Oferta::find($id);
+        $user = User::find(Auth::user()->id);
+        return view('ofertas.edit',['oferta'=>$oferta,'user'=>$user]);
+    }
+
     /**
      * Remove the specified resource from storage.
      *
