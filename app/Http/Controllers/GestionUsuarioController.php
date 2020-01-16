@@ -22,17 +22,36 @@ class GestionUsuarioController extends Controller
         $email=$datos->get('email');
         $phone=$datos->get('tlf');
         $localidad=$datos->get('localidad');
-        $avatar = $datos->avatar->getClientOriginalExtension();
-        $datos->avatar->move(public_path('img/avatares'), $avatar);
-        
-        if($datos->get('password') != ""){
-            $password = bcrypt($datos->get('password'));
-            $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'password'=>$password,'image'=>$avatar]);
+
+        if(!empty($datos->avatar)){
+            $filename = $datos->avatar;
+            $avatar = $datos->avatar->getClientOriginalExtension();
+            $filename = Auth::user()->id.'.'.$avatar;
+            $datos->avatar->move(public_path('img/avatares'), $filename);
+            
+            if($datos->get('password') != ""){
+                $password = bcrypt($datos->get('password'));
+                $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'password'=>$password,'image'=>$filename]);
+            }
+            else
+            {
+                $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'image'=>$filename]);
+            } 
         }
         else
         {
-            $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'image'=>$avatar]);
-        } 
+            if($datos->get('password') != ""){
+                $password = bcrypt($datos->get('password'));
+                $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'password'=>$password]);
+            }
+            else
+            {
+                $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad]);
+            }
+        }
+        
+        
+        
         return view('GestionUsuario',['id'=>$id]);
     }
 
