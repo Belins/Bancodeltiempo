@@ -28,12 +28,15 @@
                         <a class="dropdown-item bg-dark text-light" href="{{route('locale', ['locale' => 'en'])}}">En</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown d-flex flex-row align-items-center justify-content-end">
+                <img src="/img/avatares/{{Auth::user()->image}}" alt="avatar" class="img-circle" width="10%" heigth="10%">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    <img src="/img/avatares/{{Auth::user()->image}}" alt="avatar" class="img-circle"> {{ Auth::user()->name }} <span class="caret"></span>
+                    {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{route('GestionUsuario')}}">Perfil</a><!--Ver tu perfil-->
+                        <a class="dropdown-item" href="{{route('ofertas.index')}}">Mis ofertas</a><!--Ver tus ofertas-->
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
@@ -43,8 +46,6 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
-                        <a class="dropdown-item" href="{{route('GestionUsuario')}}">Perfil</a><!--Ver tu perfil-->
-                        <a class="dropdown-item" href="{{route('ofertas.index')}}">Mis ofertas</a><!--Ver tus ofertas-->
                     </div>
                 </li>
             </ul>

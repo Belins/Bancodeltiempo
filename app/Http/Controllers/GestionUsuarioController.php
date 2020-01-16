@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\User;
 use Auth;
 
@@ -21,18 +22,19 @@ class GestionUsuarioController extends Controller
         $email=$datos->get('email');
         $phone=$datos->get('tlf');
         $localidad=$datos->get('localidad');
-        $filename = $datos->file('avatar');
-        $datos->avatar->move(public_path('img/avatares'), $filename);
-        if($filename == ''){
-            $filename='predifinida.jpg';
-        }
+        $avatar = $datos->get('avatar');
+
+        Storage::disk('public')->put("/img/avatares/$avatar",$avatar);
+        
+        
+
         if($datos->get('password') != ""){
             $password = bcrypt($datos->get('password'));
-            $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'password'=>$password]);
+            $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'password'=>$password,'image'=>$avatar]);
         }
         else
         {
-            $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad]);
+            $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'image'=>$avatar]);
         } 
         return view('GestionUsuario',['id'=>$id]);
     }
