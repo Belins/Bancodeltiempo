@@ -22,12 +22,9 @@ class GestionUsuarioController extends Controller
         $email=$datos->get('email');
         $phone=$datos->get('tlf');
         $localidad=$datos->get('localidad');
-        $avatar = $datos->get('avatar');
-
-        Storage::disk('public')->put("/img/avatares/$avatar",$avatar);
+        $avatar = $datos->avatar->getClientOriginalExtension();
+        $datos->avatar->move(public_path('img/avatares'), $avatar);
         
-        
-
         if($datos->get('password') != ""){
             $password = bcrypt($datos->get('password'));
             $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'password'=>$password,'image'=>$avatar]);
