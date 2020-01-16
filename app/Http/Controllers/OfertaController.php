@@ -45,6 +45,7 @@ class OfertaController extends Controller
         $ofer->tiempo = $request -> input('tiempo');
         $ofer->disp_desde = $request -> input('disp_desde');
         $ofer->disp_hasta = $request -> input('disp_hasta');
+        $ofer->titulo = $request -> input('titulo');
         
         $ofer->save();
         return redirect(route('home'));
@@ -99,8 +100,9 @@ class OfertaController extends Controller
         $tiempo = $request -> input('tiempo');
         $disp_desde = $request -> input('disp_desde');
         $disp_hasta = $request -> input('disp_hasta');
+        $titulo = $request -> input('titulo');
 
-        Oferta::where('id',$id)->update(['descripcion'=>$descripcion,'tiempo'=>$tiempo,'disp_desde'=>$disp_desde,'disp_hasta'=>$disp_hasta]);
+        Oferta::where('id',$id)->update(['descripcion'=>$descripcion,'tiempo'=>$tiempo,'disp_desde'=>$disp_desde,'disp_hasta'=>$disp_hasta,'titulo'=>$titulo]);
         return redirect(route('ofertas.index'));
     }
 

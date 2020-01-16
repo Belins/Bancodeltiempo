@@ -23,7 +23,11 @@
 		        <div class="form-group">
 		            <label>Especialidad</label><br>
 		            <h5>{{$user->especialidad}}</h5>
-		        </div>
+				</div>
+				<div class="form-group">
+		            <label>Titulo</label><br>
+		            <input type="text" name="titulo" value="{{$oferta->titulo}}">
+				</div>
 		        <div class="form-group" >
 		            <label>Descripción</label><br>
 		            ​<textarea name="descripcion" rows="3" cols="50" placeholder="Escribe una breve descripcion">{{$oferta->descripcion}}</textarea>
