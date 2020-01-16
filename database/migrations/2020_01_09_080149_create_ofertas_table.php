@@ -20,6 +20,7 @@ class CreateOfertasTable extends Migration
             $table->integer('tiempo');
             $table->string('descripcion', 100);
             $table->timestamps();
+            $table->boolean('visible')->default(true);
         });
     }
 

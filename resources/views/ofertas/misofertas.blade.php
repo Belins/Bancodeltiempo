@@ -2,43 +2,34 @@
 <html>
 <head>
 	<title>Banco Del Tiempo</title>
-	@include('/includes/refcode')
+    @include('/includes/refcode')
+	<link href="css/card.css" rel="stylesheet">
 </head>
 <body>
 @include('/includes/headerUser')
-
 <div id="contenedor" class="container ">
-    <div class="row justify-content-center">
-        <h1>Mis ofertas</h1>
-    </div>
-    <div class="row">
-    <table class="table table-striped table-dark">
-        <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">@lang('messages.Especialidad')</th>
-                <th scope="col">@lang('messages.FechaInicio')</th>
-                <th scope="col">@lang('messages.FechaFin')</th>
-                <th scope="col">@lang('messages.Tiempo')</th>
-                <th scope="col">@lang('messages.Descripcion')</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($ofertas as $oferta)
-            <tr>
-                <th scope="row">{{$oferta->id}}</th>
-                <td>{{$oferta->usuario->especialidad}}</td>                  
-                <td class="">{{$oferta->disp_desde}}</td>
-                <td class="">{{$oferta->disp_hasta}}</td>
-                <td class="">{{$oferta->tiempo}}</td>
-                <td class="">{{$oferta->descripcion}}</td>
-                <td><a href=""><span class="glyphicon glyphicon-pencil">editar</span></a></td>
-                <td><a href="{{route('ofertas.destroy',$oferta->id)}}"><span class="glyphicon glyphicon-pencil">eliminar</span></a></td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
-    </div>
+
+@foreach($ofertas as $oferta)
+    @if($oferta->visible == 1)
+	    <div class="card text-center" id="tarjeta">
+    @elseif($oferta->visible == 0)
+        <div class="card text-center transparencia" id="tarjeta">
+    @endif
+		<img src='img/Especialidades/{{$oferta->usuario->especialidad}}.jpg' alt="img" style="width:100%; height: 35%">
+		<div class="h-50">
+			<h4>{{$oferta->usuario->especialidad}} {{$oferta->tiempo}}h</h4>
+			<p class="title h-25 text-justify p-1">{{$oferta->descripcion}}</p>
+			<p><strong>Puntuacion: </strong> {{$oferta->usuario->puntuacion}}/5</p>		  
+            <h5>{{$oferta->disp_desde}} -- {{$oferta->disp_hasta}}</h5>
+        </div>
+        <a href=""><button>Editar</button></a><br>
+        @if($oferta->visible == 1)
+            <a href="{{route('ofertas.edit',$oferta->id)}}"><button>Desactivar</button></a>
+        @else
+            <a href="{{route('ofertas.edit',$oferta->id)}}"><button>Activar</button></a>
+        @endif
+	</div>
+@endforeach
 </div>
 
 </body>

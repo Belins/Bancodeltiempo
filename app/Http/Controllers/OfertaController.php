@@ -17,8 +17,6 @@ class OfertaController extends Controller
     public function index()
     {
         $ofertas = Oferta::where('user_id',Auth::user()->id)->get();
-        
-
         return view('ofertas.misofertas', ['ofertas'=> $ofertas]);
     }
 
@@ -72,7 +70,15 @@ class OfertaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $visibilidad = Oferta::find($id);
+        if($visibilidad->visible == 1){
+            Oferta::where('id',$id)->update(['visible'=>0]);
+        }
+        elseif($visibilidad->visible == 0){
+            Oferta::where('id',$id)->update(['visible'=>1]);
+        }
+
+        return redirect(route('ofertas.index'));
     }
 
     /**
@@ -95,7 +101,7 @@ class OfertaController extends Controller
      */
     public function destroy($id)
     {
-        Oferta::destroy($id);
-        return redirect(route('ofertas.index'));
+       //
+        
     }
 }

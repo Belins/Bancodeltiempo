@@ -16,16 +16,20 @@ class GestionUsuarioController extends Controller
 
     //Funcion para cambiar los usuarios//
     public function ModUser(request $datos){
-        $id=$datos->get('id');
+        $id=Auth::user()->id;
         $name=$datos->get('name');
         $email=$datos->get('email');
         $phone=$datos->get('tlf');
+        $especialidad=$datos->get('especialidad');
         $localidad=$datos->get('localidad');
         if($datos->get('password') != ""){
-            $password=$datos->get('password');
-        };
-        $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad]);
-        
+            $password = bcrypt($datos->get('password'));
+            $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'password'=>$password,'especialidad'=>$especialidad]);
+        }
+        else
+        {
+            $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'especialidad'=>$especialidad]);
+        } 
         return view('GestionUsuario',['id'=>$id]);
     }
 
