@@ -11,7 +11,7 @@
 
 <div id="contenedor" class="d-flex flex-row flex-wrap">
 	@foreach($listadoOfertas as $oferta)
-		@if($oferta->usuario)
+		@if($oferta->visible == 1)
 			<div class="card text-center" id="tarjeta">
 			  <img src='img/Especialidades/{{$oferta->usuario->especialidad}}.jpg' alt="img" style="width:100%; height: 35%">
 			  <div class="h-50">
