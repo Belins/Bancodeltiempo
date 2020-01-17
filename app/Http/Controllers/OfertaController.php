@@ -95,7 +95,12 @@ class OfertaController extends Controller
      */
     public function destroy($id)
     {
-        Oferta::destroy($id);
-        return redirect(route('ofertas.index'));
+        
+    }
+
+    public function MostrarOfertas(){
+        $ofertas = Oferta::all();
+
+        return view('admin.GestionOfertas',['ofertas'=>$ofertas]);
     }
 }

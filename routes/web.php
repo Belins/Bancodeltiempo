@@ -76,5 +76,5 @@ Route::get('locale/{locale}', function($locale){
 
     ////GESTION DE OFERTAS////
 
-
+    Route::get('/GestionOfertas','OfertaController@MostrarOfertas')->name('mostrarofertas');
 //////////////////////////////
