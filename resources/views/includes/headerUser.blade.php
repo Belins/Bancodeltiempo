@@ -45,6 +45,7 @@
                         </form>
                         <a class="dropdown-item" href="{{route('GestionUsuario')}}">Perfil</a><!--Ver tu perfil-->
                         <a class="dropdown-item" href="{{route('ofertas.index')}}">Mis ofertas</a><!--Ver tus ofertas-->
+                        <a class="dropdown-item" href="{{route('confirmations.index')}}">Servicios</a><!--Ver tus servicios-->
                     </div>
                 </li>
             </ul>

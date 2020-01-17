@@ -13,7 +13,7 @@
             </div>
             <div class="row m-4">
                 <label><b>Mensaje a enviar : </b></label>&nbsp; 
-                <textarea id="mensaje" name="msg" rows="10" cols="100">Buenas {{$datosMensaje->nombre}},</textarea>
+                <textarea id="mensaje" name="msg" rows="10" cols="100"></textarea>
             </div>
             <input type="hidden" name="nombre" value="{{$datosMensaje->nombre}}">
             <div class="row m-4 justify-content-center">

@@ -14,7 +14,7 @@ class OfertasSeeder extends Seeder
 
         $fecha = date('Y/m/d');
   
-        for ($i=0;$i<3;$i++) {
+        for ($i=0;$i<4;$i++) {
             $disp_desde = strtotime ( "+".rand(1,31)." day" , strtotime ( $fecha ) );
             $disp_desde = date ( 'Y/m/d' , $disp_desde);
             $disp_hasta = strtotime ( "+".rand(30,500)." day" , strtotime ( $fecha ) );
