@@ -122,4 +122,9 @@ class OfertaController extends Controller
     {
        //
     }
+
+    public function MostrarOfertas(){
+        $ofertas = Oferta::all();
+        return view('admin.GestionOfertas',['ofertas'=>$ofertas]);
+    }
 }

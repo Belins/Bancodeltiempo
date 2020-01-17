@@ -7,7 +7,7 @@
 </head>
 <body>
 @include('/includes/headerUser')
-<div id="contenedor" class="container ">
+<div id="contenedor" class="container d-flex flex-row flex-wrap">
 
 @foreach($ofertas as $oferta)
     @if($oferta->visible == 1)
