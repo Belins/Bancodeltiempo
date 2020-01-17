@@ -31,7 +31,7 @@
                         <a class="dropdown-item bg-dark text-light" href="{{route('locale', ['locale' => 'en'])}}">En</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown d-flex flex-row align-items-center justify-content-around" style="width:30%">
+                <li class="nav-item dropdown d-flex flex-row align-items-center justify-content-around" style="width:40%">
                 <h2 class="text-white">{{Auth::user()->tiempo}} h</h2>
                 <img src="/img/avatares/{{Auth::user()->image}}" alt="avatar" class="img-circle" width="20%" heigth="20%">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
