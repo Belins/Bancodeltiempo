@@ -8,14 +8,16 @@
             @include('/includes/headerUser')
         </header>
         <div class="container">
+            <div class="row justify-content-center ml-5">
+                <h4 class="text-center p-3">{{ trans('messages.Gestion') }}</h4>
+            </div>
             <div class="row">
-                <div class="col-12">
-                <form method="POST" action="{{route('ModificarUsuario',['id'=>Auth::user()->id])}}">
-                        @csrf
-                        <h4 class="text-center p-3">{{ trans('messages.Gestion') }}</h4>
-                        
-                       
-                        
+                <div class="col-3 d-flex justify-content-end align-items-start">
+                    <img src="/img/avatares/{{Auth::user()->image}}" alt="avatar" class="img-circle" width="100%" heigth="50%">
+                </div> 
+                <div class="col-9 d-flex justify-content-center">
+                <form method="POST" action="{{route('ModificarUsuario',['id'=>Auth::user()->id])}}" enctype="multipart/form-data">
+                        @csrf                        
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Nombre') }}</label>
                             <div class="col-md-6">
@@ -43,7 +45,7 @@
                         <div class="form-group row">
                             <label for="especialidad" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Especialidad') }}</label>
                             <div class="col-md-6">
-                                <select name="especialidad" value="{{ Auth::user()->localidad }}">
+                                <select name="especialidad">
                                     <option value="Jardinero">Jardinero</option> 
                                     <option value="Programador">Programador</option> 
                                     <option value="Mecanico">Mecanico</option>
@@ -66,7 +68,7 @@
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Contraseña') }}</label>
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

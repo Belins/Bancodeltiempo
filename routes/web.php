@@ -39,13 +39,23 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('admin');
 
+Route::get('ofertas/edit/{id}','OfertaController@MostrarOferta')->name('editaroferta')->middleware('admin');
+
+Route::post('ofertas/edit/guardar/{id}','OfertaController@editofert')->name('guardarcambios')->middleware('admin');
+
 Route::resource('ofertas','OfertaController')->middleware('admin');
+
 
 //Confirmaciones
 Route::get('/confirmations', 'ConfirmationController@index')->name('confirmations.index')->middleware('admin');
 Route::get('/confirmations/create/{id}', 'ConfirmationController@createConf')->name('confirmations.createConf')->middleware('admin');
 Route::get('/confirmations/aceptar/{id}', 'ConfirmationController@acept')->name('confirmations.acept')->middleware('admin');
 Route::get('/confirmations/{id}', 'ConfirmationController@trueque')->name('confirmations.trueque')->middleware('admin');
+
+//Route::get('/ofertas/{id}', 'OfertaController@show')->name('ofertas.show')->middleware('admin');
+//Route::get('/ofertas/create', 'OfertaController@create')->name('ofertas.create')->middleware('admin');
+//Route::get('/ofertas', 'OfertaController@store')->name('ofertas.store')->middleware('admin');
+
 
 Route::get('/admin', 'AdminController@index')->name('admin');
 
@@ -78,5 +88,5 @@ Route::get('locale/{locale}', function($locale){
 
     ////GESTION DE OFERTAS////
 
-
+    Route::get('/GestionOfertas','OfertaController@MostrarOfertas')->name('mostrarofertas');
 //////////////////////////////

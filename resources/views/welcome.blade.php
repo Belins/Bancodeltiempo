@@ -60,7 +60,7 @@
       </div>
       <!-- /.col-md-4 -->
       <div class="col-md-4 mb-5">
-        <div class="trj card h-100">
+        <div id= "trj" class="trj card h-100">
           <div class="card-body">
             <h2 class="card-title">@lang('messages.Cliente')</h2>
             <!--Cliente-->
@@ -75,7 +75,7 @@
       </div>
       <!-- /.col-md-4 -->
       <div class="col-md-4 mb-5">
-        <div class="trj card h-100">
+        <div id= "trj" class="trj card h-100">
           <div class="card-body">
             <h2 class="card-title">@lang('messages.Blog') </h2>
             <!--Blog-->

@@ -54,7 +54,7 @@
                         <a class="error">{{ $errors->first('password') }}</a><br>
                         @endif
                         <fieldset class="form-group">
-                            <input type="password" class="form-control" name="password" placeholder="@lang('messages.Contraseña') " value="{{$password}}" required>
+                            <input type="password" class="form-control" name="password" placeholder="@lang('messages.Contraseña') " value="{{$password}}" >
                             <!--Contraseña-->
                         </fieldset>
                         @if ($errors ->has('phone'))
