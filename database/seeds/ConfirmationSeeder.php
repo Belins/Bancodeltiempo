@@ -15,5 +15,15 @@ class ConfirmationSeeder extends Seeder
         $conf->oferta_id = 1;
         $conf->user_id = 3;
         $conf->save();
+
+        $conf = new Confirmation();
+        $conf->oferta_id = 3;
+        $conf->user_id = 4;
+        $conf->save();
+        
+        $conf = new Confirmation();
+        $conf->oferta_id = 4;
+        $conf->user_id = 3;
+        $conf->save();
     }
 }

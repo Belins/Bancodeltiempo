@@ -22,7 +22,9 @@
 			<h5 class="text-primary">{{$ofer->disp_desde}} - {{$ofer->disp_hasta}}</h5>
 		</div>
 		
-		<button>Solicitar</button>
+		
+					<a href="{{route('confirmations.createConf', $ofer->id)}}"><button>Solicitar</button>
+		
 	</div>
 </div>
 

@@ -19,7 +19,9 @@ class CreateConfirmationsTable extends Migration
             $table->foreign('oferta_id')->references('id')->on('ofertas');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->boolean('confirmado')->default(0);
+            $table->boolean('o_confirmado')->default(0);
+            $table->boolean('r_confirmado')->default(0);
+            $table->integer('estado')->default(0);
             $table->timestamps();
         });
     }

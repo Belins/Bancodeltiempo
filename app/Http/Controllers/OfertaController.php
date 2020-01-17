@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Oferta;
 use App\User;
+use App\Confirmation;
 use Auth;
 
 class OfertaController extends Controller
@@ -17,9 +18,9 @@ class OfertaController extends Controller
     public function index()
     {
         $ofertas = Oferta::where('user_id',Auth::user()->id)->get();
-        
+        $conf = Confirmation::where('user_id',Auth::user()->id)->get();
 
-        return view('ofertas.misofertas', ['ofertas'=> $ofertas]);
+        return view('ofertas.misofertas')->with(['ofertas' => $ofertas, 'confirmaciones' => $conf]);
     }
 
     /**
