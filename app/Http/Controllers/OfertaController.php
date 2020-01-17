@@ -17,8 +17,6 @@ class OfertaController extends Controller
     public function index()
     {
         $ofertas = Oferta::where('user_id',Auth::user()->id)->get();
-        
-
         return view('ofertas.misofertas', ['ofertas'=> $ofertas]);
     }
 
@@ -47,6 +45,7 @@ class OfertaController extends Controller
         $ofer->tiempo = $request -> input('tiempo');
         $ofer->disp_desde = $request -> input('disp_desde');
         $ofer->disp_hasta = $request -> input('disp_hasta');
+        $ofer->titulo = $request -> input('titulo');
         
         $ofer->save();
         return redirect(route('home'));
@@ -72,7 +71,15 @@ class OfertaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $visibilidad = Oferta::find($id);
+        if($visibilidad->visible == 1){
+            Oferta::where('id',$id)->update(['visible'=>0]);
+        }
+        elseif($visibilidad->visible == 0){
+            Oferta::where('id',$id)->update(['visible'=>1]);
+        }
+
+        return redirect(route('ofertas.index'));
     }
 
     /**
@@ -87,6 +94,24 @@ class OfertaController extends Controller
         //
     }
 
+    public function editofert(Request $request, $id)
+    {
+        $descripcion = $request -> get('descripcion');
+        $tiempo = $request -> input('tiempo');
+        $disp_desde = $request -> input('disp_desde');
+        $disp_hasta = $request -> input('disp_hasta');
+        $titulo = $request -> input('titulo');
+
+        Oferta::where('id',$id)->update(['descripcion'=>$descripcion,'tiempo'=>$tiempo,'disp_desde'=>$disp_desde,'disp_hasta'=>$disp_hasta,'titulo'=>$titulo]);
+        return redirect(route('ofertas.index'));
+    }
+
+    public function MostrarOferta($id){
+        $oferta = Oferta::find($id);
+        $user = User::find(Auth::user()->id);
+        return view('ofertas.edit',['oferta'=>$oferta,'user'=>$user]);
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -95,12 +120,6 @@ class OfertaController extends Controller
      */
     public function destroy($id)
     {
-        
-    }
-
-    public function MostrarOfertas(){
-        $ofertas = Oferta::all();
-
-        return view('admin.GestionOfertas',['ofertas'=>$ofertas]);
+       //
     }
 }

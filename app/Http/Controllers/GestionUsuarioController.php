@@ -17,12 +17,12 @@ class GestionUsuarioController extends Controller
 
     //Funcion para cambiar los usuarios//
     public function ModUser(request $datos){
-        $id=$datos->get('id');
+        $id=Auth::user()->id;
         $name=$datos->get('name');
         $email=$datos->get('email');
         $phone=$datos->get('tlf');
+        $especialidad=$datos->get('especialidad');
         $localidad=$datos->get('localidad');
-
         if(!empty($datos->avatar)){
             $filename = $datos->avatar;
             $avatar = $datos->avatar->getClientOriginalExtension();
@@ -49,9 +49,6 @@ class GestionUsuarioController extends Controller
                 $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad]);
             }
         }
-        
-        
-        
         return view('GestionUsuario',['id'=>$id]);
     }
 

@@ -4,6 +4,10 @@
   text-align: center;
   margin: 15px;
 }
+.transparencia{
+  opacity: 0.6;
+}
+
 #tarjeta{
   background-color: hsla(35, 70%, 70%, 0.6);
 }

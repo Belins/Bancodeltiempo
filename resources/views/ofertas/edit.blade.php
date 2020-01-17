@@ -11,9 +11,10 @@
 
 <div id="contenedor" class="container d-flex justify-content-center">
 	<div id="solicitud" class="mt-3 p-3 text-center">
-		<form method="POST" action="{{route('ofertas.store')}}">
-	        @csrf
-	        <h2 class="text-center">Crear oferta</h2>
+		<form method="post" action="{{route('guardarcambios',$oferta->id)}}">
+			@csrf
+			
+	        <h2 class="text-center">Editar oferta</h2>
 	        
 		       	<div class="form-group" >
 		            <label>Localidad</label><br>
@@ -25,23 +26,23 @@
 				</div>
 				<div class="form-group">
 		            <label>Titulo</label><br>
-		            <input type="text" name="titulo">
+		            <input type="text" name="titulo" value="{{$oferta->titulo}}">
 				</div>
 		        <div class="form-group" >
 		            <label>Descripción</label><br>
-		            ​<textarea name="descripcion" rows="3" cols="30" placeholder="Escribe una breve descripcion"></textarea>
+		            ​<textarea name="descripcion" rows="3" cols="50" placeholder="Escribe una breve descripcion">{{$oferta->descripcion}}</textarea>
 		        </div>
 		        <div class="form-group" >
 		            <label>Tiempo (Ofreces en h)</label><br>
-		            <input type="number" name="tiempo">
+		            <input type="number" name="tiempo" value="{{$oferta->tiempo}}">
 		        </div>
 		        <div class="form-group" >
 		            <label>Disponibilidad</label><br>
-		            <label>Desde:</label><input type="date" name="disp_desde" placeholder="YYYY/MM/DD">
-		            <label>Hasta:</label><input type="date" name="disp_hasta" placeholder="YYYY/MM/DD">
+		            <label>Desde:</label><input type="date" name="disp_desde" placeholder="YYYY/MM/DD" value="{{$oferta->disp_desde}}">
+		            <label>Hasta:</label><input type="date" name="disp_hasta" placeholder="YYYY/MM/DD" value="{{$oferta->disp_hasta}}">
 		        </div>
 	        
-	        <button>Crear</button>
+	        <button>Editar</button>
 	    </form>
 	</div>
 </div>

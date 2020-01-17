@@ -39,7 +39,12 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('admin');
 
+Route::get('ofertas/edit/{id}','OfertaController@MostrarOferta')->name('editaroferta')->middleware('admin');
+
+Route::post('ofertas/edit/guardar/{id}','OfertaController@editofert')->name('guardarcambios')->middleware('admin');
+
 Route::resource('ofertas','OfertaController')->middleware('admin');
+
 
 //Route::get('/ofertas/{id}', 'OfertaController@show')->name('ofertas.show')->middleware('admin');
 //Route::get('/ofertas/create', 'OfertaController@create')->name('ofertas.create')->middleware('admin');

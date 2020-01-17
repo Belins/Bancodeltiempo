@@ -11,10 +11,13 @@
             <a class="navbar-brand" href="{{route('home')}}">{{ trans('messages.Inicio') }}</a><!--Inicio-->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">{{ trans('messages.Foro') }}</a><!--Foro-->
+                    <a class="nav-link" href="#">{{ trans('messages.Foro') }}</a><!--Foro-->
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{route('ofertas.create')}}">{{ trans('messages.AñadirOferta') }}</a><!--Foro-->
+                    <a class="nav-link" href="{{route('ofertas.create')}}">{{ trans('messages.AñadirOferta') }}</a><!--Foro-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('ofertas.index')}}">Mis ofertas</a><!--Ver tus ofertas-->
                 </li>
             </ul>
 
@@ -47,6 +50,7 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
+                        <a class="dropdown-item" href="{{route('GestionUsuario')}}">Perfil</a><!--Ver tu perfil-->
                     </div>
                 </li>
             </ul>
