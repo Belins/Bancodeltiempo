@@ -39,7 +39,7 @@ class ContactoController extends Controller
         $mensaje = new mensaje();
         $mensaje->nombre = request('nombre');
         $mensaje->email = request('email');
-        $mensaje->Comentario = request('mensaje');
+        $mensaje->comentario = request('mensaje');
         $mensaje->save();
         return view('welcome');
     }
