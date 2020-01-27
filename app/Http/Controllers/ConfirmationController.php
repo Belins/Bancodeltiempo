@@ -24,9 +24,9 @@ class ConfirmationController extends Controller
     	{
     		foreach($oferta->confirmations as $confirmacion)
     		{
-    			
-    				$r_conf[] = $confirmacion;
-    			
+    			if ($confirmacion->estado == 0) {
+                    $r_conf[] = $confirmacion;
+                }
     		}
     	}
 
