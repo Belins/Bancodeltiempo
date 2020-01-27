@@ -19,14 +19,14 @@ class ConfirmationController extends Controller
     	$r_conf = Confirmation::where('user_id',Auth::user()->id)->where('estado', 1)->get();
 
     	$ofertas = Oferta::where('user_id', Auth::user()->id)->get();
-    	$o_conf = array();
+    	
     	foreach($ofertas as $oferta)
     	{
     		foreach($oferta->confirmations as $confirmacion)
     		{
-    			if ($confirmacion->estado == 0) {
+    			
     				$r_conf[] = $confirmacion;
-    			}
+    			
     		}
     	}
 
@@ -43,7 +43,7 @@ class ConfirmationController extends Controller
     		}
     	}
 
-        return view('ofertas.servicios')->with(['o_conf' => $o_conf, 'r_conf' => $r_conf, 'servicios' => $servicios]);
+        return view('ofertas.servicios')->with(['r_conf' => $r_conf, 'servicios' => $servicios]);
     }
 
     /**

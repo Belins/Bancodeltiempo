@@ -1,0 +1,11 @@
+table{
+	background-color: hsla(35, 70%, 70%);
+}
+#contenedor h1{
+	font-family: "motion";
+	font-size: 300%;
+	color: white;
+}
+td{
+	font-weight: bold;
+}

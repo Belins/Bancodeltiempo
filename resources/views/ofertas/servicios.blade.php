@@ -3,14 +3,15 @@
 <head>
 	<title>Banco Del Tiempo</title>
 	@include('/includes/refcode')
+    <link rel="stylesheet" type="text/css" href="css/serv.css">
 </head>
 <body>
 @include('/includes/headerUser')
 
-<div id="contenedor" class="m5">
+<div id="contenedor" class="container">
 
-    <h2 class="text-center">Solicitudes de Trabajos</h2>
-    <table class="table table-striped table-dark" class="">
+    <h1 class="text-center mt-3">Solicitudes de Trabajos</h1>
+    <table class="table table-striped">
     <thead>
             <tr>
                 <th scope="col">Estado</th>
@@ -50,8 +51,8 @@
         </tbody>
     </table>
 
-    <h2 class="text-center">Trabajos realizados</h2>
-    <table class="table table-striped table-dark">
+    <h1 class="text-center">Trabajos realizados</h1>
+    <table class="table table-striped">
     <thead>
             <tr>
                 <th scope="col"></th>
