@@ -108,6 +108,11 @@ footer .form-control {
   src: url(../Fonts/FFF_Tusj.ttf);
 }
 
+@font-face{
+  font-family: "Motion";
+  src: url(../Fonts/motion.ttf);
+}
+
 #txt1{
   background-color: hsla(35, 70%, 70%, 0.6);
 }
