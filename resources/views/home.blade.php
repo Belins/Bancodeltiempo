@@ -12,9 +12,9 @@
 <div id="contenedor" class="d-flex flex-row flex-wrap">
 	@foreach($listadoOfertas as $oferta)
 		@if($oferta->visible == 1)
-			<div class="card text-center" id="tarjeta">
+			<div class="card text-center w-25" id="tarjeta">
 			  <img src='img/Especialidades/{{$oferta->usuario->especialidad}}.jpg' alt="img" style="width:100%; height: 35%">
-			  <div class="h-50">
+			  <div class="h-50" style="max-width: 100%;">
 				  <h4>{{$oferta->titulo}} {{$oferta->tiempo}}h</h4>
 				  <p class="title h-25 text-justify p-1">{{$oferta->descripcion}}</p>
 				  <p><strong>Puntuacion: </strong> {{$oferta->usuario->puntuacion}}/5</p>

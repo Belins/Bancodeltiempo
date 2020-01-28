@@ -16,6 +16,6 @@ class Oferta extends Model
     }
 
     public function confirmations(){
-        return $this->hasMany('App\Confirmation', 'id');
+        return $this->hasMany('App\Confirmation', 'oferta_id');
     }
 }

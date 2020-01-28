@@ -6,9 +6,9 @@
     <div class="modal-dialog bg-danger" role="document">
         <div class="modal-content bg-dark text-white">
             <h3>Contacto</h3>
-            
-            <p>{{$oferta->usuario->name}}}</p>
-            
+            @if(isset($oferta))
+            	<p>{{$oferta->usuario->name}}}</p>
+            @endif
         </div>
     </div>
 </div>
