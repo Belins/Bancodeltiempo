@@ -21,9 +21,18 @@
 			<h3>Disponibilidad</h3>
 			<h5 class="text-primary">{{$ofer->disp_desde}} - {{$ofer->disp_hasta}}</h5>
 		</div>
-		
-		
-					<a href="{{route('confirmations.createConf', $ofer->id)}}"><button>Solicitar</button>
+		<?php $count = 0 ?>
+		@foreach($ofer->confirmations as $confirmacion)
+			@if($confirmacion->user_id == Auth::user()->id && $confirmacion->estado == 0)
+			<?php $count = $count+1 ?>
+			@endif
+		@endforeach
+		@if($count == 0)
+			<a href="{{route('confirmations.createConf', $ofer->id)}}"><button>Solicitar</button>
+		@endif
+		@if($count == 1)
+			<button class="badge-danger">En curso</button>
+		@endif
 		
 	</div>
 </div>
