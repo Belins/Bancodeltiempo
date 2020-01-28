@@ -24,8 +24,8 @@ class UserTableSeeder extends Seeder
         $user->especialidad = 'Mecanico';
         $user->puntuacion = 5;
         $user->tiempo = 15;
-        $user->admin = 1;
-        $user->role = 'admin';
+        $user->admin = 0;
+        $user->role = 'user';
         $user->save();
 
         $user = new User();
