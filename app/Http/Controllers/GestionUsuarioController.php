@@ -31,25 +31,25 @@ class GestionUsuarioController extends Controller
             
             if($datos->get('password') != ""){
                 $password = bcrypt($datos->get('password'));
-                $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'password'=>$password,'image'=>$filename]);
+                $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'password'=>$password,'image'=>$filename,'especialidad'=>$especialidad]);
             }
             else
             {
-                $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'image'=>$filename]);
+                $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'image'=>$filename,'especialidad'=>$especialidad]);
             } 
         }
         else
         {
             if($datos->get('password') != ""){
                 $password = bcrypt($datos->get('password'));
-                $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'password'=>$password]);
+                $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'password'=>$password,'especialidad'=>$especialidad]);
             }
             else
             {
-                $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad]);
+                $Usuario = User::where('id',$id)->update(['name'=>$name,'email'=>$email,'phone'=>$phone,'localidad'=>$localidad,'especialidad'=>$especialidad]);
             }
         }
-        return view('GestionUsuario',['id'=>$id]);
+        return redirect(route('GestionUsuario',['id'=>$id]));
     }
 
     //Funcion para mostrar todos los usuarios existentes en el panel de admin

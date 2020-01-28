@@ -9,13 +9,14 @@
         </header>
         <div class="container">
             <div class="row justify-content-center ml-5">
-                <h4 class="text-center p-3">{{ trans('messages.Gestion') }}</h4>
+                
             </div>
             <div class="row">
-                <div class="col-3 d-flex justify-content-end align-items-start">
+                <div class="col-3 d-flex justify-content-end align-items-start mt-5">
                     <img src="/img/avatares/{{Auth::user()->image}}" alt="avatar" class="img-circle" width="100%" heigth="50%">
                 </div> 
-                <div class="col-9 d-flex justify-content-center">
+                <div class="col-9 d-flex justify-content-center flex-column fondoAmarillo RadiusBorder p-1 mt-2">
+                <h4 class="text-center p-3">{{ trans('messages.Gestion') }}</h4>    
                 <form method="POST" action="{{route('ModificarUsuario',['id'=>Auth::user()->id])}}" enctype="multipart/form-data">
                         @csrf                        
                         <div class="form-group row">
@@ -33,11 +34,27 @@
                         <div class="form-group row">
                             <label for="localidad" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Localidad') }}</label>
                             <div class="col-md-6">
-                                <select name="localidad" value="{{ Auth::user()->localidad }}">
-                                    <option value="Urnieta">Urnieta</option> 
-                                    <option value="Donosti">Donosti</option> 
-                                    <option value="Andoain">Andoain</option>
-                                    <option value="Hernani">Hernani</option> 
+                                <select name="localidad">
+                                    @if(Auth::user()->localidad == 'Urnieta')
+                                        <option value="Urnieta" selected="selected">Urnieta</option>
+                                    @else
+                                        <option value="Urnieta">Urnieta</option>
+                                    @endif
+                                    @if(Auth::user()->localidad == 'Donosti') 
+                                        <option value="Donosti" selected="selected">Donosti</option>
+                                    @else
+                                        <option value="Donosti">Donosti</option>   
+                                    @endif
+                                    @if(Auth::user()->localidad == 'Andoain') 
+                                        <option value="Andoain" selected="selected">Andoain</option>
+                                    @else
+                                        <option value="Andoain">Andoain</option>
+                                    @endif
+                                    @if(Auth::user()->localidad == 'Hernani')
+                                        <option value="Hernani" selected="selected">Hernani</option>
+                                    @else
+                                        <option value="Hernani">Hernani</option>
+                                    @endif 
                                 </select>
                             </div>
                         </div>
@@ -46,9 +63,21 @@
                             <label for="especialidad" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Especialidad') }}</label>
                             <div class="col-md-6">
                                 <select name="especialidad">
-                                    <option value="Jardinero">Jardinero</option> 
-                                    <option value="Programador">Programador</option> 
-                                    <option value="Mecanico">Mecanico</option>
+                                    @if(Auth::user()->especialidad == 'Jardinero')
+                                        <option value="Jardinero" selected="selected">Jardinero</option>
+                                    @else
+                                        <option value="Jardinero">Jardinero</option>
+                                    @endif
+                                    @if(Auth::user()->especialidad == 'Programador')
+                                        <option value="Programador" selected="selected">Programador</option>
+                                    @else
+                                        <option value="Programador">Programador</option>    
+                                    @endif
+                                    @if(Auth::user()->especialidad == 'Mecanico') 
+                                        <option value="Mecanico" selected="selected">Mecanico</option>
+                                    @else
+                                        <option value="Mecanico">Mecanico</option>
+                                    @endif
                                 </select>
                             </div>
                         </div>
