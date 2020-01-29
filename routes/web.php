@@ -88,7 +88,7 @@ Route::get('locale/{locale}', function($locale){
 
     Route::get('/CrearEmail/{id}','EmailController@CreateEmail')->name('CrearEmail');
 
-    Route::post('/contactar', 'EmailController@contact')->name('contact');
+    Route::post('/contactar/{id}', 'EmailController@contact')->name('contact');
 
     ////GESTION DE OFERTAS////
 

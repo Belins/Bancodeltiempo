@@ -116,3 +116,10 @@ footer .form-control {
 #trj{
   background-color: hsla(35, 70%, 70%, 0.6);
 }
+
+#horas{
+  border-style: solid;
+  border-color:white;
+  border-width: 1px;
+  color:white;
+}
