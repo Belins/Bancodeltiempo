@@ -41,7 +41,8 @@
                 <td class="columnaMensaje">{{$conf->usuario->name}}</td>
                 <td class="columnaMensaje">{{$conf->usuario->email}}</td>
                 @if($conf->estado == 0)
-                <td><a href="{{route('confirmations.acept',$conf->id)}}"><span class="glyphicon glyphicon-pencil">Aceptar</span></a></td>
+                <td><a href="{{route('confirmations.acept',$conf->id)}}" style="color: green;"><span class="glyphicon glyphicon-pencil">Aceptar</span></a></td>
+                <td><a href="" style="color: red;"><span class="glyphicon glyphicon-pencil">Rechazar</span></a></td>
                 @endif
                 @if($conf->estado == 1)
                 <td><a href="{{route('confirmations.trueque',$conf->id)}}"><span class="glyphicon glyphicon-pencil">Pagar</span></a></td>

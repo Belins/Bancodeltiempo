@@ -109,7 +109,9 @@ class ConfirmationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $conf = Confirmation::find($id);
+        $conf->delete();
+        return redirect(route('confirmations.index'));
     }
 
     public function createConf($id)
@@ -133,6 +135,8 @@ class ConfirmationController extends Controller
     public function trueque($id)
     {
     	$conf = Confirmation::find($id);
+        if($conf->estado == 1 && $conf->user_id == Auth::user()->id)
+        {
     	$conf->r_confirmado = 1;
     	$conf->estado = 2;
     	$conf->oferta->usuario->tiempo = $conf->oferta->usuario->tiempo + 2;
@@ -141,5 +145,10 @@ class ConfirmationController extends Controller
     	$conf->usuario->save();
     	$conf->save();
     	return redirect(route('confirmations.index'));
+        }
+        else
+        {
+            return('no cuela');
+        }
     }
 }
