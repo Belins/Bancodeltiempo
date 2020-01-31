@@ -25,12 +25,10 @@
   <div class="container">
 
     <!-- Heading Row -->
-    <div class="row align-items-center my-5">
-      <div class="col-lg-7">
-        <img id="imgGen" class="img-fluid rounded mb-4 mb-lg-0" src="img/imagen.png" alt="trueque">
-      </div>
+    <div class="row align-items-center m-5">
+      <img id="imgGen" class="img-fluid rounded mb-lg-0" src="img/imagen.png" alt="trueque">
       <!-- /.col-lg-8 -->
-      <div id="txt1" class="col-lg-5 font-weight-bold p-3">
+      <div class="col-lg-5 font-weight-bold p-3 ml-5" id="txt1">
         <h1 class="font-weight-light">@lang('messages.Banco')</h1>
         <!--Banco del tiempo-->
         <p>@lang('messages.Info')</p>

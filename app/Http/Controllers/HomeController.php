@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 use App\User;
 use App\Oferta;
 
@@ -25,8 +26,22 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+        $ofertas = Oferta::where('user_id', Auth::user()->id)->get();
+        $trabajadas = 0;
+        foreach($ofertas as $oferta)
+        {
+            foreach($oferta->confirmations as $confirmacion)
+            {
+                if ($confirmacion->estado == 2) {
+                    $trabajadas = $trabajadas + $confirmacion->oferta->tiempo;
+                }
+            }
+        }
+        $gastadas = $trabajadas - Auth::user()->tiempo;
+
         $listadoOfertas = Oferta::All();
-        return view('home', ['listadoOfertas' => $listadoOfertas]);
+        return view('home')->with(['listadoOfertas' => $listadoOfertas, 'trabajadas' => $trabajadas, 'gastadas' => $gastadas]);
     }
 
 

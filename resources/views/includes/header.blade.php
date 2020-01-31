@@ -1,16 +1,12 @@
 <div class="row d-flex align-items-center justify-content-center p-1">
-    <img id="logo" src="{{asset('img/logo.png')}}" style="height: 70px; width: 140px;">
+    
     <p class="display-4" style="font-family: 'Titulo'; box-shadow: 5px 4px 8px 0px; background-color: hsla(35, 70%, 70%, 0.6); border-radius: 20px;">@lang('messages.Banco') </p> <!--Banco del Tiempo -->
 </div>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm">
     <!-- Links -->
-    <a class="navbar-brand" href="{{route('welcome')}}">@lang('messages.Inicio') </a>
+    <a class="navbar-brand" href="{{route('welcome')}}"><img id="logo" src="{{asset('img/logo.png')}}" style="height: 60px; width: 120px;"> </a>
     <!--Inicio-->
     <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="#">@lang('messages.Quienes') </a>
-            <!--Quienes somos-->
-        </li>
         <li class="nav-item">
             <a class="nav-link" href="{{route('infgeneral')}}">@lang('messages.Como') </a>
             <!--Como funciona-->
@@ -31,7 +27,7 @@
     </ul>
     <ul class="nav navbar-nav flex-row ml-auto">
         <li class="dropdown order-1">
-            <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-light dropdown-toggle">@lang('messages.Login/Registro')</button>
+            <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-dark dropdown-toggle">@lang('messages.Login/Registro')</button>
             <!--Inicia/Registra-->
             <ul class="dropdown-menu dropdown-menu-right mt-2 w-100">
                 <li class="p-2 bg-dark w-100">

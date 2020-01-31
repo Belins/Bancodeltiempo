@@ -1,12 +1,13 @@
 
  <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <link type="text/css" href="/img/admin/icons/css/font-awesome.css" rel="stylesheet">
 
     <div class="row d-flex align-items-center justify-content-center">
-        <img id="logo" src="{{asset('img/logo.JPG')}}" style="height: 70px; width: 140px; ">
+        <img id="logo" class="mr-3" src="{{asset('img/logo.png')}}" style="height: 60px; width: 120px;">
         <p class="display-4" style="font-family: 'Titulo'; box-shadow: 5px 4px 8px 0px; background-color: hsla(35, 70%, 70%, 0.5); border-radius: 20px;">@lang('messages.Banco') </p> <!--Banco del Tiempo -->
     </div>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm">
             <!-- Links -->
             <a class="navbar-brand" href="{{route('home')}}">{{ trans('messages.Inicio') }}</a><!--Inicio-->
             <ul class="navbar-nav">
@@ -22,7 +23,10 @@
             </ul>
 
             <ul class="navbar-nav ml-auto d-flex flex-row justify-content-end">
-                <li class="nav-item dropdown">
+                <li class="d-flex flex-row align-items-center mr-2">
+                    <h3 class="text-white text-center">@if(isset($trabajadas)){{$trabajadas}} <i class="menu-icon icon-arrow-up"></i>@endif  @if(isset($gastadas)){{$gastadas}} <i class="menu-icon icon-arrow-down"></i>@endif <span class="text-primary"><strong>{{Auth::user()->tiempo}} <i class="icon-time"></i></span></strong></h3>
+                </li>
+                <li class="nav-item dropdown d-flex flex-row align-items-center">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         @lang('messages.Idiomas')
                     </a>
@@ -32,7 +36,6 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown d-flex flex-row align-items-center justify-content-around" style="width:40%">
-                <h2 class="text-white">{{Auth::user()->tiempo}} h</h2>
                 <img src="/img/avatares/{{Auth::user()->image}}" alt="avatar" class="img-circle" width="20%" heigth="20%">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>

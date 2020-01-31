@@ -19,7 +19,7 @@
     </header>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container bg-dark text-white mb-5">
         <div id="infoGen">
             <div class="row">
                 <div class="col-12">
@@ -88,7 +88,7 @@
                 </div>
                 <div class="col-4 text-center">
                     <img class="imgroles" src="img/trabajador.png" alt="trabajador" />
-                    <img class="imgroles" src="img/clientes.jpg" alt="clientes" />
+                    <img class="imgroles" src="img/clientes.jpg" alt="clientes"/>
                 </div>
             </div>
         </div>

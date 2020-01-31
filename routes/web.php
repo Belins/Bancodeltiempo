@@ -47,11 +47,10 @@ Route::resource('ofertas','OfertaController')->middleware('admin');
 
 
 //Confirmaciones
-Route::resource('confirmations', 'ConfirmationController')->only([
-    'index', 'destroy'
-]);
+Route::get('/confirmations', 'ConfirmationController@index')->name('confirmations.index')->middleware('admin');
 Route::get('/confirmations/create/{id}', 'ConfirmationController@createConf')->name('confirmations.createConf')->middleware('admin');
 Route::get('/confirmations/aceptar/{id}', 'ConfirmationController@acept')->name('confirmations.acept')->middleware('admin');
+Route::get('/confirmations/rechazar/{id}', 'ConfirmationController@refuse')->name('confirmations.refuse')->middleware('admin');
 Route::get('/confirmations/trueque/{id}', 'ConfirmationController@trueque')->name('confirmations.trueque')->middleware('admin');
 
 

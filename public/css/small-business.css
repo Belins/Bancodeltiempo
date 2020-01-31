@@ -16,8 +16,8 @@ body{
 }
 
 #imgGen{
-  width:70%;
-  height:70%;
+  width:30%;
+  height:30%;
 }
 
 p{
@@ -94,9 +94,10 @@ footer .form-control {
 }
 
 .imgroles{
-  width:65%;
-  height:50%;
+  width:55%;
+  height:35%;
   margin-bottom: 2%;
+  margin-top: 5%;
 }
 
 @font-face {
@@ -110,9 +111,23 @@ footer .form-control {
 }
 
 #txt1{
-  background-color: hsla(35, 70%, 70%, 0.6);
+  background-color: hsla(35, 70%, 70%, 0.8);
+}
+
+#txt1 a{
+  margin-left: 30%;
 }
 
 #trj{
   background-color: hsla(35, 70%, 70%, 0.6);
+}
+
+nav
+{
+  background-color: #A49582;
+  color: black;
+}
+nav a
+{
+  color: black;
 }

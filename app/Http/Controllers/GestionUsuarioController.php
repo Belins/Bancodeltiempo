@@ -86,4 +86,5 @@ class GestionUsuarioController extends Controller
         } 
         return redirect(route('mostrarUsuarios'));
     }
+
 }

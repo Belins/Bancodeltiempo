@@ -16,10 +16,13 @@ class ConfirmationController extends Controller
      */
     public function index()
     {
+    //SOLICITUDES DE TRABAJOS
+        //Aceptados para pagar
     	$r_conf = Confirmation::where('user_id',Auth::user()->id)->where('estado', 1)->get();
 
     	$ofertas = Oferta::where('user_id', Auth::user()->id)->get();
-    	
+
+    	//Añadimos a la misma tabla las confirmaciones por aceptar
     	foreach($ofertas as $oferta)
     	{
     		foreach($oferta->confirmations as $confirmacion)
@@ -30,20 +33,33 @@ class ConfirmationController extends Controller
     		}
     	}
 
-    	
+    //TRABAJOS PENDIENTES
+        $enproceso = array();
+        foreach($ofertas as $oferta)
+        {
+            foreach($oferta->confirmations as $confirmacion)
+            {
+                if ($confirmacion->estado == 1) {
+                    $enproceso[] = $confirmacion;
+                }
+            }
+        }
+
+
+    //TRABAJOS FINALIZADOS
     	//$servicioss = Confirmation::where('estado', 2)->get();
     	$servicios = array();
     	foreach($ofertas as $ofert)
     	{
     		foreach($ofert->confirmations as $confirmacion)
     		{
-    			if ($confirmacion->estado == 2) {
+    			if ($confirmacion->estado == 2 || $confirmacion->estado == 3) {
     				$servicios[] = $confirmacion;
     			}
     		}
     	}
 
-        return view('ofertas.servicios')->with(['r_conf' => $r_conf, 'servicios' => $servicios]);
+        return view('ofertas.servicios')->with(['r_conf' => $r_conf, 'servicios' => $servicios, 'enproceso' => $enproceso]);
     }
 
     /**
@@ -132,6 +148,14 @@ class ConfirmationController extends Controller
     	return redirect(route('confirmations.index'));
     }
 
+    public function refuse($id)
+    {
+        $conf = Confirmation::find($id);
+        $conf->estado = 3;
+        $conf->save();
+        return redirect(route('confirmations.index'));
+    }
+
     public function trueque($id)
     {
     	$conf = Confirmation::find($id);
@@ -150,5 +174,22 @@ class ConfirmationController extends Controller
         {
             return('no cuela');
         }
+    }
+
+    //Obtener la suma de horas realizadas
+    public function getSumahoras()
+    {
+        $ofertas = Oferta::where('user_id', Auth::user()->id)->get();
+        $count = 0;
+        foreach($ofertas as $oferta)
+        {
+            foreach($oferta->confirmations as $confirmacion)
+            {
+                if ($confirmacion->estado == 2) {
+                    $count = $count + $confirmacion->oferta->tiempo;
+                }
+            }
+        }
+        return $count;
     }
 }

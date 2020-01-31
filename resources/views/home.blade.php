@@ -8,7 +8,6 @@
 <body>
 @include('/includes/headerUser')
 
-
 <div id="contenedor" class="d-flex flex-row flex-wrap">
 	@foreach($listadoOfertas as $oferta)
 		@if($oferta->visible == 1)
