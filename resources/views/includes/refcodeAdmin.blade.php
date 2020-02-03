@@ -1,5 +1,9 @@
 <!-- JavaScript code -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="/js/javaScript.js"></script>
+<!-- JS para crear los graficos en admin -->
+<script src="/js/adminGraficos.js"></script>
+
 
 <!-- Bootstrap core CSS -->
 <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

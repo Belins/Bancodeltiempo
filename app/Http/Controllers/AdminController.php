@@ -24,7 +24,8 @@ class AdminController extends Controller
     public function index()
     {
         if(Auth()->user()->isAdmin())
-        return view('homeadmin');
+            
+            return view('homeadmin');
         else 
         return redirect()->back();
     }

@@ -1,8 +1,17 @@
 <html>
         <head>
-                @include('/includes/refcodeAdmin') 
+                @include('/includes/refcodeAdmin')
+                <script>
+                        $("input").on("change", function() {
+                                this.setAttribute(
+                                        "data-date",
+                                        moment(this.value, "YYYY-MM-DD")
+                                        .format( this.getAttribute("data-date-format") )
+                                )
+                        }).trigger("change")
+                </script> 
         </head>
-        <body>
+        <body onload="PedirOfertas()">
                 @include('/includes/headerAdmin')
                 <div id="pantallaAdmin" class="wrapper">
                                 <div class="row">
