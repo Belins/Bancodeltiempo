@@ -12,7 +12,7 @@
             <a class="navbar-brand" href="{{route('home')}}">{{ trans('messages.Inicio') }}</a><!--Inicio-->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{ trans('messages.Foro') }}</a><!--Foro-->
+                    <a class="nav-link" href="{{route('foro.index')}}">{{ trans('messages.Foro') }}</a><!--Foro-->
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('ofertas.create')}}">{{ trans('messages.AñadirOferta') }}</a><!--Foro-->

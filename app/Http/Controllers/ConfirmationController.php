@@ -16,6 +16,22 @@ class ConfirmationController extends Controller
      */
     public function index()
     {
+
+    //Horas navbar
+    $ofertas = Oferta::where('user_id', Auth::user()->id)->get();
+    $trabajadas = 0;
+    foreach($ofertas as $oferta)
+    {
+        foreach($oferta->confirmations as $confirmacion)
+        {
+            if ($confirmacion->estado == 2) {
+                $trabajadas = $trabajadas + $confirmacion->oferta->tiempo;
+            }
+        }
+    }
+    $gastadas = $trabajadas - Auth::user()->tiempo +4;
+
+
     //SOLICITUDES DE TRABAJOS
         //Aceptados para pagar
     	$r_conf = Confirmation::where('user_id',Auth::user()->id)->where('estado', 1)->get();
@@ -59,7 +75,7 @@ class ConfirmationController extends Controller
     		}
     	}
 
-        return view('ofertas.servicios')->with(['r_conf' => $r_conf, 'servicios' => $servicios, 'enproceso' => $enproceso]);
+        return view('ofertas.servicios')->with(['r_conf' => $r_conf, 'servicios' => $servicios, 'enproceso' => $enproceso, 'trabajadas' => $trabajadas, 'gastadas' => $gastadas]);
     }
 
     /**
@@ -176,20 +192,4 @@ class ConfirmationController extends Controller
         }
     }
 
-    //Obtener la suma de horas realizadas
-    public function getSumahoras()
-    {
-        $ofertas = Oferta::where('user_id', Auth::user()->id)->get();
-        $count = 0;
-        foreach($ofertas as $oferta)
-        {
-            foreach($oferta->confirmations as $confirmacion)
-            {
-                if ($confirmacion->estado == 2) {
-                    $count = $count + $confirmacion->oferta->tiempo;
-                }
-            }
-        }
-        return $count;
-    }
 }

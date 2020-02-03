@@ -436,6 +436,7 @@ class ComposerStaticInita299a68c8b82894d2ce96f3ab7fd0cc5
 
     public static $classMap = array (
         'AdminSeeder' => __DIR__ . '/../..' . '/database/seeds/AdminSeeder.php',
+        'App\\Comentario' => __DIR__ . '/../..' . '/app/Comentario.php',
         'App\\Confirmation' => __DIR__ . '/../..' . '/app/Confirmation.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -446,9 +447,11 @@ class ComposerStaticInita299a68c8b82894d2ce96f3ab7fd0cc5
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\ConfirmationController' => __DIR__ . '/../..' . '/app/Http/Controllers/ConfirmationController.php',
         'App\\Http\\Controllers\\ContactoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ContactoController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\EmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/EmailController.php',
+        'App\\Http\\Controllers\\ForoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ForoController.php',
         'App\\Http\\Controllers\\GestionUsuarioController' => __DIR__ . '/../..' . '/app/Http/Controllers/GestionUsuarioController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\OfertaController' => __DIR__ . '/../..' . '/app/Http/Controllers/OfertaController.php',

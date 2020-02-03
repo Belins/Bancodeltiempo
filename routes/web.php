@@ -92,4 +92,9 @@ Route::get('locale/{locale}', function($locale){
     ////GESTION DE OFERTAS////
 
     Route::get('/GestionOfertas','OfertaController@MostrarOfertas')->name('mostrarofertas');
+
+    //FORO//
+
+    Route::resource('foro','ForoController')->middleware('admin');
+
 //////////////////////////////

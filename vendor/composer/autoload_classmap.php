@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AdminSeeder' => $baseDir . '/database/seeds/AdminSeeder.php',
+    'App\\Comentario' => $baseDir . '/app/Comentario.php',
     'App\\Confirmation' => $baseDir . '/app/Confirmation.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
@@ -17,9 +18,11 @@ return array(
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
+    'App\\Http\\Controllers\\ConfirmationController' => $baseDir . '/app/Http/Controllers/ConfirmationController.php',
     'App\\Http\\Controllers\\ContactoController' => $baseDir . '/app/Http/Controllers/ContactoController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\EmailController' => $baseDir . '/app/Http/Controllers/EmailController.php',
+    'App\\Http\\Controllers\\ForoController' => $baseDir . '/app/Http/Controllers/ForoController.php',
     'App\\Http\\Controllers\\GestionUsuarioController' => $baseDir . '/app/Http/Controllers/GestionUsuarioController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\OfertaController' => $baseDir . '/app/Http/Controllers/OfertaController.php',
