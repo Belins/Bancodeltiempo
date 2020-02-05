@@ -50,7 +50,6 @@
                 <li class="p-2 bg-dark w-100">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-
                         <div class="form-group">
                             <input name="email" placeholder="@lang('messages.Email')" class="form-control @error('email') is-invalid @enderror" type="email" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required autocomplete="email" autofocus>
                             <!--Email-->

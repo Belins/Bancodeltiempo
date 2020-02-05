@@ -87,14 +87,18 @@ Route::get('locale/{locale}', function($locale){
 
     Route::get('/CrearEmail/{id}','EmailController@CreateEmail')->name('CrearEmail');
 
-    Route::post('/contactar', 'EmailController@contact')->name('contact');
+    Route::post('/contactar/{id}', 'EmailController@contact')->name('contact');
 
     ////GESTION DE OFERTAS////
 
     Route::get('/GestionOfertas','OfertaController@MostrarOfertas')->name('mostrarofertas');
 
+
     //FORO//
 
     Route::resource('foro','ForoController')->middleware('admin');
 
+    //// ESTADISTICAS /////
+
+    Route::get('Estadisticas','EstadisticaController@MostarOfertasFechas')->name('sacarEstadisticas');
 //////////////////////////////

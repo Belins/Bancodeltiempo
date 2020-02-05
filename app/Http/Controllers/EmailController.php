@@ -13,7 +13,7 @@ class EmailController extends Controller
         return view('email.emailForm',['datosMensaje'=>$datosMensaje]);
     }
 
-    public function contact(Request $request){
+    public function contact(Request $request,$id){
         $subject = $request->input('asunto');
         $for = $request->input('email');
         $mensaje = $request->get('mensaje');
@@ -22,6 +22,9 @@ class EmailController extends Controller
             $msj->subject($subject);
             $msj->to($for);
         });
+        $MensajeRespondido = mensaje::find($id);
+        $MensajeRespondido->respondido = 1;
+        $MensajeRespondido->save();
         return redirect(route('mostrarMensajes'));
     }
 }

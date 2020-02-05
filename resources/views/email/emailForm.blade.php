@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('contenidoAdmin')
     <div id="FormEmail">
-        <form action="{{route('contact')}}" method="post">
+        <form action="{{route('contact',$datosMensaje->id)}}" method="post">
             {{csrf_field()}}
             <div class="row m-4">
                 <label><b>Email a responder : </b></label>&nbsp;<br>

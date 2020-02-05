@@ -21,7 +21,7 @@
                         <a class="nav-link" href="{{route('ofertas.create')}}">{{ trans('messages.AñadirOferta') }}</a><!--Foro-->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('ofertas.index')}}">Mis ofertas</a><!--Ver tus ofertas-->
+                        <a class="nav-link" href="{{route('ofertas.index')}}">{{trans('messages.MisOfertas')}}</a><!--Ver tus ofertas-->
                     </li>
                     <li class="nav-item dropdown d-flex flex-row align-items-center">
                         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -39,14 +39,12 @@
                 <h3 class="text-white text-center">@if(isset($trabajadas)){{$trabajadas}} <i class="menu-icon icon-arrow-up"></i>@endif  @if(isset($gastadas)){{$gastadas}} <i class="menu-icon icon-arrow-down"></i>@endif <span class="text-primary"><strong>{{Auth::user()->tiempo}} <i class="icon-time"></i></span></strong></h3>
                 <img src="/img/avatares/{{Auth::user()->image}}" alt="avatar" class="img-circle ml-3" width="50px" heigth="50px">
                 <li class="nav-item dropdown d-flex justify-content-end">
-                
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
-
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{route('GestionUsuario')}}">Perfil</a><!--Ver tu perfil-->
-                        <a class="dropdown-item" href="{{route('confirmations.index')}}">Servicios</a><!--Ver tus servicios-->
+                        <a class="dropdown-item" href="{{route('GestionUsuario')}}">{{trans('messages.Perfil')}}</a><!--Ver tu perfil-->
+                        <a class="dropdown-item" href="{{route('confirmations.index')}}">{{trans('messages.Servicios')}}</a><!--Ver tus servicios-->
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
@@ -56,8 +54,6 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
-                        
-
                     </div>
                 </li>
             </div>

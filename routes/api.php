@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('estadisticas/{fechaInicio}/{fechaFin}','EstadisticaController@MostarOfertasFechas');
+Route::get('confirmaciones','EstadisticaController@Confirmaciones');
+Route::apiResource('estadisticas','EstadisticaController');

@@ -17,7 +17,8 @@ class CreateMensajesTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('email');
-            $table->string('comentario');;
+            $table->string('comentario');
+            $table->boolean('respondido');
             $table->timestamps();
         });
     }

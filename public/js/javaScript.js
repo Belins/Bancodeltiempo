@@ -38,11 +38,11 @@ function validarRegExp(cadena) {
 let validarEmail = '/^([!#-\'*+\/-9=?A-Z^-~\\\\-]{1,64}(\.[!#-\'*+\/-9=?A-Z^-~\\\\-]{1,64})*|"([\]!#-[^-~\ \t\@\\\\]|(\\[\t\ -~]))+")@([0-9A-Z]([0-9A-Z-]{0,61}[0-9A-Za-z])?(\.[0-9A-Z]([0-9A-Z-]{0,61}[0-9A-Za-z])?))+$/i'
     return cadena.replace(validarEmail);
   }
-  /*
+
 function validarTelefono(cadena){
   let validarTelefono='/^((\+?34([ \t|\-])?)?[9|6|7]((\d{1}([ \t|\-])?[0-9]{3})|(\d{2}([ \t|\-])?[0-9]{2}))([ \t|\-])?[0-9]{2}([ \t|\-])?[0-9]{2})$/ ';
     return cadena.replace(validarTelefono);
-}*/
+}
 
 //validación -> permite introducir números, letras y signos de puntuación
 function NumTextComment(string){

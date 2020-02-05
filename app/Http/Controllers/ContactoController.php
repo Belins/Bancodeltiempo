@@ -13,7 +13,7 @@ class ContactoController extends Controller
      */
     public function index()
     {
-        $mensajes = mensaje::all();
+        $mensajes = mensaje::all()->where('respondido',0);
         return view('admin.GestionMensajes',['mensajes'=>$mensajes]);
     }
 
@@ -40,6 +40,7 @@ class ContactoController extends Controller
         $mensaje->nombre = request('nombre');
         $mensaje->email = request('email');
         $mensaje->comentario = request('mensaje');
+        $mensaje->respondido = 0;
         $mensaje->save();
         return view('welcome');
     }
