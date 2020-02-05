@@ -11,7 +11,7 @@
                         }).trigger("change")
                 </script> 
         </head>
-        <body onload="PedirOfertas()">
+        <body >
                 @include('/includes/headerAdmin')
                 <div id="pantallaAdmin" class="wrapper">
                                 <div class="row">
