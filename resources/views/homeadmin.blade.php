@@ -20,8 +20,9 @@
         <script> 
                 google.charts.load('current', {'packages':['corechart']});
                 google.charts.setOnLoadCallback(drawChart);
-                var OfertasTotales;
+                var OfertasDesactivadas;
                 var OfertasActivas;
+                var TotalOfertas;
 
                 //Pedir datos a la api de ofertas creadas y activas en un rango de tiempo//
                 $('#pintar').click(function(){
@@ -33,8 +34,9 @@
                         request.onload = function(){
                                 datos = this.response;
                                 if(request.status >= 200 && request.status < 400){
-                                        OfertasTotales = parseInt(datos[1]);
+                                        OfertasDesactivadas = parseInt(datos[1])-parseInt(datos[3]);
                                         OfertasActivas = parseInt(datos[3]);
+                                        TotalOfertas = parseInt(datos[1]);
                                         drawChart();
                                 }
                                 else
@@ -55,8 +57,9 @@
                         request.onload = function(){
                                 datos = this.response;
                                 if(request.status >= 200 && request.status < 400){
-                                        OfertasTotales = parseInt(datos[1]);
+                                        OfertasDesactivadas = parseInt(datos[1])-parseInt(datos[3]);
                                         OfertasActivas = parseInt(datos[3]);
+                                        TotalOfertas = parseInt(datos[1]);
                                         drawChart();
                                 }
                                 else
@@ -71,14 +74,14 @@
                 function drawChart(){
                         var data = google.visualization.arrayToDataTable([
                                 ['Effort', 'Amount given'],
-                                ['Ofertas Totales',  OfertasTotales],
+                                ['Ofertas Desactivadas',  OfertasDesactivadas],
                                 ['Ofertas Activas',  OfertasActivas],
                         ]);
 
                         var options = {
                                 pieHole: 0.5,
                                 is3D:true,
-                                title:'Ofertas activas/totales',
+                                title:'Total Ofertas : '+TotalOfertas,
                                 pieSliceTextStyle: {
                                         color: 'black',
                                 },
