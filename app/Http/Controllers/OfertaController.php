@@ -40,15 +40,25 @@ class OfertaController extends Controller
      */
     public function store(Request $request)
     {
-        $ofer = new Oferta;
-        $ofer->user_id = Auth::user()->id;
-        $ofer->descripcion = $request -> get('descripcion');
-        $ofer->tiempo = $request -> input('tiempo');
-        $ofer->disp_desde = $request -> input('disp_desde');
-        $ofer->disp_hasta = $request -> input('disp_hasta');
-        $ofer->titulo = $request -> input('titulo');
+        $validatedData = $request->validate([
+        'descripcion' => 'required|max:50',
+        'tiempo' => 'required|integer|max:7',
+        'titulo' => 'required|max:20',
+        'disp_desde' => 'required',
+        'disp_hasta' => 'required',
+        ]);
+        if(Auth::user()->ofertas()->where('visible', 1)->count() < 3)
+        {
+            $ofer = new Oferta;
+            $ofer->user_id = Auth::user()->id;
+            $ofer->descripcion = $request -> get('descripcion');
+            $ofer->tiempo = $request -> input('tiempo');
+            $ofer->disp_desde = $request -> input('disp_desde');
+            $ofer->disp_hasta = $request -> input('disp_hasta');
+            $ofer->titulo = $request -> input('titulo');
+            $ofer->save();
+        }
         
-        $ofer->save();
         return redirect(route('home'));
     }
 

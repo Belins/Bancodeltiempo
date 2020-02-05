@@ -25,25 +25,31 @@
   <div class="container">
 
     <!-- Heading Row -->
-    <div class="row align-items-center m-5">
-      <img id="imgGen" class="img-fluid rounded mb-lg-0" src="img/imagen.png" alt="trueque">
+    <div class="row align-items-center col-12 mt-5 ml-2 p-5" id="txt1">
+      <div class="col-lg-4 col-sm-12 ml-5">
+        <img id="imgGen" class="img-fluid rounded d-flex justify-content-center ml-5" src="img/cajafuerte.jpg" alt="trueque">
+      </div>
       <!-- /.col-lg-8 -->
-      <div class="col-lg-5 font-weight-bold p-3 ml-5" id="txt1">
-        <h1 class="font-weight-light">@lang('messages.Banco')</h1>
+      <div class="col-lg-7 col-sm-12 font-weight-bold p-2 text-center">
+        <h1 class="font-weight-light">¿Que es lo que buscamos?</h1>
         <!--Banco del tiempo-->
         <p>@lang('messages.Info')</p>
         <!--Lo que estamos buscando con esta empresa es una comunidad sana donde la gente que participe en ella se dedique hacer truque de su tiempo a cambio del tiempo de otro usuario SIN necesidad de usar ningun tipo de DINERO.-->
-        <a class="btn btn-dark" href="{{route('infgeneral')}}">@lang('messages.Leyendo') </a>
+        <a class="btn btn-primary" href="{{route('infgeneral')}}">@lang('messages.Leyendo') </a>
         <!--Seguir leyendo!-->
       </div>
       <!-- /.col-md-4 -->
     </div>
     <!-- /.row -->
-
+    <div id="Ejemplo" class="row col-12 mt-5 ml-2 p-2 d-flex justify-content-center">
+        <h1 class="font-weight-light text-white col-12 text-center display-4" style="font-family: 'Motion'">Ejemplo</h1>
+        <img class="img-fluid rounded mt-5" src="img/imagen.png" alt="trueque">
+    </div>
     <!-- Content Row -->
-    <div class="row">
-      <div class="col-md-4 mb-5">
-        <div id= "trj" class="card h-100">
+    <div id="Herramientas" class="row col-12 mb-5 mt-5">
+      <h1 class="font-weight-light text-white col-12 text-center display-4" style="font-family: 'Motion'">Herramientas</h1>
+      <div class="col-lg-4 col-md-12">
+        <div id= "trj" class="card h-100 col-12">
           <div class="card-body">
             <h2 class="card-title">@lang('messages.Trabajador') </h2>
             <!--Trabajador-->
@@ -57,8 +63,8 @@
         </div>
       </div>
       <!-- /.col-md-4 -->
-      <div class="col-md-4 mb-5">
-        <div id= "trj" class="trj card h-100">
+      <div class="col-lg-4 col-md-12">
+        <div id= "trj" class="trj card h-100 col-12">
           <div class="card-body">
             <h2 class="card-title">@lang('messages.Cliente')</h2>
             <!--Cliente-->
@@ -72,10 +78,10 @@
         </div>
       </div>
       <!-- /.col-md-4 -->
-      <div class="col-md-4 mb-5">
-        <div id= "trj" class="trj card h-100">
+      <div class="col-lg-4 col-md-12">
+        <div id= "trj" class="trj card h-100 col-12">
           <div class="card-body">
-            <h2 class="card-title">@lang('messages.Blog') </h2>
+            <h2 class="card-title">@lang('messages.Foro') </h2>
             <!--Blog-->
             <p class="card-text">@lang('messages.BlogDes') </p>
             <!--En esta todos los usuarios podrán participar en un blog para itercambiar conocimientos sin necesidad de contratar a nadie.-->

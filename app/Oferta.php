@@ -8,7 +8,7 @@ class Oferta extends Model
 {
     protected $table = 'ofertas';
     protected $fillable = [
-        'disp_desde', 'disp_hasta', 'tiempo', 'descripcion', 'user_id'
+        'disp_desde', 'disp_hasta', 'tiempo', 'titulo', 'descripcion', 'user_id'
     ];
 
     public function usuario(){

@@ -10,13 +10,15 @@
 @include('/includes/headerUser')
 
 <div id="contenedor" class="d-flex flex-row flex-wrap col-8 mb-5">
-	
+	<div class="col-12">
+		<h1 class="text-center mt-3">Foro Banco del Tiempo</h1>
+	</div>
 	@foreach($comentarios as $comentario)
 		<div class="col-12">
 		@if($comentario->user_id == Auth::user()->id)
-			<div id="msg" class="col-md-5 col-sm-12 mt-3 float-right alert alert-success" role="alert">
+			<div id="msg" class="col-md-5 col-sm-12 mt-1 float-right alert alert-success" role="alert">
 		@else
-			<div class="col-md-5 col-sm-12 lead alert alert-dark">
+			<div class="col-md-5 col-sm-12 mt-1 lead alert alert-dark">
 		@endif
 				<h5 class="text-center">{{$comentario->usuario->name}} | <span class="text-primary">{{$comentario->usuario->especialidad}}</span></h5>
 				<p class="">{{$comentario->mensaje}}</p>

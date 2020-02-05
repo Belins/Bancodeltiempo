@@ -5,38 +5,41 @@
 
     <div class="row d-flex align-items-center justify-content-center">
         <img id="logo" class="mr-3" src="{{asset('img/logo.png')}}" style="height: 60px; width: 120px;">
-        <p class="display-4" style="font-family: 'Titulo'; box-shadow: 5px 4px 8px 0px; background-color: hsla(35, 70%, 70%, 0.5); border-radius: 20px;">@lang('messages.Banco') </p> <!--Banco del Tiempo -->
+        <p class="display-4 text-white" style="font-family: 'Titulo'; box-shadow: 5px 4px 8px 0px black; background-color: hsla(0, 0%, 20%, 0.7); border-radius: 20px;">@lang('messages.Banco') </p> <!--Banco del Tiempo -->
     </div>
-    <nav class="navbar navbar-expand-sm">
-            <!-- Links -->
-            <a class="navbar-brand" href="{{route('home')}}">{{ trans('messages.Inicio') }}</a><!--Inicio-->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('foro.index')}}">{{ trans('messages.Foro') }}</a><!--Foro-->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('ofertas.create')}}">{{ trans('messages.AñadirOferta') }}</a><!--Foro-->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('ofertas.index')}}">Mis ofertas</a><!--Ver tus ofertas-->
-                </li>
-            </ul>
-
-            <ul class="navbar-nav ml-auto d-flex flex-row justify-content-end">
-                <li class="d-flex flex-row align-items-center mr-2">
-                    <h3 class="text-white text-center">@if(isset($trabajadas)){{$trabajadas}} <i class="menu-icon icon-arrow-up"></i>@endif  @if(isset($gastadas)){{$gastadas}} <i class="menu-icon icon-arrow-down"></i>@endif <span class="text-primary"><strong>{{Auth::user()->tiempo}} <i class="icon-time"></i></span></strong></h3>
-                </li>
-                <li class="nav-item dropdown d-flex flex-row align-items-center">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        @lang('messages.Idiomas')
-                    </a>
-                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item bg-dark text-light" href="{{route('locale', ['locale' => 'es'])}}">Es</a>
-                        <a class="dropdown-item bg-dark text-light" href="{{route('locale', ['locale' => 'en'])}}">En</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown d-flex flex-row align-items-center justify-content-around" style="width:40%">
-                <img src="/img/avatares/{{Auth::user()->image}}" alt="avatar" class="img-circle" width="20%" heigth="20%">
+    <nav class="navbar navbar-expand-md navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse col-md-6" id="navbarSupportedContent">
+                <a class="navbar-brand" href="{{route('home')}}">{{ trans('messages.Inicio') }}</a><!--Inicio-->
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('foro.index')}}">{{ trans('messages.Foro') }}</a><!--Foro-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('ofertas.create')}}">{{ trans('messages.AñadirOferta') }}</a><!--Foro-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('ofertas.index')}}">Mis ofertas</a><!--Ver tus ofertas-->
+                    </li>
+                    <li class="nav-item dropdown d-flex flex-row align-items-center">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            @lang('messages.Idiomas')
+                        </a>
+                        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item bg-dark text-light" href="{{route('locale', ['locale' => 'es'])}}">Es</a>
+                            <a class="dropdown-item bg-dark text-light" href="{{route('locale', ['locale' => 'en'])}}">En</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex flex-wrap justify-content-lg-end justify-content-center col-md-6">
+                
+                <h3 class="text-white text-center">@if(isset($trabajadas)){{$trabajadas}} <i class="menu-icon icon-arrow-up"></i>@endif  @if(isset($gastadas)){{$gastadas}} <i class="menu-icon icon-arrow-down"></i>@endif <span class="text-primary"><strong>{{Auth::user()->tiempo}} <i class="icon-time"></i></span></strong></h3>
+                <img src="/img/avatares/{{Auth::user()->image}}" alt="avatar" class="img-circle ml-3" width="50px" heigth="50px">
+                <li class="nav-item dropdown d-flex justify-content-end">
+                
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
@@ -57,5 +60,5 @@
 
                     </div>
                 </li>
-            </ul>
+            </div>
     </nav>

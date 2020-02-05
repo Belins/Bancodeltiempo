@@ -16,8 +16,8 @@ body{
 }
 
 #imgGen{
-  width:30%;
-  height:30%;
+  width:70%;
+  height:70%;
 }
 
 p{
@@ -111,15 +111,17 @@ footer .form-control {
 }
 
 #txt1{
-  background-color: hsla(35, 70%, 70%, 0.8);
+  background-color: hsla(0, 0%, 20%, 0.7);
+  color: white;
 }
 
-#txt1 a{
-  margin-left: 30%;
+#txt1 h1{
+  font-family: 'Motion';
 }
 
 #trj{
-  background-color: hsla(35, 70%, 70%, 0.6);
+  background-color: hsla(0, 0%, 20%, 0.7);
+  color: white;
 }
 
 nav
@@ -130,4 +132,8 @@ nav
 nav a
 {
   color: black;
+}
+
+#Ejemplo img{
+    background-color: hsla(0, 0%, 20%, 0.7);
 }

@@ -19,7 +19,7 @@
     </header>
 
     <!-- Page Content -->
-    <div class="container bg-dark text-white mb-5">
+    <div class="container text-white mb-5 p-5 mt-3" style="background-color: hsla(0, 0%, 20%, 0.8); border-radius: 5%;">
         <div id="infoGen">
             <div class="row">
                 <div class="col-12">
