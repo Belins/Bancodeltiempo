@@ -12,7 +12,7 @@
                                 <h3 id="titGraf1">Trabajos Activos</h3>
                                 <label>Desde : <input type="date" id="fechaInicio" data-date="" data-date-format="DD MMMM YYYY" value="2019-01-01"></label><br>
                                 <label>Hasta : <input type="date" id="fechaFin" data-date="" data-date-format="DD MMMM YYYY" value="{{$today}}"></label>
-                                <button id="pintar">Buscar</button>
+                                <button id="pintar1">Buscar</button>
                         </div>
                         <div id="donut_single"></div>
                 </div>
@@ -25,7 +25,7 @@
                 var TotalOfertas;
 
                 //Pedir datos a la api de ofertas creadas y activas en un rango de tiempo//
-                $('#pintar').click(function(){
+                $('#pintar1').click(function(){
                         var FechaInicio= document.getElementById('fechaInicio').value;
                         var FechaFin= document.getElementById('fechaFin').value;
                         var Link = 'http://10.14.0.81:8000/api/estadisticas/'+FechaInicio+'/'+FechaFin;
