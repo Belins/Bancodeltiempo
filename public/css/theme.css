@@ -1700,4 +1700,13 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', end
 	background-color: #579cd496;
 	border-radius: 5% 5% 5% 5%;
 }
+#donut_single{
+	margin-left: 1em;
+	height:20em;
+	width: 20em;
+}
+#titGraf1{
+	text-align: center;
+	margin-bottom: 1em;
+}
 @media(max-width:767px){body{padding:0!important}.wrapper{padding:20px 15px}}
