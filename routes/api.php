@@ -19,4 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::get('estadisticas/{fechaInicio}/{fechaFin}','EstadisticaController@MostarOfertasFechas');
+Route::get('confirmaciones','EstadisticaController@Confirmaciones');
 Route::apiResource('estadisticas','EstadisticaController');

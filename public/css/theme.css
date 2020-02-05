@@ -1709,4 +1709,9 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', end
 	text-align: center;
 	margin-bottom: 1em;
 }
+#donut_single2{
+	margin-left: 1em;
+	height:20em;
+	width: 20em;
+}
 @media(max-width:767px){body{padding:0!important}.wrapper{padding:20px 15px}}

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Oferta;
+use App\Confirmation;
 
 class EstadisticaController extends Controller
 {
@@ -69,7 +70,17 @@ class EstadisticaController extends Controller
         $Oferta = array();
         $Oferta[] = Oferta::whereBetween('created_at',[$fechaInicio,$fechaFin])->count();
         $Oferta[] = Oferta::whereBetween('created_at',[$fechaInicio,$fechaFin])->where('visible',1)->count();
-        return $Oferta;
-        
+        return $Oferta;   
+    }
+
+    public function Confirmaciones()
+    {
+        $Confirmaciones = array();
+        $Confirmaciones [] = Confirmation::where('estado',0)->count();
+        $Confirmaciones [] = Confirmation::where('estado',1)->count();
+        $Confirmaciones [] = Confirmation::where('estado',2)->count();
+        $Confirmaciones [] = Confirmation::where('estado',3)->count();
+        $Confirmaciones [] = Confirmation::all()->count();
+        return $Confirmaciones;   
     }
 }
