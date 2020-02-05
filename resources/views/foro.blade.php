@@ -14,28 +14,30 @@
 	@foreach($comentarios as $comentario)
 		<div class="col-12">
 		@if($comentario->user_id == Auth::user()->id)
-			<div id="msg" class="col-6 mt-3 float-right">
+			<div id="msg" class="col-md-5 col-sm-12 mt-3 float-right alert alert-success" role="alert">
 		@else
-			<div class="col-6 lead">
+			<div class="col-md-5 col-sm-12 lead alert alert-dark">
 		@endif
-				<h5>{{$comentario->usuario->name}} | <span class="text-primary">{{$comentario->usuario->especialidad}}</span></h5>
-				<p class="bg-white">{{$comentario->mensaje}}</p>
+				<h5 class="text-center">{{$comentario->usuario->name}} | <span class="text-primary">{{$comentario->usuario->especialidad}}</span></h5>
+				<p class="">{{$comentario->mensaje}}</p>
 			</div>
 		</div>
 	@endforeach
 
-	<div class="col-8">
-		<form action="{{route('foro.store')}}" method="POST">
-			@csrf
-			
-			<div class="form-group">
-				<label>¡Pregunta sin miedo!</label>
-				<textarea class="form-control" name="mensaje"></textarea>
-			</div>
-			<div class="form-group">
-				<button class="bg-info" type="">Enviar</button>
-			</div>
-		</form>
+	<div class="col-12 d-flex justify-content-center">
+		<div class="col-md-6 col-sm-12">
+			<form action="{{route('foro.store')}}" method="POST">
+				@csrf
+				
+				<div class="form-group">
+					<label class="text-white">¡Pregunta algo!</label>
+					<textarea class="form-control" name="mensaje" required="true"></textarea>
+				</div>
+				<div class="form-group d-flex justify-content-center">
+					<button class="bg-dark col-md-4 col-sm-12" type="">Enviar</button>
+				</div>
+			</form>
+		</div>
 	</div>
 
 </div>

@@ -1,11 +1,11 @@
 #contenedor
 {
-	background-color: hsla(35, 70%, 70%, 0.7);
+	background-color: hsla(0, 0%, 20%, 0.7);
 	margin-left: 15%;
 	margin-right: 15%;
 }
 
 #msg
 {
-	border-radius: 40%;
+	
 }
