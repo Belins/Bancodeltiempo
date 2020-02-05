@@ -85,7 +85,7 @@
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Email') }}</label>
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ Auth::user()->email }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ Auth::user()->email }}" autocomplete="email" onkeyup="this.value=NumTextEmail(this.value); validarRegExp(this.value)" required>
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -109,7 +109,7 @@
                         <div class="form-group row">
                             <label for="tlf" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Telefono') }}</label>
                             <div class="col-md-6">
-                                <input id="tlf" type="number" name="tlf" value="{{ Auth::user()->phone}}" required autocomplete="email">
+                                <input id="tlf" type="number" name="tlf" value="{{ Auth::user()->phone}}" onkeyup="this.value=validarTelefono(this.value);" required >
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

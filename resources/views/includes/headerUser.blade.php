@@ -17,7 +17,7 @@
                     <a class="nav-link" href="{{route('ofertas.create')}}">{{ trans('messages.AñadirOferta') }}</a><!--Foro-->
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('ofertas.index')}}">Mis ofertas</a><!--Ver tus ofertas-->
+                    <a class="nav-link" href="{{route('ofertas.index')}}">{{trans('messages.MisOfertas')}}</a><!--Ver tus ofertas-->
                 </li>
             </ul>
 
@@ -43,8 +43,8 @@
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{route('GestionUsuario')}}">Perfil</a><!--Ver tu perfil-->
-                        <a class="dropdown-item" href="{{route('confirmations.index')}}">Servicios</a><!--Ver tus servicios-->
+                        <a class="dropdown-item" href="{{route('GestionUsuario')}}">{{trans('messages.Perfil')}}</a><!--Ver tu perfil-->
+                        <a class="dropdown-item" href="{{route('confirmations.index')}}">{{trans('messages.Servicios')}}</a><!--Ver tus servicios-->
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">

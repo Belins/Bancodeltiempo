@@ -83,5 +83,10 @@ return [
     'FechaInicio'=>'Fecha Inicio',
     'FechaFin'=>'Fecha Fin',
     'Tiempo'=>'Tiempo',
-    'Descripcion'=>'Descripcion'
+    'Descripcion'=>'Descripcion',
+    'Imagen'=>'Avatar',
+    'MisOfertas'=>'Mis Ofertas',
+    'Perfil'=>'Perfil',
+    'Servicios'=>'Servicios'
+
 ];
