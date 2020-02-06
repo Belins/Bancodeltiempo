@@ -18,39 +18,27 @@
             <div class="form-group row">
                 <label for="localidad" class="col-md-4 col-form-label text-md-right">{{ trans('messages.Localidad') }}</label>
                 <div class="col-md-6">
-                    <select name="localidad" value="{{$DatosUsuario->localidad}}">
-                        @switch($DatosUsuario->localidad)
-                            @case('')
-                                <option value="Urnieta">Urnieta</option> 
-                                <option value="Donosti">Donosti</option> 
-                                <option value="Andoain">Andoain</option>
-                                <option value="Hernani">Hernani</option> 
-                            @break
-                            @case('Urnieta')
-                                <option value="Urnieta" selected="selected">Urnieta</option> 
-                                <option value="Donosti">Donosti</option> 
-                                <option value="Andoain">Andoain</option>
-                                <option value="Hernani">Hernani</option> 
-                            @break
-                            @case('Donosti')
-                                <option value="Urnieta" >Urnieta</option> 
-                                <option value="Donosti" selected="selected">Donosti</option> 
-                                <option value="Andoain" >Andoain</option>
-                                <option value="Hernani">Hernani</option> 
-                            @break
-                            @case('Andoain')
-                                <option value="Urnieta" >Urnieta</option> 
-                                <option value="Donosti" >Donosti</option> 
-                                <option value="Andoain" selected="selected">Andoain</option>
-                                <option value="Hernani">Hernani</option> 
-                            @break
-                            @case('Hernani')
-                                <option value="Urnieta" >Urnieta</option> 
-                                <option value="Donosti" >Donosti</option> 
-                                <option value="Andoain" >Andoain</option>
-                                <option value="Hernani" selected="selected">Hernani</option> 
-                            @break
-                        @endswitch
+                    <select name="localidad">
+                        @if($DatosUsuario->localidad == 'Urnieta')
+                            <option value="Urnieta" selected="selected">Urnieta</option>
+                        @else
+                            <option value="Urnieta">Urnieta</option>
+                        @endif
+                        @if($DatosUsuario->localidad == 'Donosti') 
+                            <option value="Donosti" selected="selected">Donosti</option>
+                        @else
+                            <option value="Donosti">Donosti</option>   
+                        @endif
+                        @if($DatosUsuario->localidad == 'Andoain') 
+                            <option value="Andoain" selected="selected">Andoain</option>
+                        @else
+                            <option value="Andoain">Andoain</option>
+                        @endif
+                        @if($DatosUsuario->localidad == 'Hernani')
+                            <option value="Hernani" selected="selected">Hernani</option>
+                        @else
+                            <option value="Hernani">Hernani</option>
+                        @endif 
                     </select>
                 </div>
             </div>

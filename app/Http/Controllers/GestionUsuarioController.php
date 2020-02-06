@@ -69,7 +69,14 @@ class GestionUsuarioController extends Controller
     //Eliminar usuario desde panel de admin
     public function DeleteUser($id){
         $user = User::find($id);
-        $user->bloqued = 1;
+        if($user->bloqued == 1)
+        {
+            $user->bloqued = 0;
+        }
+        else
+        {
+            $user->bloqued = 1;
+        }
         $user->save();
         return redirect(route('mostrarUsuarios'));
     }

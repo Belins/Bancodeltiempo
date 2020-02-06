@@ -24,8 +24,12 @@
                     <td>{{$usuario->localidad}}</td>
                     <td>{{$usuario->phone}}</td>
                     <td>{{$usuario->role}}</td>
-                    <td><a href="{{route('mostrarUsuario',$usuario->id)}}"><span class="glyphicon glyphicon-pencil">editar</span></a></td>
-                    <td><a href="{{route('eliminarUsuario',$usuario->id)}}"><span class="glyphicon glyphicon-pencil">eliminar</span></a></td>
+                    <td><a href="{{route('mostrarUsuario',$usuario->id)}}"><span class="glyphicon glyphicon-pencil">Editar</span></a></td>
+                    @if($usuario->bloqued == 1)
+                    <td><a href="{{route('eliminarUsuario',$usuario->id)}}"><span class="glyphicon glyphicon-pencil text-primary">Activar</span></a></td>
+                    @else
+                    <td><a href="{{route('eliminarUsuario',$usuario->id)}}"><span class="glyphicon glyphicon-pencil text-danger">Bloquear</span></a></td>
+                    @endif
                 </tr>
                 @endforeach
             </tbody>
