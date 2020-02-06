@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->integer('puntuacion');
             $table->integer('tiempo');
             $table->boolean('admin');
+            $table->boolean('bloqued')->default('0');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('image')->default('predifinida.jpg');

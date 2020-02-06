@@ -16,8 +16,12 @@ class admin
     public function handle($request, Closure $next)
     {
         if (auth()->user()->isAdmin())
+        {
             return $next($request);
+        }
         else
-            redirect('/');
+        {
+            return back();
+        }
     }
 }

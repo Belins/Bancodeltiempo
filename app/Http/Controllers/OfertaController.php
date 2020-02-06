@@ -41,9 +41,9 @@ class OfertaController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-        'descripcion' => 'required|max:50',
+        'descripcion' => 'required|max:100',
         'tiempo' => 'required|integer|max:7',
-        'titulo' => 'required|max:20',
+        'titulo' => 'required|max:30',
         'disp_desde' => 'required',
         'disp_hasta' => 'required',
         ]);

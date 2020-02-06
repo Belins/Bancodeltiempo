@@ -17,8 +17,15 @@ class IsAdmin
     public function handle($request, Closure $next)
     {
         if (auth()->user()->isAdmin())
+        {
             return redirect('admin');
-        else
-            return $next($request);
+        }
+        else if(auth()->user()->bloqued == 1)
+        {
+            return redirect('/');
+        }
+        else{
+            return $next($request);  
+        }
     }
 }

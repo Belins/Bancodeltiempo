@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\User;
+use App\Oferta;
+use App\Confirmation;
 use Auth;
 
 class GestionUsuarioController extends Controller
@@ -66,7 +68,9 @@ class GestionUsuarioController extends Controller
 
     //Eliminar usuario desde panel de admin
     public function DeleteUser($id){
-        User::destroy($id);
+        $user = User::find($id);
+        $user->bloqued = 1;
+        $user->save();
         return redirect(route('mostrarUsuarios'));
     }
 
