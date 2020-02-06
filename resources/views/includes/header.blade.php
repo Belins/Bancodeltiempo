@@ -26,10 +26,6 @@
                         <a class="nav-link" href="#store">Contacto</a>
                         <!--Como funciona-->
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('infgeneral')}}">@lang('messages.Como') </a>
-                        <!--Como funciona-->
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             @lang('messages.Idiomas')

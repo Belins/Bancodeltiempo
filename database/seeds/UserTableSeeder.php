@@ -23,7 +23,7 @@ class UserTableSeeder extends Seeder
         $user->localidad = 'Azkoitia';
         $user->especialidad = 'Mecanico';
         $user->puntuacion = 5;
-        $user->tiempo = 15;
+        $user->tiempo = 4;
         $user->admin = 0;
         $user->email_verified_at = '2020-01-28 07:37:44';
         $user->role = 'user';
@@ -37,7 +37,7 @@ class UserTableSeeder extends Seeder
         $user->localidad = 'Urnieta';
         $user->especialidad = 'Programador';
         $user->puntuacion = 3;
-        $user->tiempo = 15;
+        $user->tiempo = 4;
         $user->admin = 1;
         $user->email_verified_at = '2020-01-28 07:37:44';
         $user->role = 'admin';
@@ -52,7 +52,7 @@ class UserTableSeeder extends Seeder
         $user->localidad = 'Donostia';
         $user->especialidad = 'Jardinero';
         $user->puntuacion = 4;
-        $user->tiempo = 15;
+        $user->tiempo = 4;
         $user->admin = 0;
         $user->email_verified_at = '2020-01-28 07:37:44';
         $user->role = 'user';
