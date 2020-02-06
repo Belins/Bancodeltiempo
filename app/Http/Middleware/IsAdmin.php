@@ -22,7 +22,7 @@ class IsAdmin
         }
         else if(auth()->user()->bloqued == 1)
         {
-            return redirect('/');
+            return redirect(route('logout'));
         }
         else{
             return $next($request);  
