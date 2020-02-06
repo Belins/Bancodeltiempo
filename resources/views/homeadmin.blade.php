@@ -39,7 +39,7 @@
                 $('#pintar1').click(function(){
                         var FechaInicio= document.getElementById('fechaInicio').value;
                         var FechaFin= document.getElementById('fechaFin').value;
-                        var Link = 'http://10.14.0.81:8000/api/estadisticas/'+FechaInicio+'/'+FechaFin;
+                        var Link = 'http://bancotiempo.herokuapp.com/api/estadisticas/'+FechaInicio+'/'+FechaFin;
                         var request = new XMLHttpRequest();
                         request.open('Get',Link,true);
                         request.onload = function(){
@@ -62,7 +62,7 @@
                 $(document).ready(function(){
                         var FechaInicio= document.getElementById('fechaInicio').value;
                         var FechaFin= document.getElementById('fechaFin').value;
-                        var Link = 'http://10.14.0.81:8000/api/estadisticas/'+FechaInicio+'/'+FechaFin;
+                        var Link = 'http://bancotiempo.herokuapp.com/api/estadisticas/'+FechaInicio+'/'+FechaFin;
                         var request = new XMLHttpRequest();
                         request.open('Get',Link,true);
                         request.onload = function(){
@@ -81,7 +81,7 @@
                         request.send();	
 
                         // SEGUNDA LLAMADA PARA EL GRAFICO 2 //
-                        var Link1 = 'http://10.14.0.81:8000/api/confirmaciones';
+                        var Link1 = 'http://bancotiempo.herokuapp.com/api/confirmaciones';
                         var request1 = new XMLHttpRequest();
                         request1.open('Get',Link1,true);
                         request1.onload = function(){
