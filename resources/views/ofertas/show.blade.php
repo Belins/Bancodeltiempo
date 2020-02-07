@@ -27,11 +27,14 @@
 			<?php $count = $count+1 ?>
 			@endif
 		@endforeach
-		@if($count == 0)
+		@if($count == 0 && Auth::user()->tiempo >= $ofer->tiempo)
 			<a href="{{route('confirmations.createConf', $ofer->id)}}"><button>Solicitar</button>
 		@endif
 		@if($count == 1)
 			<button class="badge-danger">En curso</button>
+		@endif
+		@if(Auth::user()->tiempo < $ofer->tiempo)
+			<button class="badge-danger">Tiempo insuficiente</button>
 		@endif
 		
 	</div>

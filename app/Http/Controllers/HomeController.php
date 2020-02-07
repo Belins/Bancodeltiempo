@@ -40,7 +40,8 @@ class HomeController extends Controller
         }
         $gastadas = $trabajadas - Auth::user()->tiempo +4;
 
-        $listadoOfertas = Oferta::All();
+        $listadoOfertas = Oferta::where('user_id', '!=' , Auth::user()->id)->get();
+
         return view('home')->with(['listadoOfertas' => $listadoOfertas, 'trabajadas' => $trabajadas, 'gastadas' => $gastadas]);
     }
 

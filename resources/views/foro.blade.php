@@ -13,6 +13,7 @@
 	<div class="col-12">
 		<h1 class="text-center mt-3">Foro Banco del Tiempo</h1>
 	</div>
+	<div id="contenedor2" class="row">
 	@foreach($comentarios as $comentario)
 		<div class="col-12">
 		@if($comentario->user_id == Auth::user()->id)
@@ -25,7 +26,7 @@
 			</div>
 		</div>
 	@endforeach
-
+	</div>
 	<div class="col-12 d-flex justify-content-center">
 		<div class="col-md-6 col-sm-12">
 			<form action="{{route('foro.store')}}" method="POST">

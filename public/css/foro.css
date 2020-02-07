@@ -10,7 +10,8 @@
 	color: white;
 }
 
-#msg
+#contenedor2
 {
-	
+	max-height: 400px;
+	overflow: auto;
 }

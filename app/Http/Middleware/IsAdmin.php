@@ -2,7 +2,7 @@
 
 namespace App\Http\Middleware;
 use App\User;
-
+use Auth;
 use Closure;
 
 class IsAdmin
@@ -22,7 +22,8 @@ class IsAdmin
         }
         else if(auth()->user()->bloqued == 1)
         {
-            return redirect(route('logout'));
+            Auth::logout();
+            return redirect('/');
         }
         else{
             return $next($request);  
