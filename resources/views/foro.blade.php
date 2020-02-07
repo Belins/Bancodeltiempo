@@ -13,7 +13,7 @@
 	<div class="col-12">
 		<h1 class="text-center mt-3">Foro Banco del Tiempo</h1>
 	</div>
-	<div id="contenedor2" class="row">
+	<div id="contenedor2" class="row col-12">
 	@foreach($comentarios as $comentario)
 		<div class="col-12">
 		@if($comentario->user_id == Auth::user()->id)

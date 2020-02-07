@@ -75,7 +75,7 @@
                         </div>
                     </form>
                     <div class="form-group text-center">
-                        <small><a href="" data-toggle="modal" data-target="#modalSubscriptionForm">@lang('messages.NoCuenta')</a></small>
+                        <small><a class="text-warning" href="" data-toggle="modal" data-target="#modalSubscriptionForm">@lang('messages.NoCuenta')</a></small>
                         <!--¿No tienes cuenta? Regístrate!-->
                     </div>
                 </li>
