@@ -10,7 +10,7 @@
 
 
 <div id="contenedor" class="container d-flex justify-content-center">
-	<div id="solicitud" class="mt-3 p-3 text-center">
+	<div id="solicitud" class="mt-3 p-3 text-white text-center">
 		<form method="post" action="{{route('guardarcambios',$oferta->id)}}">
 			@csrf
 			
