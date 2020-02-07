@@ -66,7 +66,7 @@ class UserTableSeeder extends Seeder
         $user->localidad = 'Donostia';
         $user->especialidad = 'Mecanico';
         $user->puntuacion = 4;
-        $user->tiempo = 8;
+        $user->tiempo = 4;
         $user->admin = 0;
         $user->email_verified_at = '2020-01-28 07:37:44';
         $user->role = 'user';
